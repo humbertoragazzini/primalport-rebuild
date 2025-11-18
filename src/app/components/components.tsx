@@ -1,5 +1,9 @@
+"use client";
+
 import PpButton from "@/src/components/atoms/Button";
 import Heading from "@/src/components/atoms/Heading";
+import MultiLangSpan from "@/src/components/atoms/MultiLangSpan";
+import { useLanguageStore } from "@/src/hooks/useLanguage";
 import {
   FaBeer,
   FaArrowRight,
@@ -173,6 +177,113 @@ export function ButtonsShowcase() {
             >
               {btn.label}
             </PpButton>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+// Your multilingual heading demo data
+const HEADING_CONTENT = [
+  {
+    level: 1 as const,
+    content: {
+      en: "Welcome to <strong>our universe</strong>",
+      es: "Bienvenido a <strong>nuestro universo</strong>",
+      it: "Benvenuto nel <strong>nostro universo</strong>",
+      ch: "欢迎来到<strong>我们的宇宙</strong>",
+    },
+  },
+  {
+    level: 2 as const,
+    content: {
+      en: "Multilingual <em>headings</em> in action",
+      es: "Encabezados <em>multilingües</em> en acción",
+      it: "Titoli <em>multilingue</em> in azione",
+      ch: "多语言<em>标题</em>动态展示",
+    },
+  },
+  {
+    level: 3 as const,
+    content: {
+      en: "Change the language, keep the <u>structure</u>",
+      es: "Cambia el idioma, mantén la <u>estructura</u>",
+      it: "Cambia la lingua, mantieni la <u>struttura</u>",
+      ch: "切换语言但保持<u>结构</u>",
+    },
+  },
+  {
+    level: 4 as const,
+    content: {
+      en: "Perfect for <strong>SEO</strong> & UX",
+      es: "Perfecto para <strong>SEO</strong> y UX",
+      it: "Perfetto per <strong>SEO</strong> e UX",
+      ch: "非常适合<strong>SEO</strong>和体验",
+    },
+  },
+  {
+    level: 5 as const,
+    content: {
+      en: "Powered by <code>Zustand</code> state",
+      es: "Impulsado por el estado de <code>Zustand</code>",
+      it: "Alimentato dallo stato di <code>Zustand</code>",
+      ch: "由 <code>Zustand</code> 状态驱动",
+    },
+  },
+];
+
+export function HeadingsI18nShowcase() {
+  const language = useLanguageStore((state) => state.language);
+  const setLanguage = useLanguageStore((state) => state.setLanguage);
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-950 px-6 py-10">
+      <div className="w-full max-w-4xl rounded-2xl bg-slate-900 border border-slate-700 p-6 shadow-xl">
+        <h2 className="mb-4 text-2xl font-semibold text-slate-50">
+          Multilingual Headings
+        </h2>
+
+        <p className="mb-6 text-sm text-slate-400">
+          Switch languages and see the headings update instantly using Zustand.
+        </p>
+
+        {/* LANGUAGE BUTTONS */}
+        <div className="flex flex-wrap gap-4 mb-10">
+          <PpButton
+            theme={language === "en" ? "yellow" : "graphite"}
+            onClick={() => setLanguage("en")}
+          >
+            English
+          </PpButton>
+
+          <PpButton
+            theme={language === "es" ? "yellow" : "graphite"}
+            onClick={() => setLanguage("es")}
+          >
+            Español
+          </PpButton>
+
+          <PpButton
+            theme={language === "it" ? "yellow" : "graphite"}
+            onClick={() => setLanguage("it")}
+          >
+            Italiano
+          </PpButton>
+
+          <PpButton
+            theme={language === "ch" ? "yellow" : "graphite"}
+            onClick={() => setLanguage("ch")}
+          >
+            中文
+          </PpButton>
+        </div>
+
+        {/* HEADINGS */}
+        <div className="space-y-6">
+          {HEADING_CONTENT.map(({ level, content }, index) => (
+            <Heading key={index} level={level} className="text-slate-50">
+              <MultiLangSpan content={content} />
+            </Heading>
           ))}
         </div>
       </div>
