@@ -1,5 +1,13 @@
 import PpButton from "@/src/components/atoms/Button";
 import Heading from "@/src/components/atoms/Heading";
+import {
+  FaBeer,
+  FaArrowRight,
+  FaGithub,
+  FaDownload,
+  FaHeart,
+} from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 // one source of truth: all literals so Tailwind can see them
 const COLORS = [
@@ -85,13 +93,86 @@ export function HeadingShowcase() {
 }
 
 export function ButtonsShowcase() {
+  const buttons = [
+    {
+      label: "Primary + Beer",
+      theme: "primary" as const,
+      icon: <FaBeer size={18} />,
+    },
+    {
+      label: "Primary + Arrow",
+      theme: "primary" as const,
+      icon: <FaArrowRight size={16} />,
+    },
+    {
+      label: "Secondary + Mail",
+      theme: "secondary" as const,
+      icon: <FiMail size={18} />,
+    },
+    {
+      label: "Secondary (no icon)",
+      theme: "secondary" as const,
+      icon: null,
+    },
+    {
+      label: "Danger + Heart",
+      theme: "danger" as const,
+      icon: <FaHeart size={16} />,
+    },
+    {
+      label: "Danger Download",
+      theme: "danger" as const,
+      icon: <FaDownload size={16} />,
+    },
+    {
+      label: "Ghost Github",
+      theme: "ghost" as const,
+      icon: <FaGithub size={18} />,
+    },
+    {
+      label: "Ghost (no icon)",
+      theme: "ghost" as const,
+      icon: null,
+    },
+    {
+      label: "Primary Link",
+      theme: "primary" as const,
+      icon: <FaArrowRight size={14} />,
+      as: "a" as const,
+      href: "#primary-link",
+    },
+    {
+      label: "Secondary Link",
+      theme: "secondary" as const,
+      icon: <FiMail size={16} />,
+      as: "a" as const,
+      href: "#secondary-link",
+    },
+  ];
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-950 px-6 py-10">
       <div className="w-full max-w-4xl rounded-2xl bg-slate-900 border border-slate-700 p-6 shadow-xl">
         <h2 className="mb-4 text-2xl font-semibold text-slate-50">Buttons</h2>
 
-        <div className="space-y-10">
-          <PpButton></PpButton>
+        <p className="mb-6 text-sm text-slate-400">
+          Variants using <code>primary</code>, <code>secondary</code>,{" "}
+          <code>danger</code> and <code>ghost</code> themes, plus icons and
+          polymorphic <code>as</code> (<code>button</code> / <code>a</code>).
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+          {buttons.map((btn, index) => (
+            <PpButton
+              key={index}
+              theme={btn.theme}
+              icon={btn.icon ?? undefined}
+              as={btn.as}
+              href={btn.href}
+            >
+              {btn.label}
+            </PpButton>
+          ))}
         </div>
       </div>
     </div>
