@@ -2,12 +2,67 @@
 import { ReactNode, ElementType } from "react";
 import { motion } from "framer-motion";
 
+type ButtonTheme = "yellow" | "plum" | "rose" | "lime" | "graphite";
+
 type PpButtonProps = {
   as?: ElementType;
   href?: string;
   icon?: ReactNode;
   children: ReactNode;
   className?: string;
+  theme?: ButtonTheme;
+};
+
+const THEME_CONFIG: Record<
+  ButtonTheme,
+  {
+    gradient: string;
+    idleGlow: string;
+    hoverGlow: string;
+    innerBgClass: string;
+    textClass: string;
+  }
+> = {
+  yellow: {
+    // yellow-bright + deep-black
+    gradient: "linear-gradient(135deg, #FDE305, #030d0c, #FDE305)",
+    idleGlow: "0 0 6px rgba(253, 227, 5, 0.25)",
+    hoverGlow: "0 0 28px rgba(253, 227, 5, 0.6)",
+    innerBgClass: "bg-yellow-bright",
+    textClass: "text-black",
+  },
+  plum: {
+    // plum + deep-black
+    gradient: "linear-gradient(135deg, #8C3B60, #030d0c, #8C3B60)",
+    idleGlow: "0 0 6px rgba(140, 59, 96, 0.35)",
+    hoverGlow: "0 0 28px rgba(140, 59, 96, 0.7)",
+    innerBgClass: "bg-plum",
+    textClass: "text-white",
+  },
+  rose: {
+    // rose + burgundy
+    gradient: "linear-gradient(135deg, #e07176, #6B0142, #e07176)",
+    idleGlow: "0 0 6px rgba(224, 113, 118, 0.35)",
+    hoverGlow: "0 0 28px rgba(224, 113, 118, 0.7)",
+    innerBgClass: "bg-rose",
+    textClass: "text-white",
+  },
+  lime: {
+    // lime + deep-black
+    gradient: "linear-gradient(135deg, #98DB14, #030d0c, #98DB14)",
+    idleGlow: "0 0 6px rgba(152, 219, 20, 0.30)",
+    hoverGlow: "0 0 28px rgba(152, 219, 20, 0.65)",
+    innerBgClass: "bg-lime",
+    textClass: "text-deep-black",
+  },
+  graphite: {
+    // graphite + yellow-bright
+    gradient: "linear-gradient(135deg, #313434, #FDE305, #313434)",
+    idleGlow: "0 0 6px rgba(253, 227, 5, 0.30)",
+    hoverGlow: "0 0 28px rgba(253, 227, 5, 0.7)",
+    innerBgClass: "bg-graphite",
+    textClass: "text-yellow-bright",
+  },
 };
 
 export default function PpButton({
@@ -16,43 +71,40 @@ export default function PpButton({
   icon,
   children,
   className = "",
+  theme = "yellow",
   ...rest
 }: PpButtonProps) {
   const MotionWrapper = motion.div;
   const MotionComponent = motion(Component as ElementType);
 
-  const gradient =
-    "linear-gradient(135deg, #FDE305, #030d0c, #FDE305, #030d0c)";
+  const config = THEME_CONFIG[theme];
 
   return (
     <MotionWrapper
       className="p-[3px] rounded-xl"
       style={{
-        backgroundImage: gradient,
+        backgroundImage: config.gradient,
         backgroundSize: "300% 300%",
         backgroundPosition: "0% 50%",
-        // small base glow instead of 0, so shrinking feels natural
-        boxShadow: "0 0 6px rgba(253, 227, 5, 0.25)",
+        boxShadow: config.idleGlow,
       }}
       variants={{
         rest: {
           backgroundPosition: "0% 50%",
-          boxShadow: "0 0 6px rgba(253, 227, 5, 0.25)", // subtle idle glow
+          boxShadow: config.idleGlow,
         },
         hover: {
           backgroundPosition: "100% 50%",
-          boxShadow: "0 0 28px rgba(253, 227, 5, 0.6)", // stronger glow
+          boxShadow: config.hoverGlow,
         },
       }}
       initial="rest"
       whileHover="hover"
       transition={{
-        // gradient can stay slow and chill
         backgroundPosition: {
           duration: 1.3,
           ease: "easeInOut",
         },
-        // glow animates a bit faster but smoothly both ways
         boxShadow: {
           duration: 0.6,
           ease: "easeInOut",
@@ -65,7 +117,7 @@ export default function PpButton({
           flex items-center justify-center gap-3
           px-6 py-3 rounded-[10px]
           font-bold cursor-pointer select-none
-          bg-yellow-bright text-black
+          ${config.innerBgClass} ${config.textClass}
           transition-colors duration-300
           ${className}
         `}

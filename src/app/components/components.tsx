@@ -95,58 +95,58 @@ export function HeadingShowcase() {
 export function ButtonsShowcase() {
   const buttons = [
     {
-      label: "Primary + Beer",
-      theme: "primary" as const,
+      label: "Yellow + Beer",
+      theme: "yellow" as const,
       icon: <FaBeer size={18} />,
     },
     {
-      label: "Primary + Arrow",
-      theme: "primary" as const,
+      label: "Yellow Arrow",
+      theme: "yellow" as const,
       icon: <FaArrowRight size={16} />,
     },
     {
-      label: "Secondary + Mail",
-      theme: "secondary" as const,
+      label: "Plum + Mail",
+      theme: "plum" as const,
       icon: <FiMail size={18} />,
     },
     {
-      label: "Secondary (no icon)",
-      theme: "secondary" as const,
+      label: "Plum (no icon)",
+      theme: "plum" as const,
       icon: null,
     },
     {
-      label: "Danger + Heart",
-      theme: "danger" as const,
+      label: "Rose + Heart",
+      theme: "rose" as const,
       icon: <FaHeart size={16} />,
     },
     {
-      label: "Danger Download",
-      theme: "danger" as const,
+      label: "Rose Download",
+      theme: "rose" as const,
       icon: <FaDownload size={16} />,
     },
     {
-      label: "Ghost Github",
-      theme: "ghost" as const,
+      label: "Lime Github",
+      theme: "lime" as const,
       icon: <FaGithub size={18} />,
     },
     {
-      label: "Ghost (no icon)",
-      theme: "ghost" as const,
+      label: "Lime (no icon)",
+      theme: "lime" as const,
       icon: null,
     },
     {
-      label: "Primary Link",
-      theme: "primary" as const,
+      label: "Graphite Link",
+      theme: "graphite" as const,
       icon: <FaArrowRight size={14} />,
       as: "a" as const,
-      href: "#primary-link",
+      href: "#graphite-link",
     },
     {
-      label: "Secondary Link",
-      theme: "secondary" as const,
+      label: "Graphite Mail Link",
+      theme: "graphite" as const,
       icon: <FiMail size={16} />,
       as: "a" as const,
-      href: "#secondary-link",
+      href: "#graphite-mail",
     },
   ];
 
@@ -156,9 +156,10 @@ export function ButtonsShowcase() {
         <h2 className="mb-4 text-2xl font-semibold text-slate-50">Buttons</h2>
 
         <p className="mb-6 text-sm text-slate-400">
-          Variants using <code>primary</code>, <code>secondary</code>,{" "}
-          <code>danger</code> and <code>ghost</code> themes, plus icons and
-          polymorphic <code>as</code> (<code>button</code> / <code>a</code>).
+          Variants using <code>yellow</code>, <code>plum</code>,{" "}
+          <code>rose</code>, <code>lime</code> and <code>graphite</code> themes,
+          with icons and polymorphic <code>as</code> (<code>button</code> /{" "}
+          <code>a</code>).
         </p>
 
         <div className="flex flex-wrap gap-4">
