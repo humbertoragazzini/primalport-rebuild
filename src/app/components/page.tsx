@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ColorGrid, { ColorShowcase } from "./components";
+import { ColorGrid } from "./components";
 
 export default function Home() {
   return (

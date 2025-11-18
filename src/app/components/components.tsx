@@ -12,7 +12,7 @@ const COLORS = [
   { name: "deep-black", className: "bg-deep-black" },
 ];
 
-export default function ColorGrid() {
+export function ColorGrid() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-950 px-6 py-10">
       <div className="w-full max-w-4xl rounded-2xl bg-slate-900 border border-slate-700 p-6 shadow-xl">
