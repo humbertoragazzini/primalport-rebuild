@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @theme {
     --color-red: #e0363e;
     --color-black: #010101;
@@ -14,4 +13,7 @@
     --color-burgundy: #6B0142;
     --color-deep-black: #030d0c;
   }
-  
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
