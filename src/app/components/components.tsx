@@ -26,7 +26,7 @@ const COLORS = [
 
 export function ColorGrid() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-950 px-6 py-10">
+    <div className="flex items-center justify-center bg-slate-950 px-6 py-10">
       <div className="w-full max-w-4xl rounded-2xl bg-slate-900 border border-slate-700 p-6 shadow-xl">
         <h2 className="mb-2 text-2xl font-semibold text-slate-50">
           Brand Colours
@@ -58,7 +58,7 @@ export function ColorGrid() {
 
 export function HeadingShowcase() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-950 px-6 py-10">
+    <div className="flex items-center justify-center bg-slate-950 px-6 py-10">
       <div className="w-full max-w-4xl rounded-2xl bg-slate-900 border border-slate-700 p-6 shadow-xl">
         <h2 className="mb-4 text-2xl font-semibold text-slate-50">
           Headings (sizes & colors)
@@ -151,7 +151,7 @@ export function ButtonsShowcase() {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-950 px-6 py-10">
+    <div className="flex items-center justify-center bg-slate-950 px-6 py-10">
       <div className="w-full max-w-4xl rounded-2xl bg-slate-900 border border-slate-700 p-6 shadow-xl">
         <h2 className="mb-4 text-2xl font-semibold text-slate-50">Buttons</h2>
 
