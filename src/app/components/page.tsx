@@ -7,7 +7,7 @@ import {
 } from "./components";
 export default function Home() {
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-scree">
       <ColorGrid></ColorGrid>
       <HeadingShowcase></HeadingShowcase>
       <ButtonsShowcase></ButtonsShowcase>
