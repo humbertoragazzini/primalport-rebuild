@@ -1,25 +1,19 @@
 import Heading from "@/components/atoms/Heading";
 
-// one source of truth
+// one source of truth: all literals so Tailwind can see them
 const COLORS = [
-  "red",
-  "black",
-  "yellow",
-  "graphite",
-  "light-grey",
-  "rose",
-  "yellow-bright",
-  "plum",
-  "lime",
-  "burgundy",
-  "deep-black",
+  { name: "red", bg: "bg-red", text: "text-red" },
+  { name: "black", bg: "bg-black", text: "text-black" },
+  { name: "yellow", bg: "bg-yellow", text: "text-yellow" },
+  { name: "graphite", bg: "bg-graphite", text: "text-graphite" },
+  { name: "light-grey", bg: "bg-light-grey", text: "text-light-grey" },
+  { name: "rose", bg: "bg-rose", text: "text-rose" },
+  { name: "yellow-bright", bg: "bg-yellow-bright", text: "text-yellow-bright" },
+  { name: "plum", bg: "bg-plum", text: "text-plum" },
+  { name: "lime", bg: "bg-lime", text: "text-lime" },
+  { name: "burgundy", bg: "bg-burgundy", text: "text-burgundy" },
+  { name: "deep-black", bg: "bg-deep-black", text: "text-deep-black" },
 ];
-
-// for the square grid we need bg-* versions too
-const COLOR_BG = COLORS.map((name) => ({
-  name,
-  className: `bg-${name}`,
-}));
 
 export function ColorGrid() {
   return (
@@ -34,16 +28,16 @@ export function ColorGrid() {
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
-          {COLOR_BG.map((color) => (
+          {COLORS.map((color) => (
             <div key={color.name} className="flex flex-col items-center gap-2">
               <div
-                className={`w-20 h-20 rounded-lg shadow-md border border-slate-800 ${color.className}`}
+                className={`w-20 h-20 rounded-lg shadow-md border border-slate-800 ${color.bg}`}
               />
               <span className="text-xs font-medium text-slate-100">
                 {color.name}
               </span>
               <span className="text-[10px] uppercase tracking-wide text-slate-500">
-                {color.className}
+                {color.bg}
               </span>
             </div>
           ))}
@@ -61,21 +55,22 @@ export function HeadingShowcase() {
           Headings (sizes & colors)
         </h2>
 
-        <div className="space-y-10">
+        <div className="space-y-8">
           {[1, 2, 3, 4, 5, 6].map((level) => (
-            <div key={level} className="space-y-4">
-              <Heading level={level}>Heading Level {level}</Heading>
+            <div key={level} className="space-y-2">
+              <p className="text-xs uppercase tracking-wide text-slate-400">
+                Level h{level}
+              </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="flex flex-wrap gap-4 items-baseline">
                 {COLORS.map((color) => (
-                  <div
-                    key={`${level}-${color}`}
-                    className={`p-3 rounded-lg bg-slate-800/50 border border-slate-700 text-${color}`}
+                  <Heading
+                    key={`${level}-${color.name}`}
+                    level={level as 1 | 2 | 3 | 4 | 5 | 6}
+                    className={color.text}
                   >
-                    <Heading level={level}>
-                      {`Heading ${level} – ${color}`}
-                    </Heading>
-                  </div>
+                    {`H${level} – ${color.name}`}
+                  </Heading>
                 ))}
               </div>
             </div>
