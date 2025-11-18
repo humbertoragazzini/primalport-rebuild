@@ -1,4 +1,4 @@
-import Heading from "@/components/atoms/Heading";
+import Heading from "@/src/components/atoms/Heading";
 
 // one source of truth: all literals so Tailwind can see them
 const COLORS = [
@@ -55,19 +55,21 @@ export function HeadingShowcase() {
           Headings (sizes & colors)
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-10">
           {[1, 2, 3, 4, 5, 6].map((level) => (
-            <div key={level} className="space-y-2">
-              <p className="text-xs uppercase tracking-wide text-slate-400">
+            <div key={level} className="space-y-3">
+              {/* Section label */}
+              <p className="text-xs uppercase tracking-wider text-slate-400">
                 Level h{level}
               </p>
 
-              <div className="flex flex-wrap gap-4 items-baseline">
+              {/* Row of all color variants for this level */}
+              <div className="flex flex-col gap-2">
                 {COLORS.map((color) => (
                   <Heading
                     key={`${level}-${color.name}`}
                     level={level as 1 | 2 | 3 | 4 | 5 | 6}
-                    className={color.text}
+                    className={`${color.text}`}
                   >
                     {`H${level} – ${color.name}`}
                   </Heading>
