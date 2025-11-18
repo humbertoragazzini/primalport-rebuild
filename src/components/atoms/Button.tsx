@@ -2,75 +2,93 @@
 import { ReactNode, ElementType } from "react";
 import { motion } from "framer-motion";
 
-type Theme = "primary" | "secondary" | "danger" | "ghost";
-
 type PpButtonProps = {
-  as?: ElementType; // "button", "a", or any element/component
-  href?: string; // only used when rendering <a>
-  theme?: Theme;
-  icon?: ReactNode; // any icon, e.g. <FaBeer />
+  as?: ElementType;
+  href?: string;
+  icon?: ReactNode;
   children: ReactNode;
   className?: string;
-};
-
-// Gradients use your brand colors (hex values from your @theme)
-const gradients: Record<Theme, string> = {
-  // yellow-bright → plum
-  primary: "linear-gradient(135deg, #FDE305, #8C3B60)",
-  // graphite → deep-black
-  secondary: "linear-gradient(135deg, #313434, #030d0c)",
-  // red → burgundy
-  danger: "linear-gradient(135deg, #e0363e, #6B0142)",
-  // deep-black → plum
-  ghost: "linear-gradient(135deg, #030d0c, #8C3B60)",
-};
-
-// Tailwind classes using your custom colors
-const themes: Record<Theme, string> = {
-  primary: "border-yellow-bright text-deep-black",
-  secondary: "border-graphite text-light-grey",
-  danger: "border-red text-red",
-  ghost: "border-transparent text-yellow-bright",
 };
 
 export default function PpButton({
   as: Component = "button",
   href,
-  theme = "primary",
   icon,
   children,
   className = "",
   ...rest
 }: PpButtonProps) {
+  const MotionWrapper = motion.div;
   const MotionComponent = motion(Component as ElementType);
 
-  const baseStyles =
-    "inline-flex items-center justify-center gap-3 rounded-xl px-5 py-3 font-bold " +
-    "border-2 cursor-pointer " +
-    "transition-transform duration-200 ease-out " +
-    "hover:-translate-y-0.5";
+  const gradient =
+    "linear-gradient(135deg, #FDE305, #030d0c, #FDE305, #030d0c)";
 
   return (
-    <MotionComponent
-      href={Component === "a" ? href : undefined}
-      className={`${baseStyles} ${themes[theme]} ${className}`}
+    <MotionWrapper
+      className="p-[3px] rounded-xl"
       style={{
-        backgroundImage: gradients[theme],
-        backgroundSize: "200% 200%",
-        backgroundPosition: "0% 0%",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: gradient,
+        backgroundSize: "300% 300%",
+        backgroundPosition: "0% 50%",
+        boxShadow: "0 0 0 rgba(0,0,0,0)", // no glow initially
       }}
       variants={{
-        rest: { backgroundPosition: "0% 0%" },
-        hover: { backgroundPosition: "100% 100%" },
+        rest: {
+          backgroundPosition: "0% 50%",
+          boxShadow: "0 0 0 rgba(0,0,0,0)", // no glow
+        },
+        hover: {
+          backgroundPosition: "100% 50%",
+          boxShadow: "0 0 28px rgba(253, 227, 5, 0.6)", // yellow glow (smooth)
+        },
       }}
       initial="rest"
       whileHover="hover"
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-      {...rest}
+      transition={{
+        duration: 1.3,
+        ease: "easeInOut",
+      }}
     >
-      <span className="block">{children}</span>
-      {icon && <span className="flex items-center">{icon}</span>}
-    </MotionComponent>
+      <MotionComponent
+        href={Component === "a" ? href : undefined}
+        className={`
+          flex items-center justify-center gap-3
+          px-6 py-3 rounded-[10px]
+          font-bold cursor-pointer select-none
+          bg-yellow-bright text-black
+          transition-colors duration-300
+          ${className}
+        `}
+        variants={{
+          rest: {
+            boxShadow: "inset 0 0 0 rgba(0,0,0,0)",
+          },
+          hover: {
+            boxShadow: "inset 0 0 30px rgba(0,0,0,0.45)",
+          },
+        }}
+        transition={{
+          duration: 0.35,
+          ease: "easeOut",
+        }}
+        {...rest}
+      >
+        <span className="block">{children}</span>
+
+        {icon && (
+          <motion.span
+            className="flex items-center"
+            variants={{
+              rest: { scale: 1 },
+              hover: { scale: 1.1 },
+            }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+          >
+            {icon}
+          </motion.span>
+        )}
+      </MotionComponent>
+    </MotionWrapper>
   );
 }
