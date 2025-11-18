@@ -31,23 +31,32 @@ export default function PpButton({
         backgroundImage: gradient,
         backgroundSize: "300% 300%",
         backgroundPosition: "0% 50%",
-        boxShadow: "0 0 0 rgba(0,0,0,0)", // no glow initially
+        // small base glow instead of 0, so shrinking feels natural
+        boxShadow: "0 0 6px rgba(253, 227, 5, 0.25)",
       }}
       variants={{
         rest: {
           backgroundPosition: "0% 50%",
-          boxShadow: "0 0 0 rgba(0,0,0,0)", // no glow
+          boxShadow: "0 0 6px rgba(253, 227, 5, 0.25)", // subtle idle glow
         },
         hover: {
           backgroundPosition: "100% 50%",
-          boxShadow: "0 0 28px rgba(253, 227, 5, 0.6)", // yellow glow (smooth)
+          boxShadow: "0 0 28px rgba(253, 227, 5, 0.6)", // stronger glow
         },
       }}
       initial="rest"
       whileHover="hover"
       transition={{
-        duration: 1.3,
-        ease: "easeInOut",
+        // gradient can stay slow and chill
+        backgroundPosition: {
+          duration: 1.3,
+          ease: "easeInOut",
+        },
+        // glow animates a bit faster but smoothly both ways
+        boxShadow: {
+          duration: 0.6,
+          ease: "easeInOut",
+        },
       }}
     >
       <MotionComponent
