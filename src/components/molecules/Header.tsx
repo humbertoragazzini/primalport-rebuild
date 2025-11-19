@@ -113,7 +113,7 @@ function NavbarLink({ href, label }: { href: string; label: LangContent }) {
   );
 }
 
-export default function Navbar() {
+export default function Header() {
   return (
     <header
       className="
@@ -131,7 +131,10 @@ export default function Navbar() {
           px-6 py-3
         "
       >
-        <Logo />
+        <a className="flex items-center" href="/">
+          <Logo />
+          <p className="text-lg font-semi ml-3 text-white">PrimalPorts</p>
+        </a>
 
         <nav className="flex items-center gap-2">
           {NAV_LINKS.map((link) => (
