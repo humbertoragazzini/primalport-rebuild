@@ -1,5 +1,5 @@
 import Image from "next/image";
 
 export default function Home() {
-  return <main className="w-full min-h-screen bg-slate-950"></main>;
+  return <main className="w-full min-h-screen"></main>;
 }

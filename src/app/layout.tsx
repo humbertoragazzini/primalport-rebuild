@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/molecules/Header";
 import Footer from "../components/molecules/Footer";
+import BgCanvas from "../components/molecules/RTF/BgCanvas";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative bg-slate-950 ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`relative ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <BgCanvas></BgCanvas>
         <Header></Header>
         {children}
         <Footer></Footer>
