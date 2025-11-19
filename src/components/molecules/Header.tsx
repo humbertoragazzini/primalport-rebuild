@@ -120,8 +120,8 @@ export default function Header() {
         sticky top-0 z-50
         w-full
         border-b border-white/10
-        bg-[rgba(0,0,0,0.2)]
         backdrop-blur-md
+        bg-[rgba(0,0,0,0.2)]
       "
     >
       <div

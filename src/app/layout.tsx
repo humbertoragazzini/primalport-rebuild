@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../components/molecules/Header";
 import Footer from "../components/molecules/Footer";
 import BgCanvas from "../components/molecules/RTF/BgCanvas";
+import SmoothScrollProvider from "@/components/atoms/SmoothScrollWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export default function RootLayout({
       >
         <BgCanvas></BgCanvas>
         <Header></Header>
-        {children}
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
         <Footer></Footer>
       </body>
     </html>
