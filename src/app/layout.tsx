@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "../components/molecules/Header";
 import Footer from "../components/molecules/Footer";
 import BgCanvas from "../components/molecules/RTF/BgCanvas";
-import SmoothScrollProvider from "@/components/atoms/SmoothScrollWrapper";
+import SmoothScrollProvider from "../components/atoms/SmoothScrollProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
