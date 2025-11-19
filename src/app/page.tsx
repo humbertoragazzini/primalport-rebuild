@@ -2,7 +2,7 @@ import Image from "next/image";
 import Heading from "../components/atoms/Heading";
 import { FaBeer } from "react-icons/fa";
 import PpButton from "../components/atoms/Button";
-import { Carousel } from "../components/organisms/Carousel";
+import { ShowcaseCarousel } from "../components/organisms/Carousel";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           Bring blockchain to the people. Solana supports experiences for power
           users, new consumers, and everyone in between.
         </p>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mb-8">
           <div>
             <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
               Contact Us
@@ -29,7 +29,6 @@ export default function Home() {
             </PpButton>
           </div>
         </div>
-        <Carousel></Carousel>
       </div>
     </main>
   );
