@@ -81,7 +81,7 @@ export default function PpButton({
 
   return (
     <MotionWrapper
-      className="p-[3px] rounded-xl"
+      className="p-[3px] rounded-full"
       style={{
         backgroundImage: config.gradient,
         backgroundSize: "300% 300%",
@@ -114,8 +114,8 @@ export default function PpButton({
       <MotionComponent
         href={Component === "a" ? href : undefined}
         className={`
-          flex items-center justify-center gap-3
-          px-6 py-3 rounded-[10px]
+          w-full flex items-center justify-center gap-3
+          px-6 py-3 rounded-full
           font-bold cursor-pointer select-none
           ${config.innerBgClass} ${config.textClass}
           transition-colors duration-300

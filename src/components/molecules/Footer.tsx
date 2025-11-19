@@ -14,7 +14,7 @@ export default function Footer() {
     <footer
       className="
         border-t border-white/10
-        bg-gradient-to-b from-slate-950 to-black
+        bg-gradient-to-b from-transparent to-black backdrop-blur-md
         text-slate-300
       "
     >
