@@ -7,7 +7,7 @@ import { ShowcaseCarousel } from "../components/organisms/Carousel";
 export default function Home() {
   return (
     <main className="w-full min-h-screen py-16">
-      <div className="mx-auto max-w-6xl px-6 py-10 h-full backdrop-blur-lg border-1 rounded-4xl border-[rgba(255,255,255,0.1)] mb-16">
+      <div className="mx-auto max-w-6xl px-6 py-10 h-full backdrop-blur-lg border-1 rounded-4xl border-[rgba(255,255,255,0.1)] mb-16 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
         <Heading level={1} className="text-white font-bold text-center mb-4">
           <span>
             Powerful for developers.<br></br> Fast for everyone.
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
           <div className="col-span-8">
             <div className="grid grid-cols-2 gap-7">
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px]">
+              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <Heading level={3}>Decentralized</Heading>
                 <p>
                   The Solana network is validated by thousands of nodes that
@@ -48,7 +48,7 @@ export default function Home() {
                 </p>
                 <p>850</p>
               </div>
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6">
+              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <Heading level={3}>Decentralized</Heading>
                 <p>
                   The Solana network is validated by thousands of nodes that
@@ -57,7 +57,7 @@ export default function Home() {
                 </p>
                 <p>850</p>
               </div>
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px]">
+              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <Heading level={3}>Decentralized</Heading>
                 <p>
                   The Solana network is validated by thousands of nodes that
@@ -66,7 +66,7 @@ export default function Home() {
                 </p>
                 <p>850</p>
               </div>
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6">
+              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <Heading level={3}>Decentralized</Heading>
                 <p>
                   The Solana network is validated by thousands of nodes that
