@@ -7,7 +7,8 @@ import MyCarousel from "../components/organisms/Carousel";
 export default function Home() {
   return (
     <main className="w-full min-h-screen py-16">
-      <div className="mx-auto max-w-6xl px-6 py-10 h-full backdrop-blur-lg border-1 rounded-4xl border-[rgba(255,255,255,0.1)] mb-16 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+      {/* Header */}
+      <div className="mx-auto max-w-6xl px-6 py-10 h-full backdrop-blur-lg border-1 rounded-4xl border-[rgba(255,255,255,0.1)] mb-40 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
         <Heading level={1} className="text-white font-bold text-center mb-4">
           <span>
             Powerful for developers.<br></br> Fast for everyone.
@@ -30,10 +31,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-slate-950">
+      {/* carousel */}
+      <div className="w-full bg-slate-900 mb-40">
         <MyCarousel></MyCarousel>
       </div>
-      <div className="mx-auto max-w-6xl text-white mb-[96px]">
+      {/* cards */}
+      <div className="mx-auto max-w-6xl text-white mb-[200px]">
         <div className="grid grid-cols-12">
           <div className="col-span-4">
             <Heading level={2} className="">

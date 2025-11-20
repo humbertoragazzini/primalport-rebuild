@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -20,7 +21,7 @@ const responsive = {
 
 export default function MyCarousel() {
   return (
-    <div className="w-full">
+    <div className="w-full py-16">
       <Carousel
         responsive={responsive}
         showDots
@@ -29,31 +30,65 @@ export default function MyCarousel() {
         keyBoardControl
         draggable
         containerClass="carousel-container"
-        dotListClass="flex justify-center gap-2 mt-4"
+        dotListClass="flex justify-center gap-2"
         itemClass="px-2"
         renderDotsOutside={false}
       >
         {/* Slide 1 */}
         <div className="h-56 flex items-center justify-center">
           <Item>
-            <span>Slide 1 – put your content here</span>
+            <div className="grid grid-cols-2">
+              <div className="col-span-1">
+                <Image
+                  alt=""
+                  width={450}
+                  height={600}
+                  src={"https://placehold.co/600x450"}
+                ></Image>
+              </div>
+              <div className="col-span-1"></div>
+            </div>
           </Item>
         </div>
 
         {/* Slide 2 */}
         <div className="h-56 flex items-center justify-center">
           <Item>
-            <span>Slide 2 – placeholder item</span>
+            <div className="grid grid-cols-2">
+              <div className="col-span-1">
+                <Image
+                  alt=""
+                  width={450}
+                  height={600}
+                  src={"https://placehold.co/600x450"}
+                ></Image>
+              </div>
+              <div className="col-span-1"></div>
+            </div>
           </Item>
         </div>
 
         {/* Slide 3 */}
         <div className="h-56 flex items-center justify-center">
           <Item>
-            <span>Slide 3 – placeholder item</span>
+            <div className="grid grid-cols-2">
+              <div className="col-span-1">
+                <Image
+                  alt=""
+                  width={450}
+                  height={600}
+                  src={"https://placehold.co/600x450"}
+                ></Image>
+              </div>
+              <div className="col-span-1"></div>
+            </div>
           </Item>
         </div>
       </Carousel>
     </div>
   );
+}
+
+function Item({ children }: { children: any }) {
+  return <div>{children}</div>;
 }
