@@ -2,7 +2,6 @@ import Image from "next/image";
 import Heading from "../components/atoms/Heading";
 import { FaBeer } from "react-icons/fa";
 import PpButton from "../components/atoms/Button";
-import { ShowcaseCarousel } from "../components/organisms/Carousel";
 import MyCarousel from "../components/organisms/Carousel";
 
 export default function Home() {
