@@ -9,6 +9,7 @@ import {
   Bloom,
 } from "@react-three/postprocessing";
 import { useMemo } from "react";
+import { OrbitControls } from "@react-three/drei";
 
 function SceneObjects() {
   const objects = useMemo(() => {
@@ -166,22 +167,22 @@ function ScrollAndMouseGroup() {
 
     const t = scrollY * 0.001;
 
-    const scrollStrength = 0.28;
+    const scrollStrength = 1.5;
     const mouseStrength = 0.02;
 
     groupRef.current.rotation.x =
       Math.sin(t * 0.6) * scrollStrength + my * mouseStrength;
 
     groupRef.current.rotation.y =
-      Math.cos(t * 0.8) * scrollStrength + mx * mouseStrength;
+      Math.cos(t * 0.6) * scrollStrength + mx * mouseStrength;
 
-    groupRef.current.rotation.z = Math.sin(t * 0.3) * scrollStrength + mx * 0.1;
+    // groupRef.current.rotation.z = Math.sin(t * 0.3) * scrollStrength + mx * 0.1;
 
-    groupRef.current.position.x = Math.sin(t * 0.6) * scrollStrength;
+    groupRef.current.position.x = mx * mouseStrength;
 
-    groupRef.current.position.y = Math.cos(t * 0.8) * scrollStrength;
+    groupRef.current.position.y = t * scrollStrength + my * mouseStrength;
 
-    groupRef.current.position.z = Math.cos(t * 0.8) * scrollStrength;
+    // groupRef.current.position.z = Math.cos(t * 0.8) * scrollStrength;
   });
 
   return (
@@ -198,7 +199,7 @@ export default function BgCanvas() {
       <Canvas camera={{ position: [5, 2, 5], fov: 45 }}>
         {/* Rotating scene group */}
         <ScrollAndMouseGroup />
-
+        <OrbitControls></OrbitControls>
         {/* Basic lighting */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[4, 6, 3]} intensity={1.2} />
