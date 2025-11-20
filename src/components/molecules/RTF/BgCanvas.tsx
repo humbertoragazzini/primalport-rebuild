@@ -1,6 +1,6 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import {
@@ -131,7 +131,7 @@ function SceneObjects() {
 
 function ScrollAndMouseGroup() {
   const groupRef = useRef<THREE.Group>(null);
-
+  const { camera } = useThree();
   const scrollRef = useRef(0);
   const mouseRef = useRef({ x: 0, y: 0 });
 
@@ -181,6 +181,13 @@ function ScrollAndMouseGroup() {
     groupRef.current.position.x = mx * mouseStrength;
 
     groupRef.current.position.y = t * scrollStrength + my * mouseStrength;
+
+    // 🔥 modify fov on every frame
+    console.log(t);
+    camera.fov = 90 - ((45 * t) / 2) * scrollStrength;
+
+    // You MUST update projection matrix after modifying the fov
+    camera.updateProjectionMatrix();
 
     // groupRef.current.position.z = Math.cos(t * 0.8) * scrollStrength;
   });
