@@ -3,6 +3,7 @@ import Heading from "../components/atoms/Heading";
 import { FaBeer } from "react-icons/fa";
 import PpButton from "../components/atoms/Button";
 import { ShowcaseCarousel } from "../components/organisms/Carousel";
+import MyCarousel from "../components/organisms/Carousel";
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
             </PpButton>
           </div>
         </div>
+      </div>
+      <div className="w-full bg-slate-950">
+        <MyCarousel></MyCarousel>
       </div>
       <div className="mx-auto max-w-6xl text-white mb-[96px]">
         <div className="grid grid-cols-12">
