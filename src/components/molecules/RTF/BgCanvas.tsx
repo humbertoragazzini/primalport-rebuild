@@ -183,7 +183,6 @@ function ScrollAndMouseGroup() {
     groupRef.current.position.y = t * scrollStrength + my * mouseStrength;
 
     // 🔥 modify fov on every frame
-    console.log(t);
     camera.fov = 90 - ((45 * t) / 2) * scrollStrength;
 
     // You MUST update projection matrix after modifying the fov

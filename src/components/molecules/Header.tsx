@@ -12,7 +12,7 @@ type LangContent = {
 
 const NAV_LINKS: { href: string; label: LangContent }[] = [
   {
-    href: "#home",
+    href: "/",
     label: {
       en: "Home",
       es: "Inicio",
@@ -21,7 +21,7 @@ const NAV_LINKS: { href: string; label: LangContent }[] = [
     },
   },
   {
-    href: "#about",
+    href: "/about-us",
     label: {
       en: "About us",
       es: "Sobre nosotros",
@@ -30,7 +30,7 @@ const NAV_LINKS: { href: string; label: LangContent }[] = [
     },
   },
   {
-    href: "#services",
+    href: "/our-services",
     label: {
       en: "Our services",
       es: "Nuestros servicios",
@@ -39,7 +39,7 @@ const NAV_LINKS: { href: string; label: LangContent }[] = [
     },
   },
   {
-    href: "#contact",
+    href: "/contact-us",
     label: {
       en: "Contact us",
       es: "Contáctanos",
