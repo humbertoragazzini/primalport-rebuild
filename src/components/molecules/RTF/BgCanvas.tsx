@@ -3,6 +3,130 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import {
+  EffectComposer,
+  DepthOfField,
+  Bloom,
+} from "@react-three/postprocessing";
+import { useMemo } from "react";
+
+function SceneObjects() {
+  const objects = useMemo(() => {
+    const GREYS = [
+      "#0b0c10",
+      "#14151b",
+      "#1f2128",
+      "#2b2e37",
+      "#3a3e4a",
+      "#515669",
+      "#707791",
+      "#9aa1b5",
+      "#c3c7d3",
+      "#e5e7ec",
+    ];
+
+    const geometryTypes = [
+      "box",
+      "sphere",
+      "dodeca",
+      "torus",
+      "torusKnot",
+      "octa",
+      "cone",
+      "cylinder",
+    ] as const;
+
+    const count = 50;
+    const result: {
+      position: [number, number, number];
+      scale: number;
+      geometry: (typeof geometryTypes)[number];
+      color: string;
+      bubble: boolean;
+    }[] = [];
+
+    const minRadius = 10;
+    const maxRadius = 35;
+
+    for (let i = 0; i < count; i++) {
+      // random direction on a sphere
+      const u = Math.random();
+      const v = Math.random();
+      const theta = 2 * Math.PI * u;
+      const phi = Math.acos(2 * v - 1);
+
+      const r = minRadius + Math.random() * (maxRadius - minRadius);
+
+      const x = r * Math.sin(phi) * Math.cos(theta);
+      const y = r * Math.sin(phi) * Math.sin(theta);
+      const z = r * Math.cos(phi);
+
+      // More variety in size
+      const scale = 0.4 + Math.random() * 3.0;
+
+      const geometry =
+        geometryTypes[Math.floor(Math.random() * geometryTypes.length)];
+
+      const color = GREYS[Math.floor(Math.random() * GREYS.length)];
+
+      // ~30% bubbles
+      const bubble = Math.random() < 0.3;
+
+      result.push({
+        position: [x, y, z - 10], // push them a bit deeper overall
+        scale,
+        geometry,
+        color,
+        bubble,
+      });
+    }
+
+    return result;
+  }, []);
+
+  return (
+    <>
+      {objects.map((obj, i) => (
+        <mesh key={i} position={obj.position} scale={obj.scale}>
+          {obj.geometry === "box" && <boxGeometry args={[1, 1, 1]} />}
+          {obj.geometry === "sphere" && <sphereGeometry args={[0.7, 32, 32]} />}
+          {obj.geometry === "dodeca" && (
+            <dodecahedronGeometry args={[0.8, 0]} />
+          )}
+          {obj.geometry === "torus" && (
+            <torusGeometry args={[0.7, 0.25, 16, 64]} />
+          )}
+          {obj.geometry === "torusKnot" && (
+            <torusKnotGeometry args={[0.6, 0.2, 100, 16]} />
+          )}
+          {obj.geometry === "octa" && <octahedronGeometry args={[0.8, 0]} />}
+          {obj.geometry === "cone" && <coneGeometry args={[0.7, 1.4, 32]} />}
+          {obj.geometry === "cylinder" && (
+            <cylinderGeometry args={[0.5, 0.5, 1.4, 32]} />
+          )}
+
+          {obj.bubble ? (
+            <meshPhysicalMaterial
+              color={obj.color}
+              roughness={0.05}
+              metalness={0.0}
+              transmission={0.9} // glassy / bubble
+              thickness={0.8}
+              clearcoat={1}
+              clearcoatRoughness={0.05}
+            />
+          ) : (
+            <meshStandardMaterial
+              color={obj.color}
+              roughness={0.4}
+              metalness={0.3}
+            />
+          )}
+        </mesh>
+      ))}
+    </>
+  );
+}
 
 function ScrollAndMouseGroup() {
   const groupRef = useRef<THREE.Group>(null);
@@ -40,14 +164,11 @@ function ScrollAndMouseGroup() {
     const scrollY = scrollRef.current;
     const { x: mx, y: my } = mouseRef.current;
 
-    // scroll rotation
     const t = scrollY * 0.001;
 
-    // Rotation multipliers
-    const scrollStrength = 0.8;
-    const mouseStrength = 0.2;
+    const scrollStrength = 0.28;
+    const mouseStrength = 0.02;
 
-    // apply rotations
     groupRef.current.rotation.x =
       Math.sin(t * 0.6) * scrollStrength + my * mouseStrength;
 
@@ -55,14 +176,18 @@ function ScrollAndMouseGroup() {
       Math.cos(t * 0.8) * scrollStrength + mx * mouseStrength;
 
     groupRef.current.rotation.z = Math.sin(t * 0.3) * scrollStrength + mx * 0.1;
+
+    groupRef.current.position.x = Math.sin(t * 0.6) * scrollStrength;
+
+    groupRef.current.position.y = Math.cos(t * 0.8) * scrollStrength;
+
+    groupRef.current.position.z = Math.cos(t * 0.8) * scrollStrength;
   });
 
   return (
     <group ref={groupRef}>
-      <mesh>
-        <torusKnotGeometry args={[1, 0.3, 120, 32]} />
-        <meshStandardMaterial color="hotpink" />
-      </mesh>
+      {/* You can replace this with your real scene later */}
+      <SceneObjects></SceneObjects>
     </group>
   );
 }
@@ -71,10 +196,30 @@ export default function BgCanvas() {
   return (
     <div className="w-screen h-screen fixed top-0 left-0 -z-50 bg-slate-950">
       <Canvas camera={{ position: [5, 2, 5], fov: 45 }}>
-        {/* SCENE GROUP THAT ROTATES */}
-        <ScrollAndMouseGroup></ScrollAndMouseGroup>
+        {/* Rotating scene group */}
+        <ScrollAndMouseGroup />
 
-        <ambientLight intensity={1} />
+        {/* Basic lighting */}
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[4, 6, 3]} intensity={1.2} />
+
+        {/* Post-processing */}
+        <EffectComposer multisampling={0}>
+          {/* Depth of field aimed at the origin (where your torus is) */}
+          <DepthOfField
+            focusDistance={0.02} // tweak for where focus starts
+            focalLength={0.04} // how strong the DOF is
+            bokehScale={3} // size of the blur circles
+            height={480}
+          />
+
+          {/* Bloom for glow */}
+          <Bloom
+            intensity={1.2} // how strong
+            luminanceThreshold={0.2} // what is considered "bright"
+            luminanceSmoothing={0.15}
+          />
+        </EffectComposer>
       </Canvas>
     </div>
   );
