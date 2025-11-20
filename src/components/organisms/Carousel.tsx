@@ -35,52 +35,124 @@ export default function MyCarousel() {
         renderDotsOutside={false}
       >
         {/* Slide 1 */}
-        <div className="h-56 flex items-center justify-center">
+        <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-12 max-w-6xl">
               <div className="col-span-1">
-                <Image
+                <img src={"https://placehold.co/600x450"}></img>
+                {/* <Image
                   alt=""
                   width={450}
                   height={600}
                   src={"https://placehold.co/600x450"}
-                ></Image>
+                ></Image> */}
               </div>
-              <div className="col-span-1"></div>
+              <div className="col-span-1 h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white">
+                  <div>
+                    <div class="text-3xl mb-8">
+                      <p>
+                        "Time-to-market is crucial in our ever-changing market
+                        environment. With help of Dash Enterprise, we were able
+                        to accelerate deployment of new apps from weeks to
+                        minutes without compromising on governance aspects and
+                        security."
+                      </p>
+                    </div>
+                    <div className="">
+                      <div className="text-md">
+                        <p className="">
+                          Volodymyr Sorokoumov - Digital Trading - Lead Platform
+                          Design &amp; Operations
+                        </p>
+                        <p className="">Uniper</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Item>
         </div>
 
         {/* Slide 2 */}
-        <div className="h-56 flex items-center justify-center">
+        <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-12 max-w-6xl">
               <div className="col-span-1">
-                <Image
+                <img src={"https://placehold.co/600x450"}></img>
+                {/* <Image
                   alt=""
                   width={450}
                   height={600}
                   src={"https://placehold.co/600x450"}
-                ></Image>
+                ></Image> */}
               </div>
-              <div className="col-span-1"></div>
+              <div className="col-span-1 h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white">
+                  <div>
+                    <div class="text-3xl mb-8">
+                      <p>
+                        "Time-to-market is crucial in our ever-changing market
+                        environment. With help of Dash Enterprise, we were able
+                        to accelerate deployment of new apps from weeks to
+                        minutes without compromising on governance aspects and
+                        security."
+                      </p>
+                    </div>
+                    <div className="">
+                      <div className="text-md">
+                        <p className="">
+                          Volodymyr Sorokoumov - Digital Trading - Lead Platform
+                          Design &amp; Operations
+                        </p>
+                        <p className="">Uniper</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Item>
         </div>
 
         {/* Slide 3 */}
-        <div className="h-56 flex items-center justify-center">
+        <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-12 max-w-6xl">
               <div className="col-span-1">
-                <Image
+                <img src={"https://placehold.co/600x450"}></img>
+                {/* <Image
                   alt=""
                   width={450}
                   height={600}
                   src={"https://placehold.co/600x450"}
-                ></Image>
+                ></Image> */}
               </div>
-              <div className="col-span-1"></div>
+              <div className="col-span-1 h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white">
+                  <div>
+                    <div class="text-3xl mb-8">
+                      <p>
+                        "Time-to-market is crucial in our ever-changing market
+                        environment. With help of Dash Enterprise, we were able
+                        to accelerate deployment of new apps from weeks to
+                        minutes without compromising on governance aspects and
+                        security."
+                      </p>
+                    </div>
+                    <div className="">
+                      <div className="text-md">
+                        <p className="">
+                          Volodymyr Sorokoumov - Digital Trading - Lead Platform
+                          Design &amp; Operations
+                        </p>
+                        <p className="">Uniper</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Item>
         </div>

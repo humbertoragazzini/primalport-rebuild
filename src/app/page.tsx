@@ -32,6 +32,11 @@ export default function Home() {
         </div>
       </div>
       {/* carousel */}
+      <div className="w-full mb-20">
+        <Heading level={2} className="text-center font-bold text-white">
+          Some heading for the carousel
+        </Heading>
+      </div>
       <div className="w-full bg-slate-900 mb-40">
         <MyCarousel></MyCarousel>
       </div>
