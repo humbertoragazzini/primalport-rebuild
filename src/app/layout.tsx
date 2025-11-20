@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+
 import Header from "../components/molecules/Header";
 import Footer from "../components/molecules/Footer";
 import BgCanvas from "../components/molecules/RTF/BgCanvas";
 import SmoothScrollProvider from "../components/atoms/SmoothScrollProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // IBM Plex Sans weights
 });
 
 export const metadata: Metadata = {
@@ -23,18 +20,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`relative ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          relative
+          ${plexSans.variable}
+          antialiased
+        `}
       >
-        <BgCanvas></BgCanvas>
-        <Header></Header>
+        <BgCanvas />
+        <Header />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );

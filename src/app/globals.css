@@ -13,3 +13,6 @@
     --color-burgundy: #6B0142;
     --color-deep-black: #030d0c;
   }
+  body {
+    font-family: var(--font-plex-sans), system-ui, sans-serif;
+  }
