@@ -81,7 +81,7 @@ export default function PpButton({
 
   return (
     <MotionWrapper
-      className="p-[3px] rounded-2xl"
+      className="p-[1px] rounded-2xl"
       style={{
         backgroundImage: config.gradient,
         backgroundSize: "300% 300%",

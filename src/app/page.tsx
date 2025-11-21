@@ -21,9 +21,11 @@ export default function Home() {
               <span className="text-yellow-bright">everyone</span>.
             </span>
           </Heading>
-          <p className="font-semi text-xl text-white text-center mx-auto w-[75%] mb-8">
-            Bring blockchain to the people. Solana supports experiences for
-            power users, new consumers, and everyone in between.
+          <p className="font-semi text-xl text-muted-steel-blue text-center mx-auto w-[75%] mb-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum,
+            tempora delectus, ut reprehenderit itaque blanditiis repudiandae
+            optio sint inventore assumenda atque corporis explicabo nostrum? Ut
+            nemo nobis ullam nam.
           </p>
           <div className="flex justify-center items-center mb-8">
             <div>
