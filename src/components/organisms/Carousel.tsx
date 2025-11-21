@@ -37,7 +37,7 @@ export default function MyCarousel() {
         {/* Slide 1 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-6xl">
+            <div className="grid grid-cols-2 gap-12 max-w-[1480px]">
               <div className="col-span-1">
                 <img src={"https://placehold.co/600x450"}></img>
                 {/* <Image
@@ -78,7 +78,7 @@ export default function MyCarousel() {
         {/* Slide 2 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-6xl">
+            <div className="grid grid-cols-2 gap-12 max-w-[1480px]">
               <div className="col-span-1">
                 <img src={"https://placehold.co/600x450"}></img>
                 {/* <Image
@@ -119,7 +119,7 @@ export default function MyCarousel() {
         {/* Slide 3 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-6xl">
+            <div className="grid grid-cols-2 gap-12 max-w-[1480px]">
               <div className="col-span-1">
                 <img src={"https://placehold.co/600x450"}></img>
                 {/* <Image

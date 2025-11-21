@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="w-full min-h-screen py-16">
       {/* Header */}
-      <div className="mx-auto max-w-6xl px-6 py-10 h-full backdrop-blur-lg border-1 rounded-4xl border-[rgba(255,255,255,0.1)] mb-40 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+      <div className="mx-auto max-w-[1480px] px-6 py-10 h-full backdrop-blur-lg border-1 rounded-4xl border-[rgba(255,255,255,0.1)] mb-40 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
         <Heading level={1} className="text-white font-bold text-center mb-4">
           <span>
             About Us.<br></br> Fast for everyone.
@@ -41,7 +41,7 @@ export default function Home() {
         <MyCarousel></MyCarousel>
       </div>
       {/* cards */}
-      <div className="mx-auto max-w-6xl text-white mb-[200px]">
+      <div className="mx-auto max-w-[1480px] text-white mb-[200px]">
         <div className="grid grid-cols-12">
           <div className="col-span-4">
             <Heading level={2} className="">

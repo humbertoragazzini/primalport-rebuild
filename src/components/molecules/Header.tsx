@@ -126,7 +126,7 @@ export default function Header() {
     >
       <div
         className="
-          mx-auto max-w-6xl
+          mx-auto max-w-[1480px]
           flex items-center justify-between
           px-6 py-3
         "
