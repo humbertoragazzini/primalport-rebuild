@@ -39,7 +39,10 @@ export default function MyCarousel() {
           <Item>
             <div className="grid grid-cols-2 gap-12 max-w-[1480px]">
               <div className="col-span-1">
-                <img src={"https://placehold.co/600x450"}></img>
+                <img
+                  className="w-full"
+                  src={"https://placehold.co/600x450"}
+                ></img>
                 {/* <Image
                   alt=""
                   width={450}
@@ -48,7 +51,7 @@ export default function MyCarousel() {
                 ></Image> */}
               </div>
               <div className="col-span-1 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-16">
                   <div>
                     <div class="text-3xl mb-8">
                       <p>
@@ -162,5 +165,9 @@ export default function MyCarousel() {
 }
 
 function Item({ children }: { children: any }) {
-  return <div>{children}</div>;
+  return (
+    <div className="border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+      {children}
+    </div>
+  );
 }
