@@ -37,20 +37,17 @@ export default function MyCarousel() {
         {/* Slide 1 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-[1180px]">
-              <div className="col-span-1">
-                <img src={"https://placehold.co/600x450"}></img>
-                {/* <Image
-                  alt=""
-                  width={450}
-                  height={600}
-                  src={"https://placehold.co/600x450"}
-                ></Image> */}
-              </div>
-              <div className="col-span-1 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white">
+            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
+              {/* <div className="relative col-span-5">
+              <img
+                className="absolute top-0 left-0 h-full"
+                src={"https://placehold.co/600x450"}
+              ></img>
+            </div> */}
+              <div className="col-span-12 h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
                   <div>
-                    <div class="text-3xl mb-8">
+                    <div class="text-4xl mb-8">
                       <p>
                         "Time-to-market is crucial in our ever-changing market
                         environment. With help of Dash Enterprise, we were able
@@ -74,24 +71,20 @@ export default function MyCarousel() {
             </div>
           </Item>
         </div>
-
-        {/* Slide 2 */}
+        {/* Slide 1 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-[1180px]">
-              <div className="col-span-1">
-                <img src={"https://placehold.co/600x450"}></img>
-                {/* <Image
-                  alt=""
-                  width={450}
-                  height={600}
+            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
+              {/* <div className="relative col-span-5">
+                <img
+                  className="absolute top-0 left-0 h-full"
                   src={"https://placehold.co/600x450"}
-                ></Image> */}
-              </div>
-              <div className="col-span-1 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white">
+                ></img>
+              </div> */}
+              <div className="col-span-12 h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
                   <div>
-                    <div class="text-3xl mb-8">
+                    <div class="text-4xl mb-8">
                       <p>
                         "Time-to-market is crucial in our ever-changing market
                         environment. With help of Dash Enterprise, we were able
@@ -115,24 +108,20 @@ export default function MyCarousel() {
             </div>
           </Item>
         </div>
-
-        {/* Slide 3 */}
+        {/* Slide 1 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-[1480px]">
-              <div className="col-span-1">
-                <img src={"https://placehold.co/600x450"}></img>
-                {/* <Image
-                  alt=""
-                  width={450}
-                  height={600}
+            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
+              {/* <div className="relative col-span-5">
+                <img
+                  className="absolute top-0 left-0 h-full"
                   src={"https://placehold.co/600x450"}
-                ></Image> */}
-              </div>
-              <div className="col-span-1 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white">
+                ></img>
+              </div> */}
+              <div className="col-span-12 h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
                   <div>
-                    <div class="text-3xl mb-8">
+                    <div class="text-4xl mb-8">
                       <p>
                         "Time-to-market is crucial in our ever-changing market
                         environment. With help of Dash Enterprise, we were able
