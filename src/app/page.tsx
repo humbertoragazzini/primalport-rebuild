@@ -43,7 +43,7 @@ export default function Home() {
       </div>
       {/* carousel */}
       <div className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]">
-        <div className="bg-slate-950 py-16 h-full">
+        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
           <Heading level={2} className="text-center font-bold text-white">
             Some heading for the carousel
           </Heading>

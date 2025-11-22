@@ -21,7 +21,7 @@ const responsive = {
 
 export default function MyCarousel() {
   return (
-    <div className="w-full py-16">
+    <div className="w-full pb-16">
       <Carousel
         responsive={responsive}
         showDots
@@ -37,12 +37,9 @@ export default function MyCarousel() {
         {/* Slide 1 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-[1480px]">
+            <div className="grid grid-cols-2 gap-12 max-w-[1180px]">
               <div className="col-span-1">
-                <img
-                  className="w-full"
-                  src={"https://placehold.co/600x450"}
-                ></img>
+                <img src={"https://placehold.co/600x450"}></img>
                 {/* <Image
                   alt=""
                   width={450}
@@ -51,7 +48,7 @@ export default function MyCarousel() {
                 ></Image> */}
               </div>
               <div className="col-span-1 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white p-16">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white">
                   <div>
                     <div class="text-3xl mb-8">
                       <p>
@@ -81,7 +78,7 @@ export default function MyCarousel() {
         {/* Slide 2 */}
         <div className="flex items-center justify-center py-16">
           <Item>
-            <div className="grid grid-cols-2 gap-12 max-w-[1480px]">
+            <div className="grid grid-cols-2 gap-12 max-w-[1180px]">
               <div className="col-span-1">
                 <img src={"https://placehold.co/600x450"}></img>
                 {/* <Image
