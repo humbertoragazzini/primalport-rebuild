@@ -80,12 +80,12 @@ export default function Home() {
                   <ShimmerBorderCard
                     title={
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportTitle}
+                        content={homeContent.solutions.cardSmoothExportTitle}
                       ></MultiLangSpan>
                     }
                     body={
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportBody}
+                        content={homeContent.solutions.cardSmoothExportBody}
                       ></MultiLangSpan>
                     }
                   ></ShimmerBorderCard>
@@ -94,12 +94,12 @@ export default function Home() {
                   <ShimmerBorderCard
                     title={
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportTitle}
+                        content={homeContent.solutions.cardLogisticsTitle}
                       ></MultiLangSpan>
                     }
                     body={
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportBody}
+                        content={homeContent.solutions.cardLogisticsBody}
                       ></MultiLangSpan>
                     }
                   ></ShimmerBorderCard>
@@ -108,12 +108,12 @@ export default function Home() {
                   <ShimmerBorderCard
                     title={
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportTitle}
+                        content={homeContent.solutions.cardPaperLineTitle}
                       ></MultiLangSpan>
                     }
                     body={
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportBody}
+                        content={homeContent.solutions.cardPaperLineBody}
                       ></MultiLangSpan>
                     }
                   ></ShimmerBorderCard>
