@@ -4,6 +4,8 @@ import { FaBeer } from "react-icons/fa";
 import PpButton from "../components/atoms/Button";
 import MyCarousel from "../components/organisms/Carousel";
 import { BiBeer } from "react-icons/bi";
+import MultiLangSpan from "../components/atoms/MultiLangSpan";
+import homeContent from "../data/homeContent";
 
 export default function Home() {
   return (
@@ -16,7 +18,10 @@ export default function Home() {
             className="text-white font-bold text-center mb-4 text-[100px]"
           >
             <span>
-              <span className="text-yellow-bright">Conectamos</span> Argentina
+              <span className="text-yellow-bright">
+                <MultiLangSpan content={}></MultiLangSpan>
+              </span>{" "}
+              Argentina
               <br></br> con el <span className="text-yellow-bright">mundo</span>
               .
             </span>
