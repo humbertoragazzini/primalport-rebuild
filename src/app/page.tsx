@@ -6,6 +6,7 @@ import MyCarousel from "../components/organisms/Carousel";
 import { BiBeer } from "react-icons/bi";
 import MultiLangSpan from "../components/atoms/MultiLangSpan";
 import homeContent from "../data/homeContent";
+import { SiHomepage } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -54,7 +55,9 @@ export default function Home() {
           <div className="grid grid-cols-12">
             <div className="col-span-4">
               <Heading level={2} className="font-bold">
-                Made for mass adoption.
+                <MultiLangSpan
+                  content={homeContent.solutions.title}
+                ></MultiLangSpan>
               </Heading>
             </div>
             <div className="col-span-8">
@@ -64,56 +67,60 @@ export default function Home() {
                     <BiBeer className="w-6 h-6"></BiBeer>
                   </div>
                   <Heading level={3} className="mb-4 text-md font-semibold">
-                    Decentralized
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportTitle}
+                    ></MultiLangSpan>
                   </Heading>
                   <p className="mb-4 text-muted-steel-blue">
-                    The Solana network is validated by thousands of nodes that
-                    operate independently of each other, ensuring your data
-                    remains secure and censorship resistant.
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportBody}
+                    ></MultiLangSpan>
                   </p>
-                  <p className="text-sm">The Solana network.</p>
                 </div>
                 <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
                     <BiBeer className="w-6 h-6"></BiBeer>
                   </div>
                   <Heading level={3} className="mb-4 text-md font-semibold">
-                    Decentralized
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmoothExportTitle}
+                    ></MultiLangSpan>
                   </Heading>
                   <p className="mb-4 text-muted-steel-blue">
-                    The Solana network is validated by thousands of nodes that
-                    operate independently of each other, ensuring your data
-                    remains secure and censorship resistant.
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmoothExportBody}
+                    ></MultiLangSpan>
                   </p>
-                  <p className="text-sm">The Solana network.</p>
                 </div>
                 <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
                     <BiBeer className="w-6 h-6"></BiBeer>
                   </div>
                   <Heading level={3} className="mb-4 text-md font-semibold">
-                    Decentralized
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardPaperLineTitle}
+                    ></MultiLangSpan>
                   </Heading>
                   <p className="mb-4 text-muted-steel-blue">
-                    The Solana network is validated by thousands of nodes that
-                    operate independently of each other, ensuring your data
-                    remains secure and censorship resistant.
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardPaperLineBody}
+                    ></MultiLangSpan>
                   </p>
-                  <p className="text-sm">The Solana network.</p>
                 </div>
                 <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
                     <BiBeer className="w-6 h-6"></BiBeer>
                   </div>
                   <Heading level={3} className="mb-4 text-md font-semibold">
-                    Decentralized
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardLogisticsTitle}
+                    ></MultiLangSpan>
                   </Heading>
                   <p className="mb-4 text-muted-steel-blue">
-                    The Solana network is validated by thousands of nodes that
-                    operate independently of each other, ensuring your data
-                    remains secure and censorship resistant.
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardLogisticsBody}
+                    ></MultiLangSpan>
                   </p>
-                  <p className="text-sm">The Solana network.</p>
                 </div>
               </div>
             </div>

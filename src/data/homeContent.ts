@@ -103,9 +103,9 @@ const homeContent = {
 
   solutions: {
     title: {
-      en: "Solutions for Your Business",
-      es: "Soluciones para Tu Empresa",
-      it: "Solutions for Your Business",
+      en: `<span class="text-yellow-bright">Solutions</span> for </br>your <span class="text-yellow-bright">Business</span>`,
+      es: `<span class="text-yellow-bright">Soluciones</span> para </br>tu <span class="text-yellow-bright">Empresa</span>`,
+      it: "Solutions for your Business",
       ch: "为您的企业提供解决方案",
     },
 
