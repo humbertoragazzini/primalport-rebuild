@@ -42,11 +42,13 @@ export default function Home() {
         </div>
       </div>
       {/* carousel */}
-      <div className="w-full min-h-screen flex flex-col justify-center items-center py-16 bg-slate-950 mb-40 border-t-1 border-white">
-        <Heading level={2} className="text-center font-bold text-white">
-          Some heading for the carousel
-        </Heading>
-        <MyCarousel></MyCarousel>
+      <div className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]">
+        <div className="bg-slate-950 py-16 h-full">
+          <Heading level={2} className="text-center font-bold text-white">
+            Some heading for the carousel
+          </Heading>
+          <MyCarousel></MyCarousel>
+        </div>
       </div>
       {/* cards */}
       <div className=" w-full min-h-screen flex justify-center items-center">
