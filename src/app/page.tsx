@@ -11,7 +11,6 @@ import { SiHomepage } from "react-icons/si";
 export default function Home() {
   return (
     <main className="w-full min-h-screen pb-16">
-      <div className="text-yellow-bright">caca</div>
       {/* Header */}
       <div className="mx-auto h-[calc(100vh-160px)] w-full flex justify-center items-center">
         <div className="max-w-[1480px]">
