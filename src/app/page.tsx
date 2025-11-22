@@ -62,7 +62,7 @@ export default function Home() {
             </div>
             <div className="col-span-8">
               <div className="grid grid-cols-2 gap-7">
-                <div className="col-span-1 border-1 aspect-[4/3] rounded-3xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="col-span-1 translate-y-32 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   {/* <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
                     <BiBeer className="w-6 h-6"></BiBeer>
                   </div> */}
@@ -82,7 +82,67 @@ export default function Home() {
                   </p> */}
                   <Example></Example>
                 </div>
-                <div className="col-span-1 border-1 aspect-[4/3] rounded-3xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="col-span-1 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  {/* <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
+                    <BiBeer className="w-6 h-6"></BiBeer>
+                  </div> */}
+                  {/* <div
+                    className="w-full mb-5 rounded-xl bg-cover bg-bottoms flex justify-center items-center aspect-3/1 overflow-hidden"
+                    style={{ backgroundImage: "url(./images/ship.avif)" }}
+                  ></div>
+                  <Heading level={3} className="mb-4 text-md font-semibold">
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportTitle}
+                    ></MultiLangSpan>
+                  </Heading>
+                  <p className="mb-4 text-muted-steel-blue">
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportBody}
+                    ></MultiLangSpan>
+                  </p> */}
+                  <Example></Example>
+                </div>
+                <div className="col-span-1 translate-y-32 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  {/* <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
+                    <BiBeer className="w-6 h-6"></BiBeer>
+                  </div> */}
+                  {/* <div
+                    className="w-full mb-5 rounded-xl bg-cover bg-bottoms flex justify-center items-center aspect-3/1 overflow-hidden"
+                    style={{ backgroundImage: "url(./images/ship.avif)" }}
+                  ></div>
+                  <Heading level={3} className="mb-4 text-md font-semibold">
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportTitle}
+                    ></MultiLangSpan>
+                  </Heading>
+                  <p className="mb-4 text-muted-steel-blue">
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportBody}
+                    ></MultiLangSpan>
+                  </p> */}
+                  <Example></Example>
+                </div>
+                <div className="col-span-1 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  {/* <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
+                    <BiBeer className="w-6 h-6"></BiBeer>
+                  </div> */}
+                  {/* <div
+                    className="w-full mb-5 rounded-xl bg-cover bg-bottoms flex justify-center items-center aspect-3/1 overflow-hidden"
+                    style={{ backgroundImage: "url(./images/ship.avif)" }}
+                  ></div>
+                  <Heading level={3} className="mb-4 text-md font-semibold">
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportTitle}
+                    ></MultiLangSpan>
+                  </Heading>
+                  <p className="mb-4 text-muted-steel-blue">
+                    <MultiLangSpan
+                      content={homeContent.solutions.cardSmartImportBody}
+                    ></MultiLangSpan>
+                  </p> */}
+                  <Example></Example>
+                </div>
+                {/* <div className="col-span-1 border-1 aspect-[4/3] rounded-3xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
                     <BiBeer className="w-6 h-6"></BiBeer>
                   </div>
@@ -126,7 +186,7 @@ export default function Home() {
                       content={homeContent.solutions.cardLogisticsBody}
                     ></MultiLangSpan>
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
