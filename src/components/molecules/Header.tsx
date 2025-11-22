@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import MultiLangSpan from "../atoms/MultiLangSpan";
+import PpButton from "../atoms/Button";
+import { FaBeer } from "react-icons/fa";
 
 type LangContent = {
   en: string;
@@ -126,7 +128,7 @@ export default function Header() {
     >
       <div
         className="
-          mx-auto max-w-[1480px]
+          mw-full
           flex items-center justify-between
           px-6 py-3
         "
@@ -141,6 +143,10 @@ export default function Header() {
             <NavbarLink key={link.href} href={link.href} label={link.label} />
           ))}
         </nav>
+
+        <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
+          Contact Us
+        </PpButton>
       </div>
     </header>
   );

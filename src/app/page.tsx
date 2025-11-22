@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </div>
       {/* carousel */}
-      <div className="w-full min-h-screen flex flex-col justify-center items-center py-16 bg-slate-950 mb-40">
+      <div className="w-full min-h-screen flex flex-col justify-center items-center py-16 bg-slate-950 mb-40 border-t-1 border-white">
         <Heading level={2} className="text-center font-bold text-white">
           Some heading for the carousel
         </Heading>
