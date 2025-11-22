@@ -22,8 +22,25 @@
 body {
   font-family: var(--font-plex-sans), system-ui, sans-serif;
 }
-.carousel-container{
-  button{
-    border: 1px solid #6B0142;
+.carousel-container {
+  .react-multiple-carousel__arrow{
+    border: 1px solid #94A3B8 !important;
+    background-color: transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+
+    &::before {
+      color: #94A3B8 !important;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      border-color: #94AAB8 !important;
+      background-color: #030d0c !important;
+
+      &::before {
+        color: #94AAB8 !important;
+      }
+    }
   }
 }
