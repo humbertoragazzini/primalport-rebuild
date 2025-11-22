@@ -26,24 +26,24 @@ export default function LanguageToggle() {
       {language === "en" ? (
         <>
           <Image
-            src="./images/icons/flags/es.svg"
+            src="./images/icons/flags/uk.svg"
             alt="Español"
             width={22}
             height={22}
             className="rounded-sm"
           />
-          <span className="text-sm">ES</span>
+          <span className="text-sm">EN</span>
         </>
       ) : (
         <>
           <Image
-            src="./images/icons/flags/uk.svg"
+            src="./images/icons/flags/es.svg"
             alt="English"
             width={22}
             height={22}
             className="rounded-sm"
           />
-          <span className="text-sm">EN</span>
+          <span className="text-sm">ES</span>
         </>
       )}
     </button>
