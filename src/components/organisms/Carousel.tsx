@@ -21,7 +21,7 @@ const responsive = {
 
 export default function MyCarousel() {
   return (
-    <div className="w-full pb-16">
+    <div className="w-full mx-auto max-w-[1480px] pb-16">
       <Carousel
         responsive={responsive}
         showDots

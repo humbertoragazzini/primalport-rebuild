@@ -3,6 +3,7 @@ import Heading from "../components/atoms/Heading";
 import { FaBeer } from "react-icons/fa";
 import PpButton from "../components/atoms/Button";
 import MyCarousel from "../components/organisms/Carousel";
+import { BiBeer } from "react-icons/bi";
 
 export default function Home() {
   return (
@@ -15,17 +16,14 @@ export default function Home() {
             className="text-white font-bold text-center mb-4 text-[100px]"
           >
             <span>
-              <span className="text-yellow-bright">Powerful</span> for
-              developers.
-              <br></br> Fast for{" "}
-              <span className="text-yellow-bright">everyone</span>.
+              <span className="text-yellow-bright">Conectamos</span> Argentina
+              <br></br> con el <span className="text-yellow-bright">mundo</span>
+              .
             </span>
           </Heading>
           <p className="font-semi text-xl text-muted-steel-blue text-center mx-auto w-[75%] mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum,
-            tempora delectus, ut reprehenderit itaque blanditiis repudiandae
-            optio sint inventore assumenda atque corporis explicabo nostrum? Ut
-            nemo nobis ullam nam.
+            Importación, exportación y soluciones logísticas para empresas que
+            buscan crecer sin fronteras.
           </p>
           <div className="flex justify-center items-center mb-8">
             {/* <div>
@@ -61,41 +59,61 @@ export default function Home() {
             </div>
             <div className="col-span-8">
               <div className="grid grid-cols-2 gap-7">
-                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <Heading level={3}>Decentralized</Heading>
-                  <p>
+                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
+                    <BiBeer className="w-6 h-6"></BiBeer>
+                  </div>
+                  <Heading level={3} className="mb-4 text-md font-semibold">
+                    Decentralized
+                  </Heading>
+                  <p className="mb-4 text-muted-steel-blue">
                     The Solana network is validated by thousands of nodes that
                     operate independently of each other, ensuring your data
                     remains secure and censorship resistant.
                   </p>
-                  <p>850</p>
+                  <p className="text-sm">The Solana network.</p>
                 </div>
-                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <Heading level={3}>Decentralized</Heading>
-                  <p>
+                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
+                    <BiBeer className="w-6 h-6"></BiBeer>
+                  </div>
+                  <Heading level={3} className="mb-4 text-md font-semibold">
+                    Decentralized
+                  </Heading>
+                  <p className="mb-4 text-muted-steel-blue">
                     The Solana network is validated by thousands of nodes that
                     operate independently of each other, ensuring your data
                     remains secure and censorship resistant.
                   </p>
-                  <p>850</p>
+                  <p className="text-sm">The Solana network.</p>
                 </div>
-                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <Heading level={3}>Decentralized</Heading>
-                  <p>
+                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
+                    <BiBeer className="w-6 h-6"></BiBeer>
+                  </div>
+                  <Heading level={3} className="mb-4 text-md font-semibold">
+                    Decentralized
+                  </Heading>
+                  <p className="mb-4 text-muted-steel-blue">
                     The Solana network is validated by thousands of nodes that
                     operate independently of each other, ensuring your data
                     remains secure and censorship resistant.
                   </p>
-                  <p>850</p>
+                  <p className="text-sm">The Solana network.</p>
                 </div>
-                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <Heading level={3}>Decentralized</Heading>
-                  <p>
+                <div className="col-span-1 border-1 aspect-[4/3] rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-7 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <div className="w-16 h-16 mb-4 rounded-xl bg-slate-800 flex justify-center items-center">
+                    <BiBeer className="w-6 h-6"></BiBeer>
+                  </div>
+                  <Heading level={3} className="mb-4 text-md font-semibold">
+                    Decentralized
+                  </Heading>
+                  <p className="mb-4 text-muted-steel-blue">
                     The Solana network is validated by thousands of nodes that
                     operate independently of each other, ensuring your data
                     remains secure and censorship resistant.
                   </p>
-                  <p>850</p>
+                  <p className="text-sm">The Solana network.</p>
                 </div>
               </div>
             </div>
