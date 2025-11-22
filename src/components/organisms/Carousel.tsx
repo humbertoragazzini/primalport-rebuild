@@ -3,6 +3,9 @@
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import homeContent from "@/src/data/homeContent";
+import MultiLangSpan from "../atoms/MultiLangSpan";
+import Heading from "../atoms/Heading";
 
 const responsive = {
   desktop: {
@@ -35,6 +38,42 @@ export default function MyCarousel() {
         renderDotsOutside={false}
       >
         {/* Slide 1 */}
+        <div className="flex items-center justify-center pt-16">
+          <Item>
+            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
+              {/* <div className="relative col-span-5">
+                <img
+                  className="absolute top-0 left-0 h-full"
+                  src={"https://placehold.co/600x450"}
+                ></img>
+              </div> */}
+              <div className="col-span-12 h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
+                  <div>
+                    <div class="text-4xl mb-8">
+                      <Heading
+                        level={2}
+                        className="!text-3xl font-semibold text-yellow-bright"
+                      >
+                        <MultiLangSpan
+                          content={homeContent.services.importTitle}
+                        ></MultiLangSpan>
+                      </Heading>
+                    </div>
+                    <div className="">
+                      <p className="text-xl text-muted-steel-blue">
+                        <MultiLangSpan
+                          content={homeContent.services.importBody}
+                        ></MultiLangSpan>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Item>
+        </div>
+        {/* Slide 1 */}
         <div className="flex items-center justify-center py-16">
           <Item>
             <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
@@ -48,22 +87,21 @@ export default function MyCarousel() {
                 <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
                   <div>
                     <div class="text-4xl mb-8">
-                      <p>
-                        "Time-to-market is crucial in our ever-changing market
-                        environment. With help of Dash Enterprise, we were able
-                        to accelerate deployment of new apps from weeks to
-                        minutes without compromising on governance aspects and
-                        security."
-                      </p>
+                      <Heading
+                        level={2}
+                        className="!text-3xl font-semibold text-yellow-bright"
+                      >
+                        <MultiLangSpan
+                          content={homeContent.services.consultingTitle}
+                        ></MultiLangSpan>
+                      </Heading>
                     </div>
                     <div className="">
-                      <div className="text-md">
-                        <p className="">
-                          Volodymyr Sorokoumov - Digital Trading - Lead Platform
-                          Design &amp; Operations
-                        </p>
-                        <p className="">Uniper</p>
-                      </div>
+                      <p className="text-xl text-muted-steel-blue">
+                        <MultiLangSpan
+                          content={homeContent.services.consultingBody}
+                        ></MultiLangSpan>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -85,59 +123,21 @@ export default function MyCarousel() {
                 <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
                   <div>
                     <div class="text-4xl mb-8">
-                      <p>
-                        "Time-to-market is crucial in our ever-changing market
-                        environment. With help of Dash Enterprise, we were able
-                        to accelerate deployment of new apps from weeks to
-                        minutes without compromising on governance aspects and
-                        security."
-                      </p>
+                      <Heading
+                        level={2}
+                        className="!text-3xl font-semibold text-yellow-bright"
+                      >
+                        <MultiLangSpan
+                          content={homeContent.services.paperTitle}
+                        ></MultiLangSpan>
+                      </Heading>
                     </div>
                     <div className="">
-                      <div className="text-md">
-                        <p className="">
-                          Volodymyr Sorokoumov - Digital Trading - Lead Platform
-                          Design &amp; Operations
-                        </p>
-                        <p className="">Uniper</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Item>
-        </div>
-        {/* Slide 1 */}
-        <div className="flex items-center justify-center py-16">
-          <Item>
-            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
-              {/* <div className="relative col-span-5">
-                <img
-                  className="absolute top-0 left-0 h-full"
-                  src={"https://placehold.co/600x450"}
-                ></img>
-              </div> */}
-              <div className="col-span-12 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
-                  <div>
-                    <div class="text-4xl mb-8">
-                      <p>
-                        "Time-to-market is crucial in our ever-changing market
-                        environment. With help of Dash Enterprise, we were able
-                        to accelerate deployment of new apps from weeks to
-                        minutes without compromising on governance aspects and
-                        security."
+                      <p className="text-xl text-muted-steel-blue">
+                        <MultiLangSpan
+                          content={homeContent.services.paperBody}
+                        ></MultiLangSpan>
                       </p>
-                    </div>
-                    <div className="">
-                      <div className="text-md">
-                        <p className="">
-                          Volodymyr Sorokoumov - Digital Trading - Lead Platform
-                          Design &amp; Operations
-                        </p>
-                        <p className="">Uniper</p>
-                      </div>
                     </div>
                   </div>
                 </div>

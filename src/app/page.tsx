@@ -10,6 +10,7 @@ import homeContent from "../data/homeContent";
 export default function Home() {
   return (
     <main className="w-full min-h-screen pb-16">
+      <div className="text-yellow-bright">caca</div>
       {/* Header */}
       <div className="mx-auto h-[calc(100vh-160px)] w-full flex justify-center items-center">
         <div className="max-w-[1480px]">
@@ -17,18 +18,10 @@ export default function Home() {
             level={1}
             className="text-white font-bold text-center mb-4 text-[100px]"
           >
-            <span>
-              <span className="text-yellow-bright">
-                <MultiLangSpan content={}></MultiLangSpan>
-              </span>{" "}
-              Argentina
-              <br></br> con el <span className="text-yellow-bright">mundo</span>
-              .
-            </span>
+            <MultiLangSpan content={homeContent.hero.title}></MultiLangSpan>
           </Heading>
           <p className="font-semi text-xl text-muted-steel-blue text-center mx-auto w-[75%] mb-8">
-            Importación, exportación y soluciones logísticas para empresas que
-            buscan crecer sin fronteras.
+            <MultiLangSpan content={homeContent.hero.subtitle}></MultiLangSpan>
           </p>
           <div className="flex justify-center items-center mb-8">
             {/* <div>
@@ -47,9 +40,11 @@ export default function Home() {
       {/* carousel */}
       <div className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]">
         <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
-          <Heading level={2} className="text-center font-bold text-white">
-            Some heading for the carousel
-          </Heading>
+          <div className="w-full mx-auto max-w-[1480px] px-6">
+            <Heading level={2} className="text-left font-bold text-white">
+              <MultiLangSpan content={homeContent.about.title}></MultiLangSpan>
+            </Heading>
+          </div>
           <MyCarousel></MyCarousel>
         </div>
       </div>
