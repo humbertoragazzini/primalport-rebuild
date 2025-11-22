@@ -15,15 +15,18 @@ export default function LanguageToggle() {
       className="
         flex items-center gap-2 
         px-3 py-2 rounded-md 
-        bg-neutral-800 hover:bg-neutral-700 
+        font-semibold
+        cursor-pointer
+        bg-slate-950 hover:bg-neutral-900 
         transition-colors
         border border-neutral-700
+        text-white
       "
     >
       {language === "en" ? (
         <>
           <Image
-            src="/flags/es.png" // you need to add this icon
+            src="./images/icons/flags/es.svg"
             alt="Español"
             width={22}
             height={22}
@@ -34,7 +37,7 @@ export default function LanguageToggle() {
       ) : (
         <>
           <Image
-            src="/flags/en.png" // you need to add this icon
+            src="./images/icons/flags/uk.svg"
             alt="English"
             width={22}
             height={22}
