@@ -43,16 +43,16 @@ const homeContent = {
 
   about: {
     title: {
-      en: "About <strong>Primalport</strong>",
-      es: "Sobre <strong>Primalport</strong>",
-      it: "About <strong>Primalport</strong>",
-      ch: "关于 <strong>Primalport</strong>",
+      en: "About Primalport",
+      es: "Sobre Primalport",
+      it: "About Primalport",
+      ch: "关于 Primalport",
     },
     body: {
-      en: "Primalport is an Argentinian family-owned company dedicated to international trade. We support businesses of all sizes with reliable, transparent, and efficient import and export processes. Our new <strong>Toilet Paper Division</strong> expands our industrial capabilities with high-quality paper products for wholesale distribution.",
-      es: "Primalport es una empresa familiar argentina dedicada al comercio internacional. Acompañamos a empresas de todos los tamaños con procesos de importación y exportación confiables, transparentes y eficientes. Nuestra nueva <strong>división de papel higiénico</strong> amplía nuestra capacidad industrial con productos de papel de alta calidad para distribución mayorista.",
-      it: "Primalport is an Argentinian family-owned company dedicated to international trade. We support businesses of all sizes with reliable, transparent, and efficient import and export processes. Our new <strong>Toilet Paper Division</strong> expands our industrial capabilities with high-quality paper products for wholesale distribution.",
-      ch: "Primalport 是一家阿根廷家族企业，专注于国际贸易。我们为各类规模的企业提供可靠、透明、高效率的进出口服务。全新的<strong>卫生纸部门</strong>扩展了我们的工业能力，提供高品质纸制品的批发供应。",
+      en: "Primalport is an Argentinian family-owned company dedicated to international trade. We support businesses of all sizes with reliable, transparent, and efficient import and export processes. Our new Toilet Paper Division expands our industrial capabilities with high-quality paper products for wholesale distribution.",
+      es: "Primalport es una empresa familiar argentina dedicada al comercio internacional. Acompañamos a empresas de todos los tamaños con procesos de importación y exportación confiables, transparentes y eficientes. Nuestra nueva división de papel higiénico amplía nuestra capacidad industrial con productos de papel de alta calidad para distribución mayorista.",
+      it: "Primalport is an Argentinian family-owned company dedicated to international trade. We support businesses of all sizes with reliable, transparent, and efficient import and export processes. Our new Toilet Paper Division expands our industrial capabilities with high-quality paper products for wholesale distribution.",
+      ch: "Primalport 是一家阿根廷家族企业，专注于国际贸易。我们为各类规模的企业提供可靠、透明、高效率的进出口服务。全新的卫生纸部门扩展了我们的工业能力，提供高品质纸制品的批发供应。",
     },
   },
 
@@ -103,10 +103,10 @@ const homeContent = {
 
   solutions: {
     title: {
-      en: "Solutions for <strong>Your Business</strong>",
-      es: "Soluciones para <strong>Tu Empresa</strong>",
-      it: "Solutions for <strong>Your Business</strong>",
-      ch: "为<strong>您的企业</strong>提供解决方案",
+      en: "Solutions for Your Business",
+      es: "Soluciones para Tu Empresa",
+      it: "Solutions for Your Business",
+      ch: "为您的企业提供解决方案",
     },
 
     cardSmartImportTitle: {
