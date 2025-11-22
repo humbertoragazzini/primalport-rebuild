@@ -1,5 +1,5 @@
 "use client";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { useLanguageStore } from "@/src/hooks/useLanguage";
 import Image from "next/image";
 
 export default function LanguageToggle() {

@@ -4,6 +4,7 @@ import Link from "next/link";
 import MultiLangSpan from "../atoms/MultiLangSpan";
 import PpButton from "../atoms/Button";
 import { FaBeer } from "react-icons/fa";
+import LanguageToggle from "../atoms/LanguageToggle";
 
 type LangContent = {
   en: string;
@@ -144,9 +145,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
-          Contact Us
-        </PpButton>
+        <LanguageToggle></LanguageToggle>
       </div>
     </header>
   );
