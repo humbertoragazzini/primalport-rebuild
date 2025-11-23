@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <main className="w-full min-h-screen pb-16">
       {/* Header */}
-      <div className="mx-auto h-[calc(100vh-160px)] w-full flex justify-center items-center">
+      <div className="mx-auto  px-6 h-[calc(100vh-160px)] w-full flex justify-center items-center">
         <div className="max-w-[1480px]">
           <Heading
             level={1}
-            className="text-white font-bold text-center mb-4 text-[100px]"
+            className="text-white font-bold text-center mb-4 text-3xl md:text-6 xl:text-[100px]"
           >
             <MultiLangSpan content={homeContent.hero.title}></MultiLangSpan>
           </Heading>

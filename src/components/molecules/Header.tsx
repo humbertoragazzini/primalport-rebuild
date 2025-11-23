@@ -139,7 +139,7 @@ export default function Header() {
           <p className="text-lg font-semi ml-3 text-white">PrimalPorts</p>
         </a>
 
-        <nav className="flex items-center gap-2">
+        <nav className="hidden lg:flex items-center gap-2">
           {NAV_LINKS.map((link) => (
             <NavbarLink key={link.href} href={link.href} label={link.label} />
           ))}
