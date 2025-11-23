@@ -40,20 +40,14 @@ export default function MyCarousel() {
         {/* Slide 1 */}
         <div className="flex items-center justify-center pt-16">
           <Item>
-            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
-              {/* <div className="relative col-span-5">
-                <img
-                  className="absolute top-0 left-0 h-full"
-                  src={"https://placehold.co/600x450"}
-                ></img>
-              </div> */}
-              <div className="col-span-12 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
+            <div className="max-w-[1180px]">
+              <div className="h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-6 xl:p-12">
                   <div>
-                    <div class="text-4xl mb-8">
+                    <div className="text-4xl mb-8">
                       <Heading
-                        level={2}
-                        className="!text-3xl font-semibold text-yellow-bright"
+                        level={3}
+                        className="font-semibold text-yellow-bright"
                       >
                         <MultiLangSpan
                           content={homeContent.services.importTitle}
@@ -61,7 +55,7 @@ export default function MyCarousel() {
                       </Heading>
                     </div>
                     <div className="">
-                      <p className="text-xl text-muted-steel-blue">
+                      <p className="text-base lg:text-xl text-muted-steel-blue">
                         <MultiLangSpan
                           content={homeContent.services.importBody}
                         ></MultiLangSpan>
@@ -74,22 +68,16 @@ export default function MyCarousel() {
           </Item>
         </div>
         {/* Slide 1 */}
-        <div className="flex items-center justify-center py-16">
+        <div className="flex items-center justify-center pt-16">
           <Item>
-            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
-              {/* <div className="relative col-span-5">
-              <img
-                className="absolute top-0 left-0 h-full"
-                src={"https://placehold.co/600x450"}
-              ></img>
-            </div> */}
-              <div className="col-span-12 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
+            <div className="max-w-[1180px]">
+              <div className="h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-6 xl:p-12">
                   <div>
-                    <div class="text-4xl mb-8">
+                    <div className="text-4xl mb-8">
                       <Heading
                         level={2}
-                        className="!text-3xl font-semibold text-yellow-bright"
+                        className="font-semibold text-yellow-bright"
                       >
                         <MultiLangSpan
                           content={homeContent.services.consultingTitle}
@@ -97,7 +85,7 @@ export default function MyCarousel() {
                       </Heading>
                     </div>
                     <div className="">
-                      <p className="text-xl text-muted-steel-blue">
+                      <p className="text-base lg:text-xl text-muted-steel-blue">
                         <MultiLangSpan
                           content={homeContent.services.consultingBody}
                         ></MultiLangSpan>
@@ -110,22 +98,16 @@ export default function MyCarousel() {
           </Item>
         </div>
         {/* Slide 1 */}
-        <div className="flex items-center justify-center py-16">
+        <div className="flex items-center justify-center pt-16">
           <Item>
-            <div className="grid grid-cols-12 gap-12 max-w-[1180px]">
-              {/* <div className="relative col-span-5">
-                <img
-                  className="absolute top-0 left-0 h-full"
-                  src={"https://placehold.co/600x450"}
-                ></img>
-              </div> */}
-              <div className="col-span-12 h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white p-12">
+            <div className="max-w-[1180px]">
+              <div className="h-full">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-6 xl:p-12">
                   <div>
-                    <div class="text-4xl mb-8">
+                    <div className="text-4xl mb-8">
                       <Heading
                         level={2}
-                        className="!text-3xl font-semibold text-yellow-bright"
+                        className="font-semibold text-yellow-bright"
                       >
                         <MultiLangSpan
                           content={homeContent.services.paperTitle}
@@ -133,7 +115,7 @@ export default function MyCarousel() {
                       </Heading>
                     </div>
                     <div className="">
-                      <p className="text-xl text-muted-steel-blue">
+                      <p className="text-base lg:text-xl text-muted-steel-blue">
                         <MultiLangSpan
                           content={homeContent.services.paperBody}
                         ></MultiLangSpan>
