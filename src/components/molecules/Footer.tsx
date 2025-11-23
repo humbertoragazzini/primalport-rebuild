@@ -99,8 +99,12 @@ export default function Footer() {
           <FooterColumn
             title="Home"
             links={[
-              { label: "Hero section", href: "#home-hero" },
-              { label: "Highlights", href: "#home-highlights" },
+              { label: "Hero", href: "#home-hero" },
+              { label: "About Primalport", href: "#home-highlights" },
+              { label: "Smart Importing", href: "#home-highlights" },
+              { label: "Smooth Exporting", href: "#home-highlights" },
+              { label: "Logistics & Coordination", href: "#home-highlights" },
+              { label: "Toilet Paper Line", href: "#home-highlights" },
             ]}
           />
           <FooterColumn
