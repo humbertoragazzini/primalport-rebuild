@@ -2,6 +2,54 @@ import React, { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { useActions } from "@/src/hooks/useActions";
 import LanguageToggle from "../atoms/LanguageToggle";
+import Link from "next/link";
+import MultiLangSpan from "../atoms/MultiLangSpan";
+
+type LangContent = {
+  en: string;
+  es: string;
+  it: string;
+  ch: string;
+};
+
+const NAV_LINKS: { href: string; label: LangContent }[] = [
+  {
+    href: "/",
+    label: {
+      en: "Home",
+      es: "Inicio",
+      it: "Home",
+      ch: "首页",
+    },
+  },
+  {
+    href: "/about-us",
+    label: {
+      en: "About us",
+      es: "Sobre nosotros",
+      it: "Chi siamo",
+      ch: "关于我们",
+    },
+  },
+  {
+    href: "/our-services",
+    label: {
+      en: "Our services",
+      es: "Nuestros servicios",
+      it: "I nostri servizi",
+      ch: "我们的服务",
+    },
+  },
+  {
+    href: "/contact-us",
+    label: {
+      en: "Contact us",
+      es: "Contáctanos",
+      it: "Contattaci",
+      ch: "联系我们",
+    },
+  },
+];
 
 export const MobileMenu = () => {
   const { menu, setMenuToggle } = useActions();
@@ -26,7 +74,27 @@ export const MobileMenu = () => {
               }}
               className="absolute top-0 left-0 h-[500px] w-full bg-[rgba(0,0,0,0.85)]"
             >
-              <div className="pt-[115px] px-4">
+              <div className="pt-[175px] px-4">
+                <div className="mb-4">
+                  <nav className="flex justify-center items-start flex-col text-white gap-4">
+                    {NAV_LINKS.map((link) => (
+                      <motion.div
+                        initial={{
+                          opacity: 0,
+                          y: 50,
+                        }}
+                        animate={{
+                          opacity: 1,
+                          y: 0,
+                        }}
+                      >
+                        <Link key={link.href} href={link.href}>
+                          <MultiLangSpan content={link.label}></MultiLangSpan>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </nav>
+                </div>
                 <LanguageToggle></LanguageToggle>
               </div>
             </motion.div>
