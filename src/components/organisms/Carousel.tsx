@@ -38,7 +38,7 @@ export default function MyCarousel() {
         renderDotsOutside={false}
       >
         {/* Slide 1 */}
-        <div className="flex items-center justify-center pt-16">
+        <div className="flex items-center justify-center py-12">
           <Item>
             <div className="max-w-[1180px]">
               <div className="h-full">
@@ -102,7 +102,7 @@ export default function MyCarousel() {
           <Item>
             <div className="max-w-[1180px]">
               <div className="h-full">
-                <div className="w-full h-full flex flex-col justify-center items-center text-white p-6 xl:p-12">
+                <div className="w-full h-full flex flex-col justify-center items-center text-white p-6 xl:p-12 ">
                   <div>
                     <div className="text-4xl mb-8">
                       <Heading

@@ -24,6 +24,7 @@ body {
 }
 .carousel-container {
   .react-multiple-carousel__arrow{
+    display: none;
     border: 1px solid #94A3B8 !important;
     background-color: transparent;
     transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
@@ -43,4 +44,31 @@ body {
       }
     }
   }
+}
+
+/* ≥ 480px — Large phones */
+@media (min-width: 480px) {
+  
+}
+
+/* ≥ 640px — Small tablets / large phones in landscape */
+@media (min-width: 640px) {
+  
+}
+
+/* ≥ 768px — Tablets */
+@media (min-width: 768px) {
+  
+}
+
+/* ≥ 1024px — Small laptops */
+@media (min-width: 1024px) {
+  .react-multiple-carousel__arrow{
+    display: block;
+  }
+}
+
+/* ≥ 1280px — Desktops */
+@media (min-width: 1280px) {
+  
 }
