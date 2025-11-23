@@ -5,6 +5,7 @@ import MultiLangSpan from "../atoms/MultiLangSpan";
 import PpButton from "../atoms/Button";
 import { FaBeer } from "react-icons/fa";
 import LanguageToggle from "../atoms/LanguageToggle";
+import { MobileMenu } from "./MobileMenu";
 
 type LangContent = {
   en: string;
@@ -146,6 +147,7 @@ export default function Header() {
         </nav>
 
         <LanguageToggle></LanguageToggle>
+        <MobileMenu></MobileMenu>
       </div>
     </header>
   );
