@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { useActions } from "@/src/hooks/useActions";
+import LanguageToggle from "../atoms/LanguageToggle";
 
 export const MobileMenu = () => {
   const { menu, setMenuToggle } = useActions();
@@ -10,7 +11,25 @@ export const MobileMenu = () => {
       <div className="w-[42px] h-[42px] ml-3 rounded-md grid place-content-center bg-gradient-to-br from-slate-800 to-slate-950">
         <AnimatePresence>
           {menu && (
-            <div className="absolute top-0 left-0 h-[500px] w-full bg-[rgba(0,0,0,0.25)]"></div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -500,
+              }}
+              animate={{
+                opacity: 1,
+                y: -100,
+              }}
+              exit={{
+                opacity: 0,
+                y: -500,
+              }}
+              className="absolute top-0 left-0 h-[500px] w-full bg-[rgba(0,0,0,0.85)]"
+            >
+              <div className="pt-[115px] px-4">
+                <LanguageToggle></LanguageToggle>
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
         <AnimatedHamburgerButton />

@@ -146,7 +146,9 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex">
-          <LanguageToggle></LanguageToggle>
+          <div className="hidden md:block">
+            <LanguageToggle></LanguageToggle>
+          </div>
           <MobileMenu></MobileMenu>
         </div>
       </div>
