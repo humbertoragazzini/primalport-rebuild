@@ -145,9 +145,10 @@ export default function Header() {
             <NavbarLink key={link.href} href={link.href} label={link.label} />
           ))}
         </nav>
-
-        <LanguageToggle></LanguageToggle>
-        <MobileMenu></MobileMenu>
+        <div className="flex">
+          <LanguageToggle></LanguageToggle>
+          <MobileMenu></MobileMenu>
+        </div>
       </div>
     </header>
   );

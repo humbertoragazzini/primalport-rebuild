@@ -1,10 +1,18 @@
 import React, { useState } from "react";
-import { MotionConfig, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
+import { useActions } from "@/src/hooks/useActions";
 
 export const MobileMenu = () => {
+  const { menu, setMenuToggle } = useActions();
+
   return (
     <div>
-      <div className="w-[42px] h-[42px] rounded-lg grid place-content-center bg-gradient-to-br from-slate-800 to-slate-950">
+      <div className="w-[42px] h-[42px] ml-3 rounded-md grid place-content-center bg-gradient-to-br from-slate-800 to-slate-950">
+        <AnimatePresence>
+          {menu && (
+            <div className="absolute top-0 left-0 h-[500px] w-full bg-[rgba(0,0,0,0.25)]"></div>
+          )}
+        </AnimatePresence>
         <AnimatedHamburgerButton />
       </div>
     </div>
@@ -12,7 +20,7 @@ export const MobileMenu = () => {
 };
 
 const AnimatedHamburgerButton = () => {
-  const [active, setActive] = useState(false);
+  const { menu, setMenuToggle } = useActions();
   return (
     <MotionConfig
       transition={{
@@ -22,9 +30,9 @@ const AnimatedHamburgerButton = () => {
     >
       <motion.button
         initial={false}
-        animate={active ? "open" : "closed"}
-        onClick={() => setActive((pv) => !pv)}
-        className="relative h-8 w-8 rounded-full bg-white/0 transition-colors hover:bg-white/20"
+        animate={menu ? "open" : "closed"}
+        onClick={() => setMenuToggle(menu)}
+        className="relative h-8 w-8 rounded-sm bg-slate-950 transition-colors hover:bg-slate-700"
       >
         <motion.span
           variants={VARIANTS.top}
