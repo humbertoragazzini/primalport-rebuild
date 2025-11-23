@@ -19,7 +19,7 @@ export default function Footer() {
       "
     >
       <div className="mx-auto max-w-[1480px] px-6 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* LEFT SIDE */}
           <div className="lg:col-span-2 space-y-4">
             <h3 className="text-2xl font-semibold text-white">
@@ -107,20 +107,41 @@ export default function Footer() {
               { label: "Toilet Paper Line", href: "#home-highlights" },
             ]}
           />
+
           <FooterColumn
             title="About us"
             links={[
               { label: "Who we are", href: "#about-who" },
               { label: "Our mission", href: "#about-mission" },
+              { label: "Our values", href: "#about-values" },
+              { label: "Our story", href: "#about-story" },
+              { label: "Why we’re different", href: "#about-different" },
+              { label: "Our team", href: "#about-team" },
+              { label: "Toilet paper brand", href: "#about-paper" },
+              { label: "Looking ahead", href: "#about-future" },
             ]}
           />
+
           <FooterColumn
             title="Our services"
             links={[
-              { label: "What we offer", href: "#services-offer" },
-              { label: "Pricing", href: "#services-pricing" },
+              { label: "Import services", href: "#services-import" },
+              { label: "Export services", href: "#services-export" },
+              {
+                label: "Market research & sourcing",
+                href: "#services-research",
+              },
+              {
+                label: "Logistics & supply chain",
+                href: "#services-logistics",
+              },
+              { label: "Customs & compliance", href: "#services-customs" },
+              { label: "Quality assurance", href: "#services-quality" },
+              { label: "Toilet paper distribution", href: "#services-paper" },
+              { label: "Additional services", href: "#services-extra" },
             ]}
           />
+
           <FooterColumn
             title="Contact us"
             links={[
