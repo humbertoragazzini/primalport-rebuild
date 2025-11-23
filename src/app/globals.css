@@ -61,17 +61,17 @@ body {
 
 /* ≥ 768px — Tablets */
 @media (min-width: 768px) {
-  
 }
 
 /* ≥ 1024px — Small laptops */
 @media (min-width: 1024px) {
-  .react-multiple-carousel__arrow{
-    display: block;
-  }
 }
 
 /* ≥ 1280px — Desktops */
 @media (min-width: 1280px) {
-  
+  .carousel-container {
+    .react-multiple-carousel__arrow{
+      display: block!important;
+    }
+  }
 }
