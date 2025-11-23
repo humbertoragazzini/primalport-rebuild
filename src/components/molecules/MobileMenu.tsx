@@ -55,7 +55,7 @@ export const MobileMenu = () => {
   const { menu, setMenuToggle } = useActions();
 
   return (
-    <div>
+    <div className="lg:hidden">
       <div className="w-[42px] h-[42px] ml-3 rounded-md grid place-content-center bg-gradient-to-br from-slate-800 to-slate-950">
         <AnimatePresence>
           {menu && (
