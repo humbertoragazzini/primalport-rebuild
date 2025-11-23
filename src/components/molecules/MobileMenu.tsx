@@ -74,10 +74,10 @@ export const MobileMenu = () => {
               }}
               className="absolute top-0 left-0 h-[500px] w-full bg-[rgba(0,0,0,0.85)]"
             >
-              <div className="pt-[175px] px-4">
+              <div className="pt-[115px] px-4">
                 <div className="mb-4">
                   <nav className="flex justify-center items-start flex-col text-white gap-4">
-                    {NAV_LINKS.map((link) => (
+                    {NAV_LINKS.map((link, i) => (
                       <motion.div
                         initial={{
                           opacity: 0,
@@ -87,6 +87,7 @@ export const MobileMenu = () => {
                           opacity: 1,
                           y: 0,
                         }}
+                        transition={{ delay: i / 5 }}
                       >
                         <Link key={link.href} href={link.href}>
                           <MultiLangSpan content={link.label}></MultiLangSpan>
