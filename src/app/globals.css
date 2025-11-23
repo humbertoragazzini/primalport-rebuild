@@ -23,6 +23,9 @@ body {
   font-family: var(--font-plex-sans), system-ui, sans-serif;
 }
 .carousel-container {
+  .react-multi-carousel-track{
+    margin-bottom: 40px;
+  }
   .react-multiple-carousel__arrow{
     display: none;
     border: 1px solid #94A3B8 !important;
