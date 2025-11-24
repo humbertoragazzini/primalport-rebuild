@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Heading from "../components/atoms/Heading";
-import { FaArrowRight, FaBeer } from "react-icons/fa";
+import { FaArrowRight, FaBeer, FaToiletPaper } from "react-icons/fa";
 import PpButton from "../components/atoms/Button";
 import MyCarousel from "../components/organisms/Carousel";
 import { BiBeer } from "react-icons/bi";
@@ -9,6 +9,9 @@ import homeContent from "../data/homeContent";
 import { SiHomepage } from "react-icons/si";
 import ShimmerBorderCard from "../components/atoms/Card";
 import { FiCloudLightning } from "react-icons/fi";
+import { GiCargoShip } from "react-icons/gi";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { LuShipWheel } from "react-icons/lu";
 
 export default function Home() {
   return (
@@ -82,9 +85,7 @@ export default function Home() {
                         content={homeContent.solutions.cardSmartImportTitle}
                       ></MultiLangSpan>
                     }
-                    icon={
-                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
-                    }
+                    icon={<GiCargoShip className="relative text-indigo-500" />}
                     body={
                       <MultiLangSpan
                         content={homeContent.solutions.cardSmartImportBody}
@@ -99,9 +100,7 @@ export default function Home() {
                         content={homeContent.solutions.cardSmoothExportTitle}
                       ></MultiLangSpan>
                     }
-                    icon={
-                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
-                    }
+                    icon={<LuShipWheel className="relative text-indigo-500" />}
                     body={
                       <MultiLangSpan
                         content={homeContent.solutions.cardSmoothExportBody}
@@ -117,7 +116,7 @@ export default function Home() {
                       ></MultiLangSpan>
                     }
                     icon={
-                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
+                      <LiaShippingFastSolid className="relative text-indigo-500" />
                     }
                     body={
                       <MultiLangSpan
@@ -139,7 +138,7 @@ export default function Home() {
                       ></MultiLangSpan>
                     }
                     icon={
-                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
+                      <FaToiletPaper className="relative text-indigo-500" />
                     }
                   ></ShimmerBorderCard>
                 </div>
