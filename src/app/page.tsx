@@ -85,7 +85,9 @@ export default function Home() {
                         content={homeContent.solutions.cardSmartImportTitle}
                       ></MultiLangSpan>
                     }
-                    icon={<GiCargoShip className="relative text-indigo-500" />}
+                    icon={
+                      <GiCargoShip className="w-14 h-14 relative text-indigo-500" />
+                    }
                     body={
                       <MultiLangSpan
                         content={homeContent.solutions.cardSmartImportBody}
@@ -100,7 +102,9 @@ export default function Home() {
                         content={homeContent.solutions.cardSmoothExportTitle}
                       ></MultiLangSpan>
                     }
-                    icon={<LuShipWheel className="relative text-indigo-500" />}
+                    icon={
+                      <LuShipWheel className="w-15 h-15 relative text-indigo-500" />
+                    }
                     body={
                       <MultiLangSpan
                         content={homeContent.solutions.cardSmoothExportBody}
@@ -116,7 +120,7 @@ export default function Home() {
                       ></MultiLangSpan>
                     }
                     icon={
-                      <LiaShippingFastSolid className="relative text-indigo-500" />
+                      <LiaShippingFastSolid className="w-14 h-14 relative text-indigo-500" />
                     }
                     body={
                       <MultiLangSpan
@@ -138,7 +142,7 @@ export default function Home() {
                       ></MultiLangSpan>
                     }
                     icon={
-                      <FaToiletPaper className="relative text-indigo-500" />
+                      <FaToiletPaper className="w-14 h-14 relative text-indigo-500" />
                     }
                   ></ShimmerBorderCard>
                 </div>
