@@ -8,6 +8,7 @@ import MultiLangSpan from "../components/atoms/MultiLangSpan";
 import homeContent from "../data/homeContent";
 import { SiHomepage } from "react-icons/si";
 import ShimmerBorderCard from "../components/atoms/Card";
+import { FiCloudLightning } from "react-icons/fi";
 
 export default function Home() {
   return (
@@ -61,9 +62,9 @@ export default function Home() {
       {/* cards */}
       <div
         id="cards-highlights"
-        className=" w-full min-h-screen flex justify-center items-center"
+        className="mx-auto w-full max-w-[1480px] min-h-screen flex justify-center items-center px-2 xl:px-6"
       >
-        <div className="mx-auto max-w-[1480px] text-white mb-[200px]">
+        <div className="mx-auto text-white mb-[200px]">
           <div className="grid grid-cols-12">
             <div className="col-span-12 lg:col-span-4 px-6 lg:px-0">
               <Heading level={2} className="font-bold">
@@ -81,6 +82,9 @@ export default function Home() {
                         content={homeContent.solutions.cardSmartImportTitle}
                       ></MultiLangSpan>
                     }
+                    icon={
+                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
+                    }
                     body={
                       <MultiLangSpan
                         content={homeContent.solutions.cardSmartImportBody}
@@ -95,6 +99,9 @@ export default function Home() {
                         content={homeContent.solutions.cardSmoothExportTitle}
                       ></MultiLangSpan>
                     }
+                    icon={
+                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
+                    }
                     body={
                       <MultiLangSpan
                         content={homeContent.solutions.cardSmoothExportBody}
@@ -108,6 +115,9 @@ export default function Home() {
                       <MultiLangSpan
                         content={homeContent.solutions.cardLogisticsTitle}
                       ></MultiLangSpan>
+                    }
+                    icon={
+                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
                     }
                     body={
                       <MultiLangSpan
@@ -127,6 +137,9 @@ export default function Home() {
                       <MultiLangSpan
                         content={homeContent.solutions.cardPaperLineBody}
                       ></MultiLangSpan>
+                    }
+                    icon={
+                      <FiCloudLightning className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
                     }
                   ></ShimmerBorderCard>
                 </div>

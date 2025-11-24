@@ -49,7 +49,7 @@ export default function Footer() {
                 className="
                   rounded-md bg-yellow-bright px-5 py-2 text-xs font-semibold
                   uppercase tracking-wide text-black
-                  hover:bg-yellow-400 transition-colors
+                  hover:bg-yellow-400 transition-colors cursor-pointer
                 "
               >
                 Let&apos;s go
