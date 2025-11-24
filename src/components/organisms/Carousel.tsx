@@ -76,7 +76,7 @@ export default function MyCarousel() {
                   <div>
                     <div className="text-4xl mb-8">
                       <Heading
-                        level={2}
+                        level={3}
                         className="font-semibold text-yellow-bright"
                       >
                         <MultiLangSpan
@@ -106,7 +106,7 @@ export default function MyCarousel() {
                   <div>
                     <div className="text-4xl mb-8">
                       <Heading
-                        level={2}
+                        level={3}
                         className="font-semibold text-yellow-bright"
                       >
                         <MultiLangSpan

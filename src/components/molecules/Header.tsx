@@ -109,7 +109,11 @@ function NavbarLink({ href, label }: { href: string; label: LangContent }) {
     <Link
       href={href}
       className={`
-        ${pathname == href ? "font-bold" : "font-medium"}
+        ${
+          pathname == href
+            ? "font-bold text-white hover:underline"
+            : "font-medium"
+        }
         px-3 py-2 text-sm
         text-slate-200/80 hover:text-white
         transition-colors
