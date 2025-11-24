@@ -33,6 +33,12 @@ const homeContent = {
               <br /> 与 <span class="text-yellow-bright">世界</span>.
             </span>`,
     },
+    button: {
+      en: "Check our services",
+      es: "Visita nuestros servicios",
+      it: "Controlla i nostri servizi",
+      ch: "查看我们的服务", // Chinese (Simplified)
+    },
     subtitle: {
       en: "Import, export, and logistics solutions designed to help businesses grow beyond borders.",
       es: "Importación, exportación y soluciones logísticas para empresas que buscan crecer sin fronteras.",

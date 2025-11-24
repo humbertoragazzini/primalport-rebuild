@@ -32,7 +32,9 @@ export default function Home() {
             </div> */}
             <div className="ml-3">
               <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
-                Check our services
+                <MultiLangSpan
+                  content={homeContent.hero.button}
+                ></MultiLangSpan>
               </PpButton>
             </div>
           </div>
