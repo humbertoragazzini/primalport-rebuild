@@ -4,6 +4,7 @@ import { useActions } from "@/src/hooks/useActions";
 import LanguageToggle from "../atoms/LanguageToggle";
 import Link from "next/link";
 import MultiLangSpan from "../atoms/MultiLangSpan";
+import { usePathname } from "next/navigation";
 
 type LangContent = {
   en: string;
@@ -53,7 +54,7 @@ const NAV_LINKS: { href: string; label: LangContent }[] = [
 
 export const MobileMenu = () => {
   const { menu, setMenuToggle } = useActions();
-
+  const pathname = usePathname();
   return (
     <div className="lg:hidden">
       <div className="w-[42px] h-[42px] ml-3 rounded-md grid place-content-center bg-gradient-to-br from-slate-800 to-slate-950">
@@ -92,7 +93,9 @@ export const MobileMenu = () => {
                         <Link
                           key={link.href}
                           href={link.href}
-                          className="text-xl font-semibold"
+                          className={`text-xl font-medium ${
+                            pathname == link.href ? "underline" : ""
+                          }`}
                         >
                           <MultiLangSpan content={link.label}></MultiLangSpan>
                         </Link>
