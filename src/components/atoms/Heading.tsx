@@ -8,12 +8,12 @@ export default function Heading({ level, children, className }: HeadingProps) {
   const Tag = `h${level}` as keyof JSX.IntrinsicElements;
 
   const sizes: Record<number, string> = {
-    1: "text-4xl md:text-5xl xl:text-6xl",
-    2: "text-3xl md:text-4xl xl:text-5xl",
-    3: "text-2xl md:text-3xl xl:text-4xl",
-    4: "text-xl md:text-2xl xl:text-3xl",
-    5: "text-lg md:text-xl xl:text-2xl",
-    6: "text-md md:text-lg xl:text-xl",
+    1: "text-4xl md:text-5xl xl:text-6xl leading-tight md:leading-tight xl:leading-tight",
+    2: "text-3xl md:text-4xl xl:text-5xl leading-tight md:leading-tight xl:leading-tight",
+    3: "text-2xl md:text-3xl xl:text-4xl leading-tight md:leading-tight xl:leading-tight",
+    4: "text-xl md:text-2xl xl:text-3xl leading-snug md:leading-snug xl:leading-snug",
+    5: "text-lg md:text-xl xl:text-2xl leading-snug md:leading-snug xl:leading-snug",
+    6: "text-md md:text-lg xl:text-xl leading-snug md:leading-snug xl:leading-snug",
   };
 
   return <Tag className={`${sizes[level]} ${className ?? ""}`}>{children}</Tag>;

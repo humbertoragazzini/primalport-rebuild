@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Heading from "../components/atoms/Heading";
-import { FaBeer } from "react-icons/fa";
+import { FaArrowRight, FaBeer } from "react-icons/fa";
 import PpButton from "../components/atoms/Button";
 import MyCarousel from "../components/organisms/Carousel";
 import { BiBeer } from "react-icons/bi";
@@ -31,7 +31,11 @@ export default function Home() {
               </PpButton>
             </div> */}
             <div className="ml-3">
-              <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
+              <PpButton
+                theme={"yellow"}
+                icon={<FaArrowRight size={18} />}
+                href={"/"}
+              >
                 <MultiLangSpan
                   content={homeContent.hero.button}
                 ></MultiLangSpan>
