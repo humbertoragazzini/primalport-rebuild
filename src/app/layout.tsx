@@ -33,7 +33,7 @@ export default function RootLayout({
           antialiased
         `}
       >
-        {/* <BgCanvas /> */}
+        <BgCanvas />
         <Header />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
         <Footer />
