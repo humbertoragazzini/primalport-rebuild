@@ -1,91 +1,54 @@
 import Image from "next/image";
 import Heading from "../../components/atoms/Heading";
-import { FaBeer } from "react-icons/fa";
+import { FaArrowRight, FaBeer, FaToiletPaper } from "react-icons/fa";
 import PpButton from "../../components/atoms/Button";
 import MyCarousel from "../../components/organisms/Carousel";
+import { BiBeer } from "react-icons/bi";
+import MultiLangSpan from "../../components/atoms/MultiLangSpan";
+import aboutUsContent from "../../data/aboutUsContent";
+import { SiHomepage } from "react-icons/si";
+import ShimmerBorderCard from "../../components/atoms/Card";
+import { FiCloudLightning } from "react-icons/fi";
+import { GiCargoShip } from "react-icons/gi";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { LuShipWheel } from "react-icons/lu";
 
-export default function Home() {
+export default function AboutUs() {
   return (
-    <main className="w-full min-h-screen py-16">
+    <main className="w-full min-h-screen pb-16" id="home-hero">
       {/* Header */}
-      <div className="mx-auto max-w-[1480px] px-6 py-10 h-full backdrop-blur-lg border-1 rounded-4xl border-[rgba(255,255,255,0.1)] mb-40 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-        <Heading level={1} className="text-white font-bold text-center mb-4">
-          <span>
-            About Us.<br></br> Fast for everyone.
-          </span>
-        </Heading>
-        <p className="font-semi text-xl text-white text-center mx-auto w-[75%] mb-8">
-          Bring blockchain to the people. Solana supports experiences for power
-          users, new consumers, and everyone in between.
-        </p>
-        <div className="flex justify-center items-center mb-8">
-          <div>
-            <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
-              Contact Us
-            </PpButton>
+      <div className="mx-auto px-2 xl:px-6 h-[calc(100vh-160px)] w-full flex justify-center items-center">
+        <div className="max-w-[1480px]">
+          <div className="rounded-full border-yellow-bright border-2 text-white py-4 px-6 w-fit mx-auto font-semibold mb-4">
+            <MultiLangSpan content={aboutUsContent.hero.tag}></MultiLangSpan>
           </div>
-          <div className="ml-3">
-            <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
-              Check our services
-            </PpButton>
-          </div>
-        </div>
-      </div>
-      {/* carousel */}
-      <div className="w-full mb-20">
-        <Heading level={2} className="text-center font-bold text-white">
-          Some heading for the carousel
-        </Heading>
-      </div>
-      <div className="w-full bg-slate-900 mb-40">
-        <MyCarousel></MyCarousel>
-      </div>
-      {/* cards */}
-      <div className="mx-auto max-w-[1480px] text-white mb-[200px]">
-        <div className="grid grid-cols-12">
-          <div className="col-span-4">
-            <Heading level={2} className="">
-              Made for mass adoption.
-            </Heading>
-          </div>
-          <div className="col-span-8">
-            <div className="grid grid-cols-2 gap-7">
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                <Heading level={3}>Decentralized</Heading>
-                <p>
-                  The Solana network is validated by thousands of nodes that
-                  operate independently of each other, ensuring your data
-                  remains secure and censorship resistant.
-                </p>
-                <p>850</p>
-              </div>
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                <Heading level={3}>Decentralized</Heading>
-                <p>
-                  The Solana network is validated by thousands of nodes that
-                  operate independently of each other, ensuring your data
-                  remains secure and censorship resistant.
-                </p>
-                <p>850</p>
-              </div>
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 translate-y-[80px] shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                <Heading level={3}>Decentralized</Heading>
-                <p>
-                  The Solana network is validated by thousands of nodes that
-                  operate independently of each other, ensuring your data
-                  remains secure and censorship resistant.
-                </p>
-                <p>850</p>
-              </div>
-              <div className="col-span-1 border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl px-8 py-6 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                <Heading level={3}>Decentralized</Heading>
-                <p>
-                  The Solana network is validated by thousands of nodes that
-                  operate independently of each other, ensuring your data
-                  remains secure and censorship resistant.
-                </p>
-                <p>850</p>
-              </div>
+          <Heading
+            level={1}
+            className="text-white font-bold text-center mb-4 xl:text-[100px]!"
+          >
+            <MultiLangSpan content={aboutUsContent.hero.title}></MultiLangSpan>
+          </Heading>
+          <p className="font-semi text-lg! lg:text-xl! text-muted-steel-blue text-center mx-auto xl:w-[75%] mb-8">
+            <MultiLangSpan
+              content={aboutUsContent.hero.subtitle}
+            ></MultiLangSpan>
+          </p>
+          <div className="flex justify-center items-center mb-8">
+            {/* <div>
+              <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
+                Contact Us
+              </PpButton>
+            </div> */}
+            <div className="ml-3">
+              <PpButton
+                theme={"yellow"}
+                icon={<FaArrowRight size={18} />}
+                href={"/"}
+              >
+                <MultiLangSpan
+                  content={aboutUsContent.hero.button}
+                ></MultiLangSpan>
+              </PpButton>
             </div>
           </div>
         </div>

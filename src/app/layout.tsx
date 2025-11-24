@@ -27,12 +27,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`
+          bg-slate-950
           relative
           ${plexSans.variable}
           antialiased
         `}
       >
-        <BgCanvas />
+        {/* <BgCanvas /> */}
         <Header />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
         <Footer />
