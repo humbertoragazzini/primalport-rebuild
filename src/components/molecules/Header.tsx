@@ -6,6 +6,7 @@ import PpButton from "../atoms/Button";
 import { FaBeer } from "react-icons/fa";
 import LanguageToggle from "../atoms/LanguageToggle";
 import { MobileMenu } from "./MobileMenu";
+import { usePathname } from "next/navigation";
 
 type LangContent = {
   en: string;
@@ -103,14 +104,16 @@ function Logo() {
 }
 
 function NavbarLink({ href, label }: { href: string; label: LangContent }) {
+  const pathname = usePathname();
   return (
     <Link
       href={href}
-      className="
-        px-3 py-2 text-sm font-medium
+      className={`
+        ${pathname == href ? "font-bold" : "font-medium"}
+        px-3 py-2 text-sm
         text-slate-200/80 hover:text-white
         transition-colors
-      "
+      `}
     >
       <MultiLangSpan content={label} />
     </Link>
