@@ -220,28 +220,40 @@ const aboutUsContent = {
       en: "Not all trade operations or paper products are the same. Here’s what sets Primalport apart.",
       es: "No todas las operaciones de comercio ni los productos de papel son iguales. Esto es lo que distingue a Primalport.",
     },
-    points: {
-      en: [
-        "End-to-end import and export management.",
-        "Certified and audited suppliers and mills.",
-        "Sustainable and high-quality toilet paper lines.",
-        "Cost-optimised logistics and smart routing.",
-        "Custom solutions for SMEs and large companies.",
-        "Transparent pricing and clear documentation.",
-        "Reliable, long-term partnerships instead of one-off deals.",
-        "Focus on both comfort and operational efficiency.",
-      ],
-      es: [
-        "Gestión integral de importaciones y exportaciones.",
-        "Proveedores y plantas certificadas y auditadas.",
-        "Líneas de papel higiénico sustentables y de alta calidad.",
-        "Logística optimizada en costos y rutas inteligentes.",
-        "Soluciones a medida para pymes y grandes empresas.",
-        "Precios transparentes y documentación clara.",
-        "Relaciones confiables y de largo plazo, no operaciones aisladas.",
-        "Foco tanto en el confort como en la eficiencia operativa.",
-      ],
-    },
+    points: [
+      {
+        en: "End-to-end import and export management.",
+        es: "Gestión integral de importaciones y exportaciones.",
+      },
+      {
+        en: "Certified and audited suppliers and mills.",
+        es: "Proveedores y plantas certificadas y auditadas.",
+      },
+      {
+        en: "Sustainable and high-quality toilet paper lines.",
+        es: "Líneas de papel higiénico sustentables y de alta calidad.",
+      },
+      {
+        en: "Cost-optimised logistics and smart routing.",
+        es: "Logística optimizada en costos y rutas inteligentes.",
+      },
+      {
+        en: "Custom solutions for SMEs and large companies.",
+        es: "Soluciones a medida para pymes y grandes empresas.",
+      },
+      {
+        en: "Transparent pricing and clear documentation.",
+        es: "Precios transparentes y documentación clara.",
+      },
+      {
+        en: "Reliable, long-term partnerships instead of one-off deals.",
+        es: "Relaciones confiables y de largo plazo, no operaciones aisladas.",
+      },
+      {
+        en: "Focus on both comfort and operational efficiency.",
+        es: "Foco tanto en el confort como en la eficiencia operativa.",
+      },
+    ],
   },
 
   team: {
