@@ -267,21 +267,6 @@ const aboutUsContent = {
     },
     members: [
       {
-        initials: "SC",
-        name: {
-          en: "Soledad Campos",
-          es: "Soledad Campos",
-        },
-        role: {
-          en: "Co-Founder & CEO",
-          es: "Cofundadora y CEO",
-        },
-        bio: {
-          en: "Leads Primalport’s vision, strategy, and long-term partnerships, balancing growth with responsibility.",
-          es: "Lidera la visión, la estrategia y las alianzas de largo plazo de Primalport, equilibrando crecimiento y responsabilidad.",
-        },
-      },
-      {
         initials: "MR",
         name: {
           en: "Martín Rodríguez",
