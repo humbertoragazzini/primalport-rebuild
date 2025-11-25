@@ -59,7 +59,7 @@ export default function AboutUs() {
               ></MultiLangSpan>
             </Heading>
             <div>
-              <p className="text-base">
+              <p className="text-lg! lg:text-xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={aboutUsContent.about.body}
                 ></MultiLangSpan>
