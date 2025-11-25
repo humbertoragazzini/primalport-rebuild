@@ -2,16 +2,8 @@ import Image from "next/image";
 import Heading from "../../components/atoms/Heading";
 import { FaArrowRight, FaBeer, FaToiletPaper } from "react-icons/fa";
 import PpButton from "../../components/atoms/Button";
-import MyCarousel from "../../components/organisms/Carousel";
-import { BiBeer } from "react-icons/bi";
 import MultiLangSpan from "../../components/atoms/MultiLangSpan";
 import aboutUsContent from "../../data/aboutUsContent";
-import { SiHomepage } from "react-icons/si";
-import ShimmerBorderCard from "../../components/atoms/Card";
-import { FiCloudLightning } from "react-icons/fi";
-import { GiCargoShip } from "react-icons/gi";
-import { LiaShippingFastSolid } from "react-icons/lia";
-import { LuShipWheel } from "react-icons/lu";
 
 export default function AboutUs() {
   return (
@@ -60,12 +52,19 @@ export default function AboutUs() {
         className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
       >
         <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
-          <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
-            <Heading level={2} className="text-left font-semibold! text-white">
+          <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+            <Heading level={2} className="text-left font-semibold! mb-4">
               <MultiLangSpan
                 content={aboutUsContent.about.title}
               ></MultiLangSpan>
             </Heading>
+            <div>
+              <p className="text-base">
+                <MultiLangSpan
+                  content={aboutUsContent.about.body}
+                ></MultiLangSpan>
+              </p>
+            </div>
           </div>
         </div>
       </div>
