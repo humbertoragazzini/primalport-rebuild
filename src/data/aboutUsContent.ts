@@ -409,4 +409,4 @@ const aboutUsContent = {
   },
 };
 
-export default aboutPageContent;
+export default aboutUsContent;
