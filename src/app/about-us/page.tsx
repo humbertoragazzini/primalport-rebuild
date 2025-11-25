@@ -248,7 +248,7 @@ export default function AboutUs() {
                     return (
                       <div className="col-span-1 h-full">
                         <div className="relative z-10 flex justify-center items-center">
-                          <div className="w-3 h-3 bg-amber-700 rounded-full -mb-1"></div>
+                          <div className="w-4 h-4 bg-slate-700 border-2 border-slate-800 rounded-full -mb-1"></div>
                         </div>
                         <div className="relative z-0 w-full h-full flex justify-center">
                           <div
@@ -256,7 +256,7 @@ export default function AboutUs() {
                               i + 1 == aboutUsContent.story.timeline.length
                                 ? ""
                                 : "h-[calc(100%+2rem)]"
-                            } w-1 bg-amber-500`}
+                            } w-[2px] bg-slate-500 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]`}
                           ></div>
                         </div>
                       </div>
