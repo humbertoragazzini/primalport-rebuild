@@ -9,7 +9,7 @@ export default function AboutUs() {
   return (
     <main className="w-full min-h-screen pb-16" id="home-hero">
       {/* Header */}
-      <div className="mx-auto px-2 xl:px-6 h-[calc(100vh-160px)] w-full flex justify-center items-center">
+      <div className="mx-auto px-2 xl:px-6 py-16 lg:py-0 lg:h-[calc(100vh-160px)] w-full flex justify-center items-center">
         <div className="max-w-[1480px]">
           <div className="rounded-full border-yellow-bright border-2 text-white py-4 px-6 w-fit mx-auto font-semibold mb-4 text-2xl">
             <MultiLangSpan content={aboutUsContent.hero.tag}></MultiLangSpan>
@@ -48,7 +48,7 @@ export default function AboutUs() {
                 ></MultiLangSpan>
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
               <div className="col-span-1">
                 <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <p className="font-semibold text-xl mb-4">
@@ -98,7 +98,7 @@ export default function AboutUs() {
                 ></MultiLangSpan>
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
               <div className="col-span-1">
                 <div className="border-1 p-6 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
@@ -191,7 +191,7 @@ export default function AboutUs() {
                 ></MultiLangSpan>
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
               <div className="col-span-1">
                 <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <p className="font-semibold text-xl mb-4">
