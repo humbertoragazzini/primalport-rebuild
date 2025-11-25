@@ -26,22 +26,7 @@ export default function AboutUs() {
             ></MultiLangSpan>
           </p>
           <div className="flex justify-center items-center mb-8">
-            {/* <div>
-              <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
-                Contact Us
-              </PpButton>
-            </div> */}
-            <div className="ml-3">
-              <PpButton
-                theme={"yellow"}
-                icon={<FaArrowRight size={18} />}
-                href={"/"}
-              >
-                <MultiLangSpan
-                  content={aboutUsContent.hero.button}
-                ></MultiLangSpan>
-              </PpButton>
-            </div>
+
           </div>
         </div>
       </div>
@@ -55,13 +40,13 @@ export default function AboutUs() {
           <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-left font-semibold! mb-4">
               <MultiLangSpan
-                content={aboutUsContent.about.title}
+                content={aboutUsContent.mission.title}
               ></MultiLangSpan>
             </Heading>
             <div>
               <p className="text-lg! lg:text-xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={aboutUsContent.about.body}
+                  content={aboutUsContent.mission.body}
                 ></MultiLangSpan>
               </p>
             </div>

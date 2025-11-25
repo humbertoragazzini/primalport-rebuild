@@ -7,8 +7,8 @@ import { useLanguageStore } from "@/src/hooks/useLanguage";
 type MultiLangHTML = {
   en: string;
   es: string;
-  it: string;
-  ch: string;
+  it?: string;
+  ch?: string;
 };
 
 type MultiLangSpanProps = {
