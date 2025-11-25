@@ -101,7 +101,7 @@ export default function AboutUs() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
               <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                     <FaBeer className="w-6 h-6"></FaBeer>
                   </div>
@@ -118,7 +118,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                     <FaBeer className="w-6 h-6"></FaBeer>
                   </div>
@@ -135,7 +135,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                     <FaBeer className="w-6 h-6"></FaBeer>
                   </div>
@@ -152,7 +152,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                     <FaBeer className="w-6 h-6"></FaBeer>
                   </div>
@@ -194,7 +194,7 @@ export default function AboutUs() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
               <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="border-1 p-6 rounded-2xl bg-slate-700 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <p className="font-semibold text-xl mb-4">
                     <MultiLangSpan
                       content={aboutUsContent.mission.cards[0].title}
@@ -208,7 +208,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                <div className="border-1 p-6 rounded-2xl bg-slate-700 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <p className="font-semibold text-xl mb-4">
                     <MultiLangSpan
                       content={aboutUsContent.mission.cards[1].title}
@@ -263,7 +263,7 @@ export default function AboutUs() {
                             ></div>
                           </div>
                         </div>
-                        <div className="border-1 p-6 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                        <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                           <p className="font-semibold text-md mb-4">{t.year}</p>
                           <p className="font-semibold text-xl mb-4">
                             <MultiLangSpan content={t.title}></MultiLangSpan>
