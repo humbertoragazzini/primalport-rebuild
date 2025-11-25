@@ -246,7 +246,7 @@ export default function AboutUs() {
                 <div className="grid grid-cols-1 gap-8 mx-auto h-full">
                   {aboutUsContent.story.timeline.map((t, i) => {
                     return (
-                      <div className="col-span-1 h-full">
+                      <div className="col-span-[1/2] h-full">
                         <div className="relative z-10 flex justify-center items-center">
                           <div className="w-4 h-4 bg-slate-700 border-2 border-slate-800 rounded-full -mb-1"></div>
                         </div>
@@ -264,7 +264,7 @@ export default function AboutUs() {
                   })}
                 </div>
               </div>
-              <div className="col-span-9">
+              <div className="col-span-9 md:col-span-8">
                 <div className="grid grid-cols-1 gap-8 mx-auto">
                   {aboutUsContent.story.timeline.map((t) => {
                     return (
@@ -283,6 +283,8 @@ export default function AboutUs() {
                   })}
                 </div>
               </div>
+
+              <div className="col-span-1 hidden md:block"></div>
             </div>
           </div>
         </div>
