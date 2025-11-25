@@ -5,7 +5,11 @@ const aboutUsContent = {
       es: "Acerca de nosotros",
     },
     title: {
-      en: "Redefining Comfort & Global Trade",
+      en: `Redefining <span class="text-yellow-bright">
+                Confort
+              </span> & <span class="text-yellow-bright">
+              Global
+            </span> Trade`,
       es: "Redefiniendo el confort y el comercio global",
     },
     subtitle: {
