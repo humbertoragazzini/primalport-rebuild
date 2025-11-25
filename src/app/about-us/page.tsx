@@ -282,6 +282,45 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+
+      {/* our mission */}
+      <div
+        id="home-highlights"
+        className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
+      >
+        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
+          <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+            <Heading level={2} className="text-left font-semibold! mb-8">
+              <MultiLangSpan
+                content={aboutUsContent.whyDifferent.title}
+              ></MultiLangSpan>
+            </Heading>
+            <div className="mb-16 lg:max-w-[75%] mx-auto">
+              <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={aboutUsContent.whyDifferent.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
+              {aboutUsContent.story.timeline.map((t, i) => {
+                return (
+                  <div className="col-span-1 relative">
+                    <div className="border-1 p-6 flex items-center rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                      <div className="w- h- flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2">
+                        <FaBeer className="w-3 h-3"></FaBeer>
+                      </div>
+                      <p className="font-semibold text-xl ml-5">
+                        <MultiLangSpan content={t.title}></MultiLangSpan>
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
