@@ -241,34 +241,27 @@ export default function AboutUs() {
                 ></MultiLangSpan>
               </p>
             </div>
-            <div className="grid grid-cols-12">
-              <div className="col-span-3 h-full">
-                <div className="grid grid-cols-1 gap-8 mx-auto h-full">
+            <div className="w-full flex flex-row">
+              <div className="w-[15%]"></div>
+              <div className="w-[80%]">
+                <div className="grid grid-cols-1 gap-8 mx-auto">
                   {aboutUsContent.story.timeline.map((t, i) => {
                     return (
-                      <div className="col-span-[1/2] h-full">
-                        <div className="relative z-10 flex justify-center items-center">
-                          <div className="w-4 h-4 bg-slate-700 border-2 border-slate-800 rounded-full -mb-1"></div>
+                      <div className="col-span-1 relative">
+                        <div className="absolute h-full top-0 -translate-x-9 md:-translate-x-12 lg:-translate-x-16 xl:-translate-x-22">
+                          <div className="relative z-10 flex justify-center items-center">
+                            <div className="w-4 h-4 bg-slate-700 border-2 border-slate-800 rounded-full -mb-1"></div>
+                          </div>
+                          <div className="relative z-0 w-full h-full flex justify-center">
+                            <div
+                              className={`${
+                                i + 1 == aboutUsContent.story.timeline.length
+                                  ? "h-[calc(100%-15px)]"
+                                  : "h-[calc(100%+2rem)]"
+                              } w-[2px] bg-slate-500 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]`}
+                            ></div>
+                          </div>
                         </div>
-                        <div className="relative z-0 w-full h-full flex justify-center">
-                          <div
-                            className={`${
-                              i + 1 == aboutUsContent.story.timeline.length
-                                ? ""
-                                : "h-[calc(100%+2rem)]"
-                            } w-[2px] bg-slate-500 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]`}
-                          ></div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="col-span-9 md:col-span-8">
-                <div className="grid grid-cols-1 gap-8 mx-auto">
-                  {aboutUsContent.story.timeline.map((t) => {
-                    return (
-                      <div className="col-span-1">
                         <div className="border-1 p-6 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                           <p className="font-semibold text-md mb-4">{t.year}</p>
                           <p className="font-semibold text-xl mb-4">
