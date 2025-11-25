@@ -28,8 +28,8 @@ export default function AboutUs() {
           <div className="flex justify-center items-center mb-8"></div>
         </div>
       </div>
-      {/* About */}
 
+      {/* our mission */}
       <div
         id="home-highlights"
         className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
@@ -59,6 +59,84 @@ export default function AboutUs() {
                   <p>
                     <MultiLangSpan
                       content={aboutUsContent.mission.cards[0].body}
+                    ></MultiLangSpan>
+                  </p>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <p className="font-semibold text-xl mb-4">
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[1].title}
+                    ></MultiLangSpan>
+                  </p>
+                  <p>
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[1].body}
+                    ></MultiLangSpan>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* our mission */}
+      <div id="home-highlights" className="w-full mb-40">
+        <div className=" inset-0 py-16 h-full">
+          <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
+            <Heading level={2} className="text-center font-semibold! mb-8">
+              <MultiLangSpan
+                content={aboutUsContent.values.title}
+              ></MultiLangSpan>
+            </Heading>
+            <div className="mb-16 lg:max-w-[75%] mx-auto">
+              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={aboutUsContent.values.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-8 mx-auto">
+              <div className="col-span-1">
+                <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <p className="font-semibold text-xl mb-4">
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[0].title}
+                    ></MultiLangSpan>
+                  </p>
+                  <p>
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[0].body}
+                    ></MultiLangSpan>
+                  </p>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <p className="font-semibold text-xl mb-4">
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[1].title}
+                    ></MultiLangSpan>
+                  </p>
+                  <p>
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[1].body}
+                    ></MultiLangSpan>
+                  </p>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <p className="font-semibold text-xl mb-4">
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[1].title}
+                    ></MultiLangSpan>
+                  </p>
+                  <p>
+                    <MultiLangSpan
+                      content={aboutUsContent.mission.cards[1].body}
                     ></MultiLangSpan>
                   </p>
                 </div>

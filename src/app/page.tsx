@@ -55,7 +55,10 @@ export default function Home() {
       >
         <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
           <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
-            <Heading level={2} className="text-left font-semibold! text-white">
+            <Heading
+              level={2}
+              className="text-center font-semibold! text-white"
+            >
               <MultiLangSpan content={homeContent.about.title}></MultiLangSpan>
             </Heading>
           </div>
