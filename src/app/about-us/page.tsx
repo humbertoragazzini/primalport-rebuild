@@ -11,7 +11,7 @@ export default function AboutUs() {
       {/* Header */}
       <div className="mx-auto px-2 xl:px-6 h-[calc(100vh-160px)] w-full flex justify-center items-center">
         <div className="max-w-[1480px]">
-          <div className="rounded-full border-yellow-bright border-2 text-white py-4 px-6 w-fit mx-auto font-semibold mb-4">
+          <div className="rounded-full border-yellow-bright border-2 text-white py-4 px-6 w-fit mx-auto font-semibold mb-4 text-2xl">
             <MultiLangSpan content={aboutUsContent.hero.tag}></MultiLangSpan>
           </div>
           <Heading
@@ -25,9 +25,7 @@ export default function AboutUs() {
               content={aboutUsContent.hero.subtitle}
             ></MultiLangSpan>
           </p>
-          <div className="flex justify-center items-center mb-8">
-
-          </div>
+          <div className="flex justify-center items-center mb-8"></div>
         </div>
       </div>
       {/* About */}
@@ -43,12 +41,28 @@ export default function AboutUs() {
                 content={aboutUsContent.mission.title}
               ></MultiLangSpan>
             </Heading>
-            <div>
+            <div className="mb-4">
               <p className="text-lg! lg:text-xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={aboutUsContent.mission.body}
                 ></MultiLangSpan>
               </p>
+            </div>
+            <div className="grid grid-cols-2">
+              <div className="col-span-1">
+                <div className="border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <MultiLangSpan
+                    content={aboutUsContent.mission.body}
+                  ></MultiLangSpan>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <MultiLangSpan
+                    content={aboutUsContent.mission.body}
+                  ></MultiLangSpan>
+                </div>
+              </div>
             </div>
           </div>
         </div>
