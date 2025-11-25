@@ -269,8 +269,8 @@ const aboutUsContent = {
       {
         initials: "MR",
         name: {
-          en: "Martín Rodríguez",
-          es: "Martín Rodríguez",
+          en: "Cristian Ragazzini",
+          es: "Cristian Ragazzini",
         },
         role: {
           en: "Head of Trade Operations",
@@ -284,8 +284,8 @@ const aboutUsContent = {
       {
         initials: "ET",
         name: {
-          en: "Emma Torres",
-          es: "Emma Torres",
+          en: "Humberto Ragazzini",
+          es: "Humberto Ragazzini",
         },
         role: {
           en: "Paper Division Lead",
@@ -299,8 +299,8 @@ const aboutUsContent = {
       {
         initials: "DP",
         name: {
-          en: "Diego Pérez",
-          es: "Diego Pérez",
+          en: "Diego Ragazzini",
+          es: "Diego Ragazzini",
         },
         role: {
           en: "Logistics & Compliance Manager",

@@ -343,18 +343,20 @@ export default function AboutUs() {
                 return (
                   <div className="col-span-1">
                     <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                      <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                        <FaBeer className="w-6 h-6"></FaBeer>
+                      <div className="aspect-square w-fit overflow-hidden mx-auto p-3 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
+                        <img
+                          className="max-w-40 rounded-full w-full aspect-square"
+                          src="http://placehold.co/450x450"
+                        ></img>
                       </div>
-                      <p className="font-semibold text-xl mb-4">
-                        <MultiLangSpan
-                          content={aboutUsContent.values.items[0].title}
-                        ></MultiLangSpan>
+                      <p className="font-semibold text-xl mb-4 text-yellow-bright">
+                        <MultiLangSpan content={m.name}></MultiLangSpan>
                       </p>
-                      <p>
-                        <MultiLangSpan
-                          content={aboutUsContent.values.items[0].body}
-                        ></MultiLangSpan>
+                      <p className="mb-4">
+                        <MultiLangSpan content={m.bio}></MultiLangSpan>
+                      </p>
+                      <p className="text-sm">
+                        <MultiLangSpan content={m.role}></MultiLangSpan>
                       </p>
                     </div>
                   </div>
