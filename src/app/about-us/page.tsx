@@ -242,7 +242,28 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="grid grid-cols-12">
-              <div className="col-span-3"></div>
+              <div className="col-span-3 h-full">
+                <div className="grid grid-cols-1 gap-8 mx-auto h-full">
+                  {aboutUsContent.story.timeline.map((t, i) => {
+                    return (
+                      <div className="col-span-1 h-full">
+                        <div className="relative z-10 flex justify-center items-center">
+                          <div className="w-3 h-3 bg-amber-700 rounded-full -mb-1"></div>
+                        </div>
+                        <div className="relative z-0 w-full h-full flex justify-center">
+                          <div
+                            className={`${
+                              i + 1 == aboutUsContent.story.timeline.length
+                                ? ""
+                                : "h-[calc(100%+2rem)]"
+                            } w-1 bg-amber-500`}
+                          ></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
               <div className="col-span-9">
                 <div className="grid grid-cols-1 gap-8 mx-auto">
                   {aboutUsContent.story.timeline.map((t) => {
