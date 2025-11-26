@@ -200,8 +200,8 @@ const servicesPageContent = {
 
   whyUs: {
     title: {
-      en: "Why Choose Primalport",
-      es: "Por qué elegir Primalport",
+      en: `<span class="text-yellow-bright">Why</span> Choose <span class="text-yellow-bright">Primalport</span>`,
+      es: `<span class="text-yellow-bright">Por</span> qué elegir <span class="text-yellow-bright">Primalport</span>`,
     },
     subtitle: {
       en: "A service partner built on trust, quality, and responsibility.",
@@ -237,8 +237,8 @@ const servicesPageContent = {
 
   process: {
     title: {
-      en: "How We Work",
-      es: "Cómo trabajamos",
+      en: `How We <span class="text-yellow-bright">Work</span>`,
+      es: `Cómo <span class="text-yellow-bright">trabajamos</span>`,
     },
     steps: [
       {
@@ -284,8 +284,8 @@ const servicesPageContent = {
 
   cta: {
     title: {
-      en: "Ready to grow your business?",
-      es: "¿Listo para hacer crecer tu negocio?",
+      en: `Ready to <span class="text-yellow-bright">grow</span> your <span class="text-yellow-bright">business</span>?`,
+      es: `¿Listo para <span class="text-yellow-bright">hacer</span> crecer tu <span class="text-yellow-bright">negocio</span>?`,
     },
     subtitle: {
       en: "Let’s build smarter trade routes and sustainable solutions together.",

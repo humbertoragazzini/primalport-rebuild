@@ -330,7 +330,7 @@ export default function Home() {
       </div>
 
       {/* our values */}
-      <div id="home-highlights" className="w-full mb-40">
+      <div id="home-highlights" className="w-full">
         <div className=" inset-0 py-16 h-full">
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-center font-semibold! mb-8">
