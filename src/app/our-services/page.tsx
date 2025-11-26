@@ -83,8 +83,8 @@ export default function Home() {
                 content={servicesPageContent.importSection.title}
               ></MultiLangSpan>
             </Heading>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
-              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+            <div className="mb-4 lg:max-w-[75%] mx-auto">
+              <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
                 <MultiLangSpan
                   content={servicesPageContent.importSection.subtitle}
                 ></MultiLangSpan>
@@ -97,76 +97,22 @@ export default function Home() {
                 ></MultiLangSpan>
               </p>
             </div>
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-              <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
+              {servicesPageContent.importSection.bullets.map((b) => {
+                return (
+                  <div className="col-span-1">
+                    <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                      <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
+                        <FaBeer className="w-6 h-6"></FaBeer>
+                      </div>
+                      <p className="font-semibold text-xl mb-4">
+                        <MultiLangSpan content={b}></MultiLangSpan>
+                      </p>
+                    </div>
                   </div>
-                  <p className="font-semibold text-xl mb-4">
-                    <MultiLangSpan
-                      content={servicesPageContent.importSection.items[0].title}
-                    ></MultiLangSpan>
-                  </p>
-                  <p>
-                    <MultiLangSpan
-                      content={servicesPageContent.importSection.items[0].body}
-                    ></MultiLangSpan>
-                  </p>
-                </div>
-              </div>
-              <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
-                  </div>
-                  <p className="font-semibold text-xl mb-4">
-                    <MultiLangSpan
-                      content={servicesPageContent.importSection.items[1].title}
-                    ></MultiLangSpan>
-                  </p>
-                  <p>
-                    <MultiLangSpan
-                      content={servicesPageContent.importSection.items[1].body}
-                    ></MultiLangSpan>
-                  </p>
-                </div>
-              </div>
-              <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
-                  </div>
-                  <p className="font-semibold text-xl mb-4">
-                    <MultiLangSpan
-                      content={servicesPageContent.values.items[2].title}
-                    ></MultiLangSpan>
-                  </p>
-                  <p>
-                    <MultiLangSpan
-                      content={servicesPageContent.values.items[2].body}
-                    ></MultiLangSpan>
-                  </p>
-                </div>
-              </div>
-              <div className="col-span-1">
-                <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
-                  </div>
-                  <p className="font-semibold text-xl mb-4">
-                    <MultiLangSpan
-                      content={servicesPageContent.values.items[3].title}
-                    ></MultiLangSpan>
-                  </p>
-                  <p>
-                    <MultiLangSpan
-                      content={servicesPageContent.values.items[3].body}
-                    ></MultiLangSpan>
-                  </p>
-                </div>
-              </div>
-            </div> */}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

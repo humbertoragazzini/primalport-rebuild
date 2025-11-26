@@ -75,20 +75,24 @@ const servicesPageContent = {
       en: "We coordinate suppliers, transport, documents, regulations, risk management, and post-arrival operations to ensure reliable, predictable, and cost-efficient imports.",
       es: "Coordinamos proveedores, transporte, documentos, normativas, gestión de riesgo y operaciones posteriores al arribo para garantizar importaciones confiables, predecibles y rentables.",
     },
-    bullets: {
-      en: [
-        "Supplier scouting & negotiation",
-        "International shipping & freight coordination",
-        "Customs clearance & documentation",
-        "National delivery to your facility",
-      ],
-      es: [
-        "Búsqueda y negociación con proveedores",
-        "Coordinación de transporte internacional",
-        "Despacho aduanero y documentación",
-        "Entrega nacional a tu depósito",
-      ],
-    },
+    bullets: [
+      {
+        en: "Supplier scouting & negotiation",
+        es: "Búsqueda y negociación con proveedores",
+      },
+      {
+        en: "International shipping & freight coordination",
+        es: "Coordinación de transporte internacional",
+      },
+      {
+        en: "Customs clearance & documentation",
+        es: "Despacho aduanero y documentación",
+      },
+      {
+        en: "National delivery to your facility",
+        es: "Entrega nacional a tu depósito",
+      },
+    ],
   },
 
   exportSection: {
