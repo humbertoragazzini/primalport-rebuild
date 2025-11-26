@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Heading from "../../components/atoms/Heading";
-import { FaBeer } from "react-icons/fa";
+import { FaArrowRight, FaBeer } from "react-icons/fa";
 import PpButton from "../../components/atoms/Button";
 import MyCarousel from "../../components/organisms/Carousel";
 import MultiLangSpan from "@/src/components/atoms/MultiLangSpan";
@@ -277,7 +277,7 @@ export default function Home() {
                           src="http://placehold.co/450x450"
                         ></img>
                       </div> */}
-                      <p className="font-semibold text-xl text-yellow-bright">
+                      <p className="font-semibold text-xl">
                         <MultiLangSpan content={m}></MultiLangSpan>
                       </p>
                     </div>
@@ -344,6 +344,19 @@ export default function Home() {
                   content={servicesPageContent.cta.subtitle}
                 ></MultiLangSpan>
               </p>
+            </div>
+            <div className="flex justify-center items-center mb-8">
+              <div className="ml-3">
+                <PpButton
+                  theme={"yellow"}
+                  icon={<FaArrowRight size={18} />}
+                  href={"/"}
+                >
+                  <MultiLangSpan
+                    content={servicesPageContent.cta.button}
+                  ></MultiLangSpan>
+                </PpButton>
+              </div>
             </div>
           </div>
         </div>
