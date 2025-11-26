@@ -179,45 +179,23 @@ export default function Home() {
                 ></MultiLangSpan>
               </p>
             </div>
-            {/* <div className="w-full flex flex-row">
-              <div className="w-[15%]"></div>
-              <div className="w-[80%]">
-                <div className="grid grid-cols-1 gap-8 mx-auto">
-                  {servicesPageContent.story.timeline.map((t, i) => {
-                    return (
-                      <div className="col-span-1 relative">
-                        <div className="absolute h-full top-0 -translate-x-9 md:-translate-x-12 lg:-translate-x-16 xl:-translate-x-22">
-                          <div className="relative z-10 flex justify-center items-center">
-                            <div className="w-4 h-4 bg-slate-700 border-2 border-slate-800 rounded-full -mb-1"></div>
-                          </div>
-                          <div className="relative z-0 w-full h-full flex justify-center">
-                            <div
-                              className={`${
-                                i + 1 ==
-                                servicesPageContent.story.timeline.length
-                                  ? "h-[calc(100%-15px)]"
-                                  : "h-[calc(100%+2rem)]"
-                              } w-[2px] bg-slate-500 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]`}
-                            ></div>
-                          </div>
-                        </div>
-                        <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                          <p className="font-semibold text-md mb-4">{t.year}</p>
-                          <p className="font-semibold text-xl mb-4">
-                            <MultiLangSpan content={t.title}></MultiLangSpan>
-                          </p>
-                          <p>
-                            <MultiLangSpan content={t.body}></MultiLangSpan>
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
 
-              <div className="col-span-1 hidden md:block"></div>
-            </div> */}
+            <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
+              {servicesPageContent.consultingSection.bullets.map((b) => {
+                return (
+                  <div className="col-span-1 relative">
+                    <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                      <div className="w-[28px] h-[28px] p-[2px] bg bg-slate-950 rounded-full border-yellow-bright border-2">
+                        <FaCircleCheck className="w-[20px] h-[20px] text-yellow-bright"></FaCircleCheck>
+                      </div>
+                      <p className="text-xl ml-5">
+                        <MultiLangSpan content={b}></MultiLangSpan>
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -229,20 +207,31 @@ export default function Home() {
       >
         <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
           <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
-            <Heading level={2} className="text-left font-semibold! mb-8">
-              <MultiLangSpan
-                content={servicesPageContent.paperSection.title}
-              ></MultiLangSpan>
-            </Heading>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
-              <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+            <div className="mb-4 lg:max-w-[75%] mx-auto">
+              <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
                 <MultiLangSpan
                   content={servicesPageContent.paperSection.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 lg:max-w-[75%] mx-auto">
-              {servicesPageContent.whyDifferent.points.map((t, i) => {
+
+            <div className="mb-4 lg:max-w-[75%] mx-auto">
+              <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
+                <MultiLangSpan
+                  content={servicesPageContent.paperSection.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+            <div className="mb-16 lg:max-w-[75%] mx-auto">
+              <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={servicesPageContent.paperSection.body}
+                ></MultiLangSpan>
+              </p>
+            </div>
+
+            <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
+              {servicesPageContent.paperSection.bullets.map((b) => {
                 return (
                   <div className="col-span-1 relative">
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -250,13 +239,13 @@ export default function Home() {
                         <FaCircleCheck className="w-[20px] h-[20px] text-yellow-bright"></FaCircleCheck>
                       </div>
                       <p className="text-xl ml-5">
-                        <MultiLangSpan content={t}></MultiLangSpan>
+                        <MultiLangSpan content={b}></MultiLangSpan>
                       </p>
                     </div>
                   </div>
                 );
               })}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
