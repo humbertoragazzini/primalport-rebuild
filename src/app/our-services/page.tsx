@@ -165,10 +165,17 @@ export default function Home() {
                 content={servicesPageContent.consultingSection.title}
               ></MultiLangSpan>
             </Heading>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
-              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+            <div className="mb-4 lg:max-w-[75%] mx-auto">
+              <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
                 <MultiLangSpan
                   content={servicesPageContent.consultingSection.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+            <div className="mb-16 lg:max-w-[75%] mx-auto">
+              <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={servicesPageContent.consultingSection.body}
                 ></MultiLangSpan>
               </p>
             </div>

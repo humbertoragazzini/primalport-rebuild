@@ -141,20 +141,24 @@ const servicesPageContent = {
       en: "We provide strategic guidance to reduce costs, speed up processes, and ensure compliance with both Argentine and international regulations.",
       es: "Ofrecemos acompañamiento estratégico para reducir costos, acelerar procesos y asegurar cumplimiento con normas argentinas e internacionales.",
     },
-    bullets: {
-      en: [
-        "Cost analysis and forecasting",
-        "Regulatory compliance for imports and exports",
-        "Supplier verification and quality audits",
-        "Operational planning and logistics strategy",
-      ],
-      es: [
-        "Análisis de costos y proyecciones",
-        "Cumplimiento normativo para importación y exportación",
-        "Verificación de proveedores y auditorías de calidad",
-        "Planificación operativa y estrategia logística",
-      ],
-    },
+    bullets: [
+      {
+        en: "Cost analysis and forecasting",
+        es: "Análisis de costos y proyecciones",
+      },
+      {
+        en: "Regulatory compliance for imports and exports",
+        es: "Cumplimiento normativo para importación y exportación",
+      },
+      {
+        en: "Supplier verification and quality audits",
+        es: "Verificación de proveedores y auditorías de calidad",
+      },
+      {
+        en: "Operational planning and logistics strategy",
+        es: "Planificación operativa y estrategia logística",
+      },
+    ],
   },
 
   paperSection: {
