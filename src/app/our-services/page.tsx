@@ -208,11 +208,11 @@ export default function Home() {
         <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
           <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
             <div className="mb-4 lg:max-w-[75%] mx-auto">
-              <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
+              <Heading level={2} className="text-center font-semibold! mb-8">
                 <MultiLangSpan
-                  content={servicesPageContent.paperSection.subtitle}
+                  content={servicesPageContent.consultingSection.title}
                 ></MultiLangSpan>
-              </p>
+              </Heading>
             </div>
 
             <div className="mb-4 lg:max-w-[75%] mx-auto">
