@@ -174,22 +174,28 @@ const servicesPageContent = {
       en: "We manufacture high-quality paper products designed for retailers, wholesalers, cleaning companies, industries, and large-volume clients across the country.",
       es: "Fabricamos productos de papel de alta calidad diseñados para comercios, mayoristas, empresas de limpieza, industrias y clientes de gran volumen en todo el país.",
     },
-    bullets: {
-      en: [
-        "Household toilet rolls",
-        "Jumbo industrial rolls",
-        "Soft-touch premium lines",
-        "Cellulose and sustainable material options",
-        "Nationwide wholesale distribution",
-      ],
-      es: [
-        "Rollos de papel higiénico para el hogar",
-        "Bobinas industriales jumbo",
-        "Líneas premium suaves al tacto",
-        "Opciones de celulosa y materiales sustentables",
-        "Distribución mayorista en todo el país",
-      ],
-    },
+    bullets: [
+      {
+        en: "Household toilet rolls",
+        es: "Rollos de papel higiénico para el hogar",
+      },
+      {
+        en: "Jumbo industrial rolls",
+        es: "Bobinas industriales jumbo",
+      },
+      {
+        en: "Soft-touch premium lines",
+        es: "Líneas premium suaves al tacto",
+      },
+      {
+        en: "Cellulose and sustainable material options",
+        es: "Opciones de celulosa y materiales sustentables",
+      },
+      {
+        en: "Nationwide wholesale distribution",
+        es: "Distribución mayorista en todo el país",
+      },
+    ],
   },
 
   whyUs: {
