@@ -108,20 +108,24 @@ const servicesPageContent = {
       en: "We handle all legal, logistical, and operational requirements for exporting from Argentina, helping your products reach the right buyers with a competitive advantage.",
       es: "Gestionamos todos los requisitos legales, logísticos y operativos para exportar desde Argentina, ayudando a que tus productos lleguen a los compradores correctos con ventaja competitiva.",
     },
-    bullets: {
-      en: [
-        "Market research and entry strategy",
-        "International documentation & compliance",
-        "Export logistics & freight planning",
-        "Global distribution partnerships",
-      ],
-      es: [
-        "Investigación de mercado y estrategia de ingreso",
-        "Documentación internacional y compliance",
-        "Logística de exportación y planificación de fletes",
-        "Alianzas de distribución global",
-      ],
-    },
+    bullets: [
+      {
+        en: "Market research and entry strategy",
+        es: "Investigación de mercado y estrategia de ingreso",
+      },
+      {
+        en: "International documentation & compliance",
+        es: "Documentación internacional y compliance",
+      },
+      {
+        en: "Export logistics & freight planning",
+        es: "Logística de exportación y planificación de fletes",
+      },
+      {
+        en: "Global distribution partnerships",
+        es: "Alianzas de distribución global",
+      },
+    ],
   },
 
   consultingSection: {
