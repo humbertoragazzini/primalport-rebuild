@@ -309,7 +309,7 @@ export default function Home() {
                 return (
                   <div className="col-span-1 relative">
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                      <div className="w-[28px] h-[28px] p-[2px] bg bg-slate-950 rounded-full border-yellow-bright border-2">
+                      <div className="flex justify-center items-center min-w-[48px] text-yellow-bright min-h-[48px] bg bg-slate-950 rounded-full border-yellow-bright border-2 font-bold">
                         {b.number}
                       </div>
                       <div>
@@ -324,6 +324,26 @@ export default function Home() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* our values */}
+      <div id="home-highlights" className="w-full mb-40">
+        <div className=" inset-0 py-16 h-full">
+          <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
+            <Heading level={2} className="text-center font-semibold! mb-8">
+              <MultiLangSpan
+                content={servicesPageContent.cta.title}
+              ></MultiLangSpan>
+            </Heading>
+            <div className="mb-16 lg:max-w-[75%] mx-auto">
+              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={servicesPageContent.cta.subtitle}
+                ></MultiLangSpan>
+              </p>
             </div>
           </div>
         </div>
