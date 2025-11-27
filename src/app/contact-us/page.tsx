@@ -5,7 +5,7 @@ import PpButton from "../../components/atoms/Button";
 import MyCarousel from "../../components/organisms/Carousel";
 import MultiLangSpan from "@/src/components/atoms/MultiLangSpan";
 import { FaCircleCheck } from "react-icons/fa6";
-import servicesPageContent from "@/src/data/servicesPageContent";
+import conteactContent from "@/src/data/conteactContent";
 
 export default function Contact() {
   return (
@@ -14,21 +14,17 @@ export default function Contact() {
       <div className="mx-auto px-2 xl:px-6 py-16 lg:py-0 lg:h-[calc(100vh-160px)] w-full flex justify-center items-center">
         <div className="max-w-[1480px]">
           <div className="rounded-full border-yellow-bright border-2 text-white py-4 px-6 w-fit mx-auto font-semibold mb-4 text-2xl">
-            <MultiLangSpan
-              content={servicesPageContent.hero.tag}
-            ></MultiLangSpan>
+            <MultiLangSpan content={conteactContent.hero.tag}></MultiLangSpan>
           </div>
           <Heading
             level={1}
             className="text-white font-bold text-center mb-4 xl:text-[100px]!"
           >
-            <MultiLangSpan
-              content={servicesPageContent.hero.title}
-            ></MultiLangSpan>
+            <MultiLangSpan content={conteactContent.hero.title}></MultiLangSpan>
           </Heading>
           <p className="font-semi text-lg! lg:text-xl! text-muted-steel-blue text-center mx-auto xl:w-[75%] mb-8">
             <MultiLangSpan
-              content={servicesPageContent.hero.subtitle}
+              content={conteactContent.hero.subtitle}
             ></MultiLangSpan>
           </p>
           <div className="flex justify-center items-center mb-8"></div>
@@ -44,18 +40,18 @@ export default function Contact() {
           <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.overview.title}
+                content={conteactContent.overview.title}
               ></MultiLangSpan>
             </Heading>
             <div className="mb-16 lg:max-w-[75%] mx-auto">
               <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={servicesPageContent.overview.subtitle}
+                  content={conteactContent.overview.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
-              {servicesPageContent.overview.cards.map((c) => {
+              {conteactContent.overview.cards.map((c) => {
                 return (
                   <div className="col-span-1">
                     <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -80,25 +76,25 @@ export default function Contact() {
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.importSection.title}
+                content={conteactContent.importSection.title}
               ></MultiLangSpan>
             </Heading>
             <div className="mb-4 lg:max-w-[75%] mx-auto">
               <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
                 <MultiLangSpan
-                  content={servicesPageContent.importSection.subtitle}
+                  content={conteactContent.importSection.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
             <div className="mb-16 lg:max-w-[75%] mx-auto">
               <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={servicesPageContent.importSection.body}
+                  content={conteactContent.importSection.body}
                 ></MultiLangSpan>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-              {servicesPageContent.importSection.bullets.map((b) => {
+              {conteactContent.importSection.bullets.map((b) => {
                 return (
                   <div className="col-span-1 relative">
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -126,18 +122,18 @@ export default function Contact() {
           <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.exportSection.title}
+                content={conteactContent.exportSection.title}
               ></MultiLangSpan>
             </Heading>
             <div className="mb-16 lg:max-w-[1200px] mx-auto">
               <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={servicesPageContent.exportSection.body}
+                  content={conteactContent.exportSection.body}
                 ></MultiLangSpan>
               </p>
             </div>
             <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-              {servicesPageContent.exportSection.bullets.map((b) => {
+              {conteactContent.exportSection.bullets.map((b) => {
                 return (
                   <div className="col-span-1 relative">
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -162,26 +158,26 @@ export default function Contact() {
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.consultingSection.title}
+                content={conteactContent.consultingSection.title}
               ></MultiLangSpan>
             </Heading>
             <div className="mb-4 lg:max-w-[75%] mx-auto">
               <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
                 <MultiLangSpan
-                  content={servicesPageContent.consultingSection.subtitle}
+                  content={conteactContent.consultingSection.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
             <div className="mb-16 lg:max-w-[75%] mx-auto">
               <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={servicesPageContent.consultingSection.body}
+                  content={conteactContent.consultingSection.body}
                 ></MultiLangSpan>
               </p>
             </div>
 
             <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-              {servicesPageContent.consultingSection.bullets.map((b) => {
+              {conteactContent.consultingSection.bullets.map((b) => {
                 return (
                   <div className="col-span-1 relative">
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -210,7 +206,7 @@ export default function Contact() {
             <div className="mb-4 lg:max-w-[75%] mx-auto">
               <Heading level={2} className="text-center font-semibold! mb-8">
                 <MultiLangSpan
-                  content={servicesPageContent.paperSection.title}
+                  content={conteactContent.paperSection.title}
                 ></MultiLangSpan>
               </Heading>
             </div>
@@ -218,20 +214,20 @@ export default function Contact() {
             <div className="mb-4 lg:max-w-[75%] mx-auto">
               <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
                 <MultiLangSpan
-                  content={servicesPageContent.paperSection.subtitle}
+                  content={conteactContent.paperSection.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
             <div className="mb-16 lg:max-w-[75%] mx-auto">
               <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={servicesPageContent.paperSection.body}
+                  content={conteactContent.paperSection.body}
                 ></MultiLangSpan>
               </p>
             </div>
 
             <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-              {servicesPageContent.paperSection.bullets.map((b) => {
+              {conteactContent.paperSection.bullets.map((b) => {
                 return (
                   <div className="col-span-1 relative">
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -256,18 +252,18 @@ export default function Contact() {
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.whyUs.title}
+                content={conteactContent.whyUs.title}
               ></MultiLangSpan>
             </Heading>
             <div className="mb-16 lg:max-w-[75%] mx-auto">
               <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={servicesPageContent.whyUs.subtitle}
+                  content={conteactContent.whyUs.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
-              {servicesPageContent.whyUs.points.map((m) => {
+              {conteactContent.whyUs.points.map((m) => {
                 return (
                   <div className="col-span-1">
                     <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -299,13 +295,13 @@ export default function Contact() {
             <div className="mb-4 lg:max-w-[75%] mx-auto">
               <Heading level={2} className="text-center font-semibold! mb-8">
                 <MultiLangSpan
-                  content={servicesPageContent.process.title}
+                  content={conteactContent.process.title}
                 ></MultiLangSpan>
               </Heading>
             </div>
 
             <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-              {servicesPageContent.process.steps.map((b) => {
+              {conteactContent.process.steps.map((b) => {
                 return (
                   <div className="col-span-1 relative">
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -335,13 +331,13 @@ export default function Contact() {
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.cta.title}
+                content={conteactContent.cta.title}
               ></MultiLangSpan>
             </Heading>
             <div className="mb-16 lg:max-w-[75%] mx-auto">
               <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
-                  content={servicesPageContent.cta.subtitle}
+                  content={conteactContent.cta.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
@@ -353,7 +349,7 @@ export default function Contact() {
                   href={"/"}
                 >
                   <MultiLangSpan
-                    content={servicesPageContent.cta.button}
+                    content={conteactContent.cta.button}
                   ></MultiLangSpan>
                 </PpButton>
               </div>
