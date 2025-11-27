@@ -7,6 +7,8 @@ import MultiLangSpan from "@/src/components/atoms/MultiLangSpan";
 import { FaCircleCheck } from "react-icons/fa6";
 import contactPageContent from "@/src/data/contactPageContent";
 import ShimmerBorderCard from "@/src/components/atoms/Card";
+import { useLanguageStore } from "@/src/hooks/useLanguage";
+import ContactForm from "@/src/components/organisms/ContactForm";
 
 export default function Contact() {
   return (
@@ -93,14 +95,16 @@ export default function Contact() {
         className="mx-auto w-full max-w-[1480px] min-h-screen flex justify-center items-center px-2 xl:px-6"
       >
         <div className="mx-auto text-white mb-[200px]">
-          <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+          <div className="w-full mx-auto max-w-[1480px] mb-16 px-2 xl:px-6 text-white">
             <Heading level={2} className="font-bold">
               <MultiLangSpan
                 content={contactPageContent.formSection.title}
               ></MultiLangSpan>
             </Heading>
           </div>
-          <div></div>
+          <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+            <ContactForm></ContactForm>
+          </div>
         </div>
       </div>
     </main>
