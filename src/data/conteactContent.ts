@@ -1,15 +1,15 @@
 const conteactContent = {
   hero: {
     tag: {
-      en: "Our Services",
-      es: "Nuestros Servicios",
+      en: "Contact Us",
+      es: "Contáctanos",
     },
     title: {
-      en: `Solutions for <span class="text-yellow-bright">Global Trade</span> & <span class="text-yellow-bright">Sustainable Products</span>`,
+      en: `<span class="text-yellow-bright">Get in touch</span>`,
       es: `Soluciones para el <span class="text-yellow-bright">Comercio Global</span> y <span class="text-yellow-bright">Productos Sustentables</span>`,
     },
     subtitle: {
-      en: "We help businesses import, export, scale, and access sustainable paper products through reliable logistics, transparent processes, and a family-driven approach.",
+      en: "Have questions about our services? We're here to help you with imports, exports, and manufacturing solutions.",
       es: "Ayudamos a las empresas a importar, exportar, crecer y acceder a productos de papel sustentables mediante logística confiable, procesos transparentes y un enfoque familiar.",
     },
     ctaLabel: {
