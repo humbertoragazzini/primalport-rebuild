@@ -7,7 +7,7 @@ import MultiLangSpan from "@/src/components/atoms/MultiLangSpan";
 import { FaCircleCheck } from "react-icons/fa6";
 import servicesPageContent from "@/src/data/servicesPageContent";
 
-export default function Home() {
+export default function OurServices() {
   return (
     <main className="w-full min-h-screen pb-16" id="home-hero">
       {/* Header */}
