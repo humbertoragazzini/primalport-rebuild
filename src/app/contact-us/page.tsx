@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Heading from "../../components/atoms/Heading";
-import { FaArrowRight, FaBeer } from "react-icons/fa";
+import { FaArrowRight, FaBeer, FaToiletPaper } from "react-icons/fa";
 import PpButton from "../../components/atoms/Button";
 import MyCarousel from "../../components/organisms/Carousel";
 import MultiLangSpan from "@/src/components/atoms/MultiLangSpan";
 import { FaCircleCheck } from "react-icons/fa6";
 import contactPageContent from "@/src/data/contactPageContent";
+import ShimmerBorderCard from "@/src/components/atoms/Card";
 
 export default function Contact() {
   return (
@@ -32,6 +33,58 @@ export default function Contact() {
             ></MultiLangSpan>
           </p>
           <div className="flex justify-center items-center mb-8"></div>
+        </div>
+      </div>
+
+      {/* carousel */}
+      <div
+        id="home-highlights"
+        className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
+      >
+        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
+          <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
+            <Heading
+              level={2}
+              className="text-center font-semibold! text-white"
+            >
+              <MultiLangSpan
+                content={contactPageContent.infoSection.title}
+              ></MultiLangSpan>
+            </Heading>
+          </div>
+          <div className="mb-16 lg:max-w-[1280px] mx-auto">
+            <p className="text-md! text-center lg:text-2xl! text-muted-steel-blue">
+              <MultiLangSpan
+                content={contactPageContent.infoSection.subtitle}
+              ></MultiLangSpan>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:max-w-[75%] mx-auto">
+            {contactPageContent.infoSection.cards.map((c) => {
+              return (
+                <ShimmerBorderCard
+                  title={
+                    <div className="text-center w-full">
+                      <MultiLangSpan content={c.title}></MultiLangSpan>
+                    </div>
+                  }
+                  body={
+                    <>
+                      <div className="w-full text-center">
+                        <MultiLangSpan content={c.line1}></MultiLangSpan>
+                      </div>
+                      <div className="w-full text-center">
+                        <MultiLangSpan content={c.line2}></MultiLangSpan>
+                      </div>
+                    </>
+                  }
+                  icon={
+                    <FaToiletPaper className="w-14 h-14 relative text-indigo-500" />
+                  }
+                ></ShimmerBorderCard>
+              );
+            })}
+          </div>
         </div>
       </div>
     </main>
