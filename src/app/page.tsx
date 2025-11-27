@@ -13,7 +13,7 @@ import { GiCargoShip } from "react-icons/gi";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { LuShipWheel } from "react-icons/lu";
 import Header from "../components/molecules/Header";
-import HeadingSection from "../components/organisms/Header";
+import HeadingSection from "../components/organisms/HeadingSection";
 
 export default function Home() {
   return (

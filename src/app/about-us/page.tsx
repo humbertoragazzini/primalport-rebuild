@@ -5,7 +5,7 @@ import PpButton from "../../components/atoms/Button";
 import MultiLangSpan from "../../components/atoms/MultiLangSpan";
 import aboutUsContent from "../../data/aboutUsContent";
 import { FaCircleCheck } from "react-icons/fa6";
-import HeadingSection from "@/src/components/organisms/Header";
+import HeadingSection from "@/src/components/organisms/HeadingSection";
 
 export default function AboutUs() {
   return (

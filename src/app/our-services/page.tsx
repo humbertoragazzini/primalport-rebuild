@@ -6,7 +6,7 @@ import MyCarousel from "../../components/organisms/Carousel";
 import MultiLangSpan from "@/src/components/atoms/MultiLangSpan";
 import { FaCircleCheck } from "react-icons/fa6";
 import servicesPageContent from "@/src/data/servicesPageContent";
-import HeadingSection from "@/src/components/organisms/Header";
+import HeadingSection from "@/src/components/organisms/HeadingSection";
 
 export default function OurServices() {
   return (

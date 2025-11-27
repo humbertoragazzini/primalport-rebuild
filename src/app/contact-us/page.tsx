@@ -9,7 +9,7 @@ import contactPageContent from "@/src/data/contactPageContent";
 import ShimmerBorderCard from "@/src/components/atoms/Card";
 import { useLanguageStore } from "@/src/hooks/useLanguage";
 import ContactForm from "@/src/components/organisms/ContactForm";
-import HeadingSection from "@/src/components/organisms/Header";
+import HeadingSection from "@/src/components/organisms/HeadingSection";
 
 export default function Contact() {
   return (

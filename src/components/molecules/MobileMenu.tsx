@@ -93,6 +93,7 @@ export const MobileMenu = () => {
                         <Link
                           key={link.href}
                           href={link.href}
+                          onClick={() => setMenuToggle(menu)}
                           className={`text-xl font-medium ${
                             pathname == link.href ? "underline" : ""
                           }`}
