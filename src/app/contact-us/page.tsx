@@ -14,7 +14,7 @@ export default function Contact() {
   return (
     <main className="w-full min-h-screen pb-16" id="home-hero">
       {/* Header */}
-      <div className="mx-auto px-2 xl:px-6 py-16 lg:py-0 lg:h-[calc(100vh-160px)] w-full flex justify-center items-center">
+      <div className="mx-auto px-2 xl:px-6 py-16 lg:py-0 h-screen lg:h-[calc(100vh-160px)] w-full flex justify-center items-center">
         <div className="max-w-[1480px]">
           <div className="rounded-full border-yellow-bright border-2 text-white py-4 px-6 w-fit mx-auto font-semibold mb-4 text-2xl">
             <MultiLangSpan
