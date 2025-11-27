@@ -12,42 +12,18 @@ import { FiCloudLightning } from "react-icons/fi";
 import { GiCargoShip } from "react-icons/gi";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { LuShipWheel } from "react-icons/lu";
+import Header from "../components/molecules/Header";
+import HeadingSection from "../components/organisms/Header";
 
 export default function Home() {
   return (
     <main className="w-full min-h-screen pb-16" id="home-hero">
       {/* Header */}
-      <div className="mx-auto px-2 xl:px-6 h-screen lg:h-[calc(100vh-160px)] w-full flex justify-center items-center">
-        <div className="max-w-[1480px]">
-          <Heading
-            level={1}
-            className="text-white font-bold text-center mb-4 xl:text-[100px]!"
-          >
-            <MultiLangSpan content={homeContent.hero.title}></MultiLangSpan>
-          </Heading>
-          <p className="font-semi text-lg! lg:text-xl! text-muted-steel-blue text-center mx-auto xl:w-[75%] mb-8">
-            <MultiLangSpan content={homeContent.hero.subtitle}></MultiLangSpan>
-          </p>
-          <div className="flex justify-center items-center mb-8">
-            {/* <div>
-              <PpButton theme={"yellow"} icon={<FaBeer size={18} />} href={"/"}>
-                Contact Us
-              </PpButton>
-            </div> */}
-            <div className="ml-3">
-              <PpButton
-                theme={"yellow"}
-                icon={<FaArrowRight size={18} />}
-                href={"/"}
-              >
-                <MultiLangSpan
-                  content={homeContent.hero.button}
-                ></MultiLangSpan>
-              </PpButton>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeadingSection
+        title={homeContent.hero.title}
+        subtitle={homeContent.hero.subtitle}
+        button={homeContent.hero.button}
+      ></HeadingSection>
       {/* carousel */}
       <div
         id="home-highlights"
