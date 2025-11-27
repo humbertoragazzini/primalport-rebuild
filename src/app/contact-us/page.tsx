@@ -87,6 +87,22 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
+      <div
+        id="cards-highlights"
+        className="mx-auto w-full max-w-[1480px] min-h-screen flex justify-center items-center px-2 xl:px-6"
+      >
+        <div className="mx-auto text-white mb-[200px]">
+          <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+            <Heading level={2} className="font-bold">
+              <MultiLangSpan
+                content={contactPageContent.formSection.title}
+              ></MultiLangSpan>
+            </Heading>
+          </div>
+          <div></div>
+        </div>
+      </div>
     </main>
   );
 }
