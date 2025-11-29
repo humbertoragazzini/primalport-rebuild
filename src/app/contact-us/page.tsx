@@ -82,8 +82,9 @@ export default function Contact() {
                 ></MultiLangSpan>
               </Heading>
             </div>
-
-            <ContactForm></ContactForm>
+            <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+              <ContactForm></ContactForm>
+            </div>
           </div>
         </>
       </TransparentSection>
