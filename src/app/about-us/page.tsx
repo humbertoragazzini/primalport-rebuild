@@ -9,7 +9,7 @@ import HeadingSection from "@/src/components/organisms/HeadingSection";
 
 export default function AboutUs() {
   return (
-    <main className="w-full min-h-screen pb-16" id="home-hero">
+    <main className="w-full min-h-screen" id="home-hero">
       {/* Header */}
       <HeadingSection
         tag={aboutUsContent.hero.tag}

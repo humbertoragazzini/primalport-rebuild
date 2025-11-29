@@ -13,7 +13,7 @@ import HeadingSection from "@/src/components/organisms/HeadingSection";
 
 export default function Contact() {
   return (
-    <main className="w-full min-h-screen pb-16" id="home-hero">
+    <main className="w-full min-h-screen" id="home-hero">
       {/* Header */}
       <HeadingSection
         tag={contactPageContent.hero.tag}
@@ -26,7 +26,7 @@ export default function Contact() {
         id="home-highlights"
         className="w-full py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_95%,rgba(2,6,24,1)_100%)] md:bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
       >
-        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full px-2 xl:px-6">
+        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 h-full px-2 xl:px-6">
           <div className="w-full mx-auto max-w-[1480px]">
             <Heading
               level={2}
@@ -75,7 +75,7 @@ export default function Contact() {
 
       <div
         id="cards-highlights"
-        className="mx-auto w-full max-w-[1480px] min-h-screen flex flex-col justify-center items-center px-2 xl:px-6"
+        className="mx-auto w-full max-w-[1480px] flex flex-col justify-center items-center px-2 xl:px-6"
       >
         <div className="mx-auto text-white">
           <div className="w-full mx-auto max-w-[1480px] mb-16 text-white">

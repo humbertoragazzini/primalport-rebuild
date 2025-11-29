@@ -17,7 +17,7 @@ import HeadingSection from "../components/organisms/HeadingSection";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen pb-16" id="home-hero">
+    <main className="w-full min-h-screen" id="home-hero">
       {/* Header */}
       <HeadingSection
         title={homeContent.hero.title}
@@ -27,9 +27,9 @@ export default function Home() {
       {/* carousel */}
       <div
         id="home-highlights"
-        className="w-full py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_95%,rgba(2,6,24,1)_100%)] md:bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
+        className="w-full my-8 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_95%,rgba(2,6,24,1)_100%)] md:bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
       >
-        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 h-full">
+        <div className="py-16 inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 h-full">
           <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
             <Heading
               level={2}
@@ -44,9 +44,9 @@ export default function Home() {
       {/* cards */}
       <div
         id="cards-highlights"
-        className="mx-auto w-full max-w-[1480px] min-h-screen flex justify-center items-center px-2 xl:px-6"
+        className="py-16 my-8 mx-auto w-full max-w-[1480px] min-h-screen flex justify-center items-center px-2 xl:px-6"
       >
-        <div className="mx-auto text-white pb-[75px]">
+        <div className="mx-auto text-white lg:pb-[145px]">
           <div className="grid grid-cols-12">
             <div className="col-span-12 lg:col-span-4 px-6 lg:px-0">
               <Heading level={2} className="font-bold">
