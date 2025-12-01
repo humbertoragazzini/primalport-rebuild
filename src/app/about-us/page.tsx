@@ -288,7 +288,7 @@ export default function AboutUs() {
             {aboutUsContent.whyDifferent.points.map((t, i) => {
               return (
                 <div className="col-span-1 relative">
-                  <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <div className="border-1 h-full p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="w-[28px] h-[28px] p-[2px] bg bg-slate-950 rounded-full border-yellow-bright border-2">
                       <FaCircleCheck className="w-[20px] h-[20px] text-yellow-bright"></FaCircleCheck>
                     </div>
