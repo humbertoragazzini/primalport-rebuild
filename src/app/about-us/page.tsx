@@ -1,11 +1,18 @@
 import Image from "next/image";
 import Heading from "../../components/atoms/Heading";
-import { FaArrowRight, FaBeer, FaToiletPaper } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaBeer,
+  FaHandHoldingHeart,
+  FaToiletPaper,
+} from "react-icons/fa";
 import PpButton from "../../components/atoms/Button";
 import MultiLangSpan from "../../components/atoms/MultiLangSpan";
 import aboutUsContent from "../../data/aboutUsContent";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FaCircleCheck, FaPeopleGroup } from "react-icons/fa6";
 import HeadingSection from "@/src/components/organisms/HeadingSection";
+import { ImLeaf } from "react-icons/im";
+import { GiBrain } from "react-icons/gi";
 
 export default function AboutUs() {
   return (
@@ -90,7 +97,7 @@ export default function AboutUs() {
               <div className="col-span-1">
                 <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
+                    <ImLeaf className="w-6 h-6"></ImLeaf>
                   </div>
                   <p className="font-semibold text-xl mb-4">
                     <MultiLangSpan
@@ -107,7 +114,7 @@ export default function AboutUs() {
               <div className="col-span-1">
                 <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
+                    <FaHandHoldingHeart className="w-6 h-6"></FaHandHoldingHeart>
                   </div>
                   <p className="font-semibold text-xl mb-4">
                     <MultiLangSpan
@@ -124,7 +131,7 @@ export default function AboutUs() {
               <div className="col-span-1">
                 <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
+                    <FaPeopleGroup className="w-6 h-6"></FaPeopleGroup>
                   </div>
                   <p className="font-semibold text-xl mb-4">
                     <MultiLangSpan
@@ -141,7 +148,7 @@ export default function AboutUs() {
               <div className="col-span-1">
                 <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
-                    <FaBeer className="w-6 h-6"></FaBeer>
+                    <GiBrain className="w-6 h-6"></GiBrain>
                   </div>
                   <p className="font-semibold text-xl mb-4">
                     <MultiLangSpan
