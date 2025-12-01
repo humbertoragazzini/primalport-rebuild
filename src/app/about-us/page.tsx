@@ -29,20 +29,20 @@ export default function AboutUs() {
 
       {/* our mission */}
       <GradientSection>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+        <div className="w-full text-white">
           <Heading level={2} className="text-left font-semibold! mb-8">
             <MultiLangSpan
               content={aboutUsContent.mission.title}
             ></MultiLangSpan>
           </Heading>
-          <div className="mb-16 lg:max-w-[75%] mx-auto">
+          <div className="mb-16 ">
             <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={aboutUsContent.mission.body}
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
             <div className="col-span-1">
               <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <p className="font-semibold text-xl mb-4">
@@ -77,13 +77,13 @@ export default function AboutUs() {
 
       {/* our values */}
       <TransparentSection>
-        <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
+        <div className="w-ful text-white">
           <Heading level={2} className="text-center font-semibold! mb-8">
             <MultiLangSpan
               content={aboutUsContent.values.title}
             ></MultiLangSpan>
           </Heading>
-          <div className="mb-16 lg:max-w-[75%] mx-auto">
+          <div className="mb-16 mx-auto">
             <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={aboutUsContent.values.subtitle}
@@ -165,20 +165,20 @@ export default function AboutUs() {
 
       {/* our mission */}
       <GradientSection>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+        <div className="w-full mx-auto text-white">
           <Heading level={2} className="text-left font-semibold! mb-8">
             <MultiLangSpan
               content={aboutUsContent.mission.title}
             ></MultiLangSpan>
           </Heading>
-          <div className="mb-16 lg:max-w-[75%] mx-auto">
+          <div className="mb-16 mx-auto">
             <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={aboutUsContent.mission.body}
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
             <div className="col-span-1">
               <div className="border-1 p-6 rounded-2xl bg-slate-700 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <p className="font-semibold text-xl mb-4">
@@ -214,13 +214,13 @@ export default function AboutUs() {
       {/* our values */}
       <TransparentSection>
         <div className=" inset-0 h-full">
-          <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
+          <div className="w-full mx-auto text-white">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
                 content={aboutUsContent.story.title}
               ></MultiLangSpan>
             </Heading>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
+            <div className="mb-16 ">
               <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={aboutUsContent.story.subtitle}
@@ -271,20 +271,20 @@ export default function AboutUs() {
 
       {/* our mission */}
       <GradientSection>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+        <div className="w-full mx-auto text-white">
           <Heading level={2} className="text-left font-semibold! mb-8">
             <MultiLangSpan
               content={aboutUsContent.whyDifferent.title}
             ></MultiLangSpan>
           </Heading>
-          <div className="mb-16 lg:max-w-[75%] mx-auto">
+          <div className="mb-16 w-full">
             <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={aboutUsContent.whyDifferent.subtitle}
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 lg:max-w-[75%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 ">
             {aboutUsContent.whyDifferent.points.map((t, i) => {
               return (
                 <div className="col-span-1 relative">
@@ -306,13 +306,13 @@ export default function AboutUs() {
       {/* our values */}
       <TransparentSection>
         <div className=" inset-0 h-full">
-          <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
+          <div className="w-full mx-auto text-white">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
                 content={aboutUsContent.team.title}
               ></MultiLangSpan>
             </Heading>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
+            <div className="mb-16 ">
               <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={aboutUsContent.team.subtitle}
