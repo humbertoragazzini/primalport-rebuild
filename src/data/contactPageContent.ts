@@ -72,16 +72,16 @@ const contactPageContent = {
       {
         icon: "clock",
         title: {
-          en: "Business Hours",
+          en: "Hours",
           es: "Horarios",
         },
         line1: {
-          en: "Mon – Fri: 9:00 AM – 6:00 PM",
-          es: "Lun – Vie: 9:00 AM – 18:00 PM",
+          en: "Mon – Fri:",
+          es: "Lun – Vie:",
         },
         line2: {
-          en: "Saturday: 9:00 AM – 1:00 PM",
-          es: "Sábado: 9:00 AM – 13:00 PM",
+          en: "9:00 AM – 6:00 PM",
+          es: "9:00 AM – 6:00 PM",
         },
       },
     ],
