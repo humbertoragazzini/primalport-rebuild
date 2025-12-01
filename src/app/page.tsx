@@ -33,9 +33,19 @@ export default function Home() {
         className={"[&_.inner-container]:px-0 [&_.inner-container]:py-16"}
       >
         <div className="w-full mb-16">
-          <Heading level={2} className="text-center font-semibold! text-white">
-            <MultiLangSpan content={homeContent.about.title}></MultiLangSpan>
-          </Heading>
+          <h2 class="text-3xl md:text-4xl xl:text-5xl leading-tight md:leading-tight xl:leading-tight text-left mb-8 font-semibold! text-white">
+            <span class="" lang="en">
+              Nuestras herramientas
+            </span>
+          </h2>
+          <p class="text-xl! lg:text-2xl! text-muted-steel-blue">
+            <span class="" lang="en">
+              Te brindamos herramientas utiles para el enprendedor, utilizalas
+              de forma totalmente gratuita, necesitas acesoramiento, comunicate
+              con nosotros y uno de nuestros expertos te ayudara a conseguir lo
+              mejor de tu negocio.
+            </span>
+          </p>
         </div>
         {/* <MyCarousel></MyCarousel> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto text-white">
