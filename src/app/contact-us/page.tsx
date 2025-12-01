@@ -10,10 +10,12 @@ import ShimmerBorderCard from "@/src/components/atoms/Card";
 import { useLanguageStore } from "@/src/hooks/useLanguage";
 import ContactForm from "@/src/components/organisms/ContactForm";
 import HeadingSection from "@/src/components/organisms/HeadingSection";
+import GradientSection from "@/src/components/atoms/GradientSection";
+import TransparentSection from "@/src/components/atoms/TransparentSection";
 
 export default function Contact() {
   return (
-    <main className="w-full min-h-screen pb-16" id="home-hero">
+    <main className="w-full min-h-screen" id="home-hero">
       {/* Header */}
       <HeadingSection
         tag={contactPageContent.hero.tag}
@@ -22,11 +24,8 @@ export default function Contact() {
       ></HeadingSection>
 
       {/* carousel */}
-      <div
-        id="home-highlights"
-        className="w-full py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_95%,rgba(2,6,24,1)_100%)] md:bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
-      >
-        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full px-2 xl:px-6">
+      <GradientSection>
+        <>
           <div className="w-full mx-auto max-w-[1480px]">
             <Heading
               level={2}
@@ -70,28 +69,25 @@ export default function Contact() {
               );
             })}
           </div>
-        </div>
-      </div>
+        </>
+      </GradientSection>
 
-      <div
-        id="cards-highlights"
-        className="mx-auto w-full max-w-[1480px] min-h-screen flex flex-col justify-center items-center px-2 xl:px-6"
-      >
-        <div className="mx-auto text-white">
-          <div className="w-full mx-auto max-w-[1480px] mb-16 text-white">
-            <Heading level={2} className="font-bold">
-              <MultiLangSpan
-                content={contactPageContent.formSection.title}
-              ></MultiLangSpan>
-            </Heading>
+      <TransparentSection>
+        <>
+          <div className="mx-auto text-white">
+            <div className="w-full mx-auto max-w-[1480px] mb-16 text-white">
+              <Heading level={2} className="font-bold">
+                <MultiLangSpan
+                  content={contactPageContent.formSection.title}
+                ></MultiLangSpan>
+              </Heading>
+            </div>
+            <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+              <ContactForm></ContactForm>
+            </div>
           </div>
-        </div>
-        <div className="w-full mx-auto max-w-[800px]">
-          <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-            <ContactForm></ContactForm>
-          </div>
-        </div>
-      </div>
+        </>
+      </TransparentSection>
     </main>
   );
 }

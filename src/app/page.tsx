@@ -14,10 +14,12 @@ import { LiaShippingFastSolid } from "react-icons/lia";
 import { LuShipWheel } from "react-icons/lu";
 import Header from "../components/molecules/Header";
 import HeadingSection from "../components/organisms/HeadingSection";
+import GradientSection from "../components/atoms/GradientSection";
+import TransparentSection from "../components/atoms/TransparentSection";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen pb-16" id="home-hero">
+    <main className="w-full min-h-screen" id="home-hero">
       {/* Header */}
       <HeadingSection
         title={homeContent.hero.title}
@@ -25,28 +27,18 @@ export default function Home() {
         button={homeContent.hero.button}
       ></HeadingSection>
       {/* carousel */}
-      <div
-        id="home-highlights"
-        className="w-full mb-40 py-[1px] bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_95%,rgba(2,6,24,1)_100%)] md:bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)]"
-      >
-        <div className=" inset-0 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 py-16 h-full">
-          <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
-            <Heading
-              level={2}
-              className="text-center font-semibold! text-white"
-            >
-              <MultiLangSpan content={homeContent.about.title}></MultiLangSpan>
-            </Heading>
-          </div>
-          <MyCarousel></MyCarousel>
+      <GradientSection id={"home-highlights"}>
+        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
+          <Heading level={2} className="text-center font-semibold! text-white">
+            <MultiLangSpan content={homeContent.about.title}></MultiLangSpan>
+          </Heading>
         </div>
-      </div>
+        <MyCarousel></MyCarousel>
+      </GradientSection>
+
       {/* cards */}
-      <div
-        id="cards-highlights"
-        className="mx-auto w-full max-w-[1480px] min-h-screen flex justify-center items-center px-2 xl:px-6"
-      >
-        <div className="mx-auto text-white mb-[200px]">
+      <TransparentSection id={"cards-highlights"}>
+        <div className="mx-auto text-white lg:pb-[145px]">
           <div className="grid grid-cols-12">
             <div className="col-span-12 lg:col-span-4 px-6 lg:px-0">
               <Heading level={2} className="font-bold">
@@ -129,7 +121,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </TransparentSection>
     </main>
   );
 }
