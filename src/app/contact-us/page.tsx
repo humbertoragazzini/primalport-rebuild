@@ -12,6 +12,10 @@ import ContactForm from "@/src/components/organisms/ContactForm";
 import HeadingSection from "@/src/components/organisms/HeadingSection";
 import GradientSection from "@/src/components/atoms/GradientSection";
 import TransparentSection from "@/src/components/atoms/TransparentSection";
+import { RiMapPin2Fill } from "react-icons/ri";
+import { FiPhone } from "react-icons/fi";
+import { LuMail } from "react-icons/lu";
+import { TbClock } from "react-icons/tb";
 
 export default function Contact() {
   return (
@@ -45,6 +49,27 @@ export default function Contact() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 ">
             {contactPageContent.infoSection.cards.map((c) => {
+              let icon = null;
+              if (c.icon == "location") {
+                icon = (
+                  <RiMapPin2Fill className="w-14 h-14 relative text-indigo-500" />
+                );
+              }
+              if (c.icon == "phone") {
+                icon = (
+                  <FiPhone className="w-14 h-14 relative text-indigo-500" />
+                );
+              }
+              if (c.icon == "email") {
+                icon = (
+                  <LuMail className="w-14 h-14 relative text-indigo-500" />
+                );
+              }
+              if (c.icon == "clock") {
+                icon = (
+                  <TbClock className="w-14 h-14 relative text-indigo-500" />
+                );
+              }
               return (
                 <ShimmerBorderCard
                   title={
@@ -62,9 +87,7 @@ export default function Contact() {
                       </div>
                     </>
                   }
-                  icon={
-                    <FaToiletPaper className="w-14 h-14 relative text-indigo-500" />
-                  }
+                  icon={icon}
                 ></ShimmerBorderCard>
               );
             })}
