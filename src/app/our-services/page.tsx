@@ -21,20 +21,20 @@ export default function OurServices() {
       ></HeadingSection>
 
       <GradientSection>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+        <div className="w-full  text-white">
           <Heading level={2} className="text-left font-semibold! mb-8">
             <MultiLangSpan
               content={servicesPageContent.overview.title}
             ></MultiLangSpan>
           </Heading>
-          <div className="mb-16 lg:max-w-[75%] mx-auto">
+          <div className="mb-16 ">
             <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={servicesPageContent.overview.subtitle}
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-[75%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
             {servicesPageContent.overview.cards.map((c) => {
               return (
                 <div className="col-span-1">
@@ -60,14 +60,14 @@ export default function OurServices() {
               content={servicesPageContent.importSection.title}
             ></MultiLangSpan>
           </Heading>
-          <div className="mb-4 lg:max-w-[75%] mx-auto">
+          <div className="mb-4 ">
             <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
               <MultiLangSpan
                 content={servicesPageContent.importSection.subtitle}
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="mb-16 lg:max-w-[75%] mx-auto">
+          <div className="mb-16 ">
             <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={servicesPageContent.importSection.body}
@@ -94,7 +94,7 @@ export default function OurServices() {
       </TransparentSection>
 
       <GradientSection>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
+        <div className="w-full  text-white">
           <Heading level={2} className="text-left font-semibold! mb-8">
             <MultiLangSpan
               content={servicesPageContent.exportSection.title}
@@ -133,14 +133,14 @@ export default function OurServices() {
                 content={servicesPageContent.consultingSection.title}
               ></MultiLangSpan>
             </Heading>
-            <div className="mb-4 lg:max-w-[75%] mx-auto">
+            <div className="mb-4 ">
               <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
                 <MultiLangSpan
                   content={servicesPageContent.consultingSection.subtitle}
                 ></MultiLangSpan>
               </p>
             </div>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
+            <div className="mb-16 ">
               <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={servicesPageContent.consultingSection.body}
@@ -169,8 +169,8 @@ export default function OurServices() {
       </TransparentSection>
 
       <GradientSection>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
-          <div className="mb-4 lg:max-w-[75%] mx-auto">
+        <div className="w-full  text-white">
+          <div className="mb-4 ">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
                 content={servicesPageContent.paperSection.title}
@@ -178,14 +178,14 @@ export default function OurServices() {
             </Heading>
           </div>
 
-          <div className="mb-4 lg:max-w-[75%] mx-auto">
+          <div className="mb-4 ">
             <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
               <MultiLangSpan
                 content={servicesPageContent.paperSection.subtitle}
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="mb-16 lg:max-w-[75%] mx-auto">
+          <div className="mb-16 ">
             <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={servicesPageContent.paperSection.body}
@@ -219,7 +219,7 @@ export default function OurServices() {
                 content={servicesPageContent.whyUs.title}
               ></MultiLangSpan>
             </Heading>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
+            <div className="mb-16 ">
               <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={servicesPageContent.whyUs.subtitle}
@@ -250,8 +250,8 @@ export default function OurServices() {
       </TransparentSection>
 
       <GradientSection>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6 text-white">
-          <div className="mb-4 lg:max-w-[75%] mx-auto">
+        <div className="w-full  text-white">
+          <div className="mb-4 ">
             <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
                 content={servicesPageContent.process.title}
@@ -290,7 +290,7 @@ export default function OurServices() {
                 content={servicesPageContent.cta.title}
               ></MultiLangSpan>
             </Heading>
-            <div className="mb-16 lg:max-w-[75%] mx-auto">
+            <div className="mb-16 ">
               <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={servicesPageContent.cta.subtitle}
