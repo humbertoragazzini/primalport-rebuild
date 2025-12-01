@@ -18,7 +18,7 @@ export default function Footer() {
         text-slate-300
       "
     >
-      <div className="mx-auto max-w-[1480px] px-6 py-10">
+      <div className="mx-auto max-w-[1280px] px-6 py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-10">
           {/* LEFT SIDE */}
           <div className="md:col-span-4 lg:col-span-2 space-y-4">

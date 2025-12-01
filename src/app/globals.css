@@ -70,6 +70,9 @@ body {
 /* ≥ 1280px — Desktops */
 @media (min-width: 1280px) {
   .carousel-container {
+    li{
+      padding: 0!important;
+    }
     .react-multiple-carousel__arrow{
       position: absolute;
       bottom: 0;
@@ -77,8 +80,8 @@ body {
       &.react-multiple-carousel__arrow--right{
         transform: translateX(100%)!important;
       }
-      react-multiple-carousel__arrow--left{
-        transform: translateX(100%)!important;
+      &.react-multiple-carousel__arrow--left{
+        transform: translateX(-100%)!important;
       }
     }
   }

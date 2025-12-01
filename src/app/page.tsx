@@ -28,8 +28,11 @@ export default function Home() {
       ></HeadingSection>
 
       {/* carousel */}
-      <GradientSection id={"home-highlights"}>
-        <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
+      <GradientSection
+        id={"home-highlights"}
+        className={"[&_.inner-container]:px-0 [&_.inner-container]:py-16"}
+      >
+        <div className="w-full">
           <Heading level={2} className="text-center font-semibold! text-white">
             <MultiLangSpan content={homeContent.about.title}></MultiLangSpan>
           </Heading>
