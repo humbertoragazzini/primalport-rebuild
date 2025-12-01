@@ -284,7 +284,7 @@ export default function AboutUs() {
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {aboutUsContent.whyDifferent.points.map((t, i) => {
               return (
                 <div className="col-span-1 relative">
