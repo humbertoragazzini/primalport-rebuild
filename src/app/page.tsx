@@ -26,6 +26,7 @@ export default function Home() {
         subtitle={homeContent.hero.subtitle}
         button={homeContent.hero.button}
       ></HeadingSection>
+
       {/* carousel */}
       <GradientSection id={"home-highlights"}>
         <div className="w-full mx-auto max-w-[1480px] px-2 xl:px-6">
