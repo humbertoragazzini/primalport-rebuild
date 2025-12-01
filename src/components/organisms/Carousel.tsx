@@ -24,7 +24,7 @@ const responsive = {
 
 export default function MyCarousel() {
   return (
-    <div className="w-full mx-auto max-w-[1480px]">
+    <div className="w-full mx-auto max-w-[1480px] px-2 lg:px-6">
       <Carousel
         responsive={responsive}
         showDots
@@ -38,9 +38,9 @@ export default function MyCarousel() {
         renderDotsOutside={false}
       >
         {/* Slide 1 */}
-        <div className="flex items-center justify-center py-12">
+        <div className="flex items-center justify-center py-12 overflow-visible">
           <Item>
-            <div className="max-w-[1180px]">
+            <div className="w-full">
               <div className="h-full">
                 <div className="w-full h-full flex flex-col justify-center items-center text-white p-6 xl:p-12">
                   <div>
@@ -134,7 +134,7 @@ export default function MyCarousel() {
 
 function Item({ children }: { children: any }) {
   return (
-    <div className="border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+    <div className="border-1 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl bg-slate-950">
       {children}
     </div>
   );
