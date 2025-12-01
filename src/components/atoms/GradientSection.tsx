@@ -6,7 +6,7 @@ export default function GradientSection({ children, id, className }: any) {
         className ? className : ""
       }`}
     >
-      <div className="inner-container inset-0 p-16 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 h-full">
+      <div className="inner-container inset-0 pt-16 pb-28 bg-gradient-to-br from-slate-800 via-slate-950 to-slate-800 h-full">
         <div className="max-w-[1280px] mx-auto px-2 lg:px-6">{children}</div>
       </div>
     </div>
