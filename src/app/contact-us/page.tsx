@@ -43,7 +43,7 @@ export default function Contact() {
               ></MultiLangSpan>
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:max-w-[75%] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 ">
             {contactPageContent.infoSection.cards.map((c) => {
               return (
                 <ShimmerBorderCard
