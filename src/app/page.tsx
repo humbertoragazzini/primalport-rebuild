@@ -148,7 +148,7 @@ export default function Home() {
       <TransparentSection id={"cards-highlights"}>
         <div className="mx-auto text-white lg:pb-[145px]">
           <div className="grid grid-cols-12">
-            <div className="col-span-12 lg:col-span-4 px-6 lg:px-0">
+            <div className="col-span-12 lg:col-span-4 px-2 lg:px-0">
               <Heading level={2} className="font-bold">
                 <MultiLangSpan
                   content={homeContent.solutions.title}
