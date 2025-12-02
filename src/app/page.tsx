@@ -175,6 +175,21 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-span-1 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <div className="h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]  overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                    <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
+                      <GiCargoShip className="w-14 h-14 relative text-indigo-500" />
+                    </div>
+                    <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
+                      <MultiLangSpan
+                        content={homeContent.solutions.cardSmartImportTitle}
+                      ></MultiLangSpan>
+                    </h4>
+                    <p className="relative z-10 text-slate-400">
+                      <MultiLangSpan
+                        content={homeContent.solutions.cardSmartImportBody}
+                      ></MultiLangSpan>
+                    </p>
+                  </div>
                   <ShimmerBorderCard
                     title={
                       <MultiLangSpan
@@ -192,6 +207,21 @@ export default function Home() {
                   ></ShimmerBorderCard>
                 </div>
                 <div className="col-span-1 lg:translate-y-32 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                  <div className="h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]  overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                    <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
+                      <GiCargoShip className="w-14 h-14 relative text-indigo-500" />
+                    </div>
+                    <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
+                      <MultiLangSpan
+                        content={homeContent.solutions.cardSmartImportTitle}
+                      ></MultiLangSpan>
+                    </h4>
+                    <p className="relative z-10 text-slate-400">
+                      <MultiLangSpan
+                        content={homeContent.solutions.cardSmartImportBody}
+                      ></MultiLangSpan>
+                    </p>
+                  </div>
                   <ShimmerBorderCard
                     title={
                       <MultiLangSpan
@@ -209,20 +239,25 @@ export default function Home() {
                   ></ShimmerBorderCard>
                 </div>
                 <div className="col-span-1 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                  <ShimmerBorderCard
-                    title={
+                  <div className="h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]  overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+                    <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
+                      <FaToiletPaper className="w-14 h-14 relative text-indigo-500" />
+                    </div>
+                    <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
                       <MultiLangSpan
                         content={homeContent.solutions.cardPaperLineTitle}
                       ></MultiLangSpan>
-                    }
-                    body={
+                    </h4>
+                    <p className="relative z-10 text-slate-400">
                       <MultiLangSpan
                         content={homeContent.solutions.cardPaperLineBody}
                       ></MultiLangSpan>
-                    }
-                    icon={
-                      <FaToiletPaper className="w-14 h-14 relative text-indigo-500" />
-                    }
+                    </p>
+                  </div>
+                  <ShimmerBorderCard
+                    title={}
+                    body={}
+                    icon={}
                   ></ShimmerBorderCard>
                 </div>
               </div>
