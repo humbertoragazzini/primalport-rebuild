@@ -177,66 +177,36 @@ export default function Home() {
                 <div className="col-span-1 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]  overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
-                      <GiCargoShip className="w-14 h-14 relative text-indigo-500" />
+                      <LuShipWheel className="w-15 h-15 relative text-indigo-500" />
                     </div>
                     <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportTitle}
+                        content={homeContent.solutions.cardSmoothExportTitle}
                       ></MultiLangSpan>
                     </h4>
                     <p className="relative z-10 text-slate-400">
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportBody}
+                        content={homeContent.solutions.cardSmoothExportBody}
                       ></MultiLangSpan>
                     </p>
                   </div>
-                  <ShimmerBorderCard
-                    title={
-                      <MultiLangSpan
-                        content={homeContent.solutions.cardSmoothExportTitle}
-                      ></MultiLangSpan>
-                    }
-                    icon={
-                      <LuShipWheel className="w-15 h-15 relative text-indigo-500" />
-                    }
-                    body={
-                      <MultiLangSpan
-                        content={homeContent.solutions.cardSmoothExportBody}
-                      ></MultiLangSpan>
-                    }
-                  ></ShimmerBorderCard>
                 </div>
                 <div className="col-span-1 lg:translate-y-32 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]  overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
-                      <GiCargoShip className="w-14 h-14 relative text-indigo-500" />
+                      <LiaShippingFastSolid className="w-14 h-14 relative text-indigo-500" />
                     </div>
                     <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportTitle}
+                        content={homeContent.solutions.cardLogisticsTitle}
                       ></MultiLangSpan>
                     </h4>
                     <p className="relative z-10 text-slate-400">
                       <MultiLangSpan
-                        content={homeContent.solutions.cardSmartImportBody}
+                        content={homeContent.solutions.cardLogisticsBody}
                       ></MultiLangSpan>
                     </p>
                   </div>
-                  <ShimmerBorderCard
-                    title={
-                      <MultiLangSpan
-                        content={homeContent.solutions.cardLogisticsTitle}
-                      ></MultiLangSpan>
-                    }
-                    icon={
-                      <LiaShippingFastSolid className="w-14 h-14 relative text-indigo-500" />
-                    }
-                    body={
-                      <MultiLangSpan
-                        content={homeContent.solutions.cardLogisticsBody}
-                      ></MultiLangSpan>
-                    }
-                  ></ShimmerBorderCard>
                 </div>
                 <div className="col-span-1 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                   <div className="h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]  overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -254,11 +224,11 @@ export default function Home() {
                       ></MultiLangSpan>
                     </p>
                   </div>
-                  <ShimmerBorderCard
+                  {/* <ShimmerBorderCard
                     title={}
                     body={}
                     icon={}
-                  ></ShimmerBorderCard>
+                  ></ShimmerBorderCard> */}
                 </div>
               </div>
             </div>
