@@ -68,7 +68,7 @@ export default function Home() {
                     fill="currentColor"
                     stroke-width="0"
                     viewBox="0 0 512 512"
-                    className="w-6 h-6"
+                    className="w-14 h-14"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ export default function Home() {
                     fill="currentColor"
                     stroke-width="0"
                     viewBox="0 0 512 512"
-                    className="w-6 h-6"
+                    className="w-14 h-14"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ export default function Home() {
                     fill="currentColor"
                     stroke-width="0"
                     viewBox="0 0 512 512"
-                    className="w-6 h-6"
+                    className="w-14 h-14"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ export default function Home() {
                     fill="currentColor"
                     stroke-width="0"
                     viewBox="0 0 512 512"
-                    className="w-6 h-6"
+                    className="w-14 h-14"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@ export default function Home() {
                     fill="currentColor"
                     stroke-width="0"
                     viewBox="0 0 512 512"
-                    className="w-6 h-6"
+                    className="w-14 h-14"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ export default function Home() {
               ></ShimmerBorderCard>
             </a>
           </div>
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1  md:col-span-2">
             <a href="#">
               <ShimmerBorderCard
                 title={
@@ -218,7 +218,7 @@ export default function Home() {
                     fill="currentColor"
                     stroke-width="0"
                     viewBox="0 0 512 512"
-                    className="w-6 h-6"
+                    className="w-14 h-14"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
