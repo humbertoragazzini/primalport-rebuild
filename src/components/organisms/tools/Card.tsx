@@ -16,7 +16,7 @@ export default function Card({ title, body, icon, id }: iCard) {
         onClick={() => {
           setCard(id);
         }}
-        className="group relative mx-auto w-full h-full overflow-hidden rounded-3xl bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50"
+        className="group cursor-pointer relative mx-auto w-full h-full overflow-hidden rounded-3xl bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50"
       >
         <div className="relative h-full z-10 flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-slate-900 p-8 transition-colors duration-500 group-hover:bg-slate-800">
           <div className="main-container">
@@ -46,21 +46,18 @@ export default function Card({ title, body, icon, id }: iCard) {
         {card == id && (
           <motion.div
             initial={{
-              x: 0,
-              y: 0,
+              y: -50,
               opacity: 0,
-              width: 0,
-              height: 0,
             }}
             animate={{
+              y: 0,
               opacity: 1,
-              width: "100vw",
-              height: "100vh",
             }}
             exit={{
+              y: 50,
               opacity: 0,
             }}
-            className="fixed top-0 left-0 bg-red-400/40 z-50"
+            className="fixed w-full h-full top-0 left-0 bg-slate-800/40 z-50 backdrop-blur-2xl"
           >
             <button
               onClick={() => {
