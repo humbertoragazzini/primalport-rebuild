@@ -2,6 +2,8 @@
 import { FiCloudLightning } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { useActions } from "@/src/hooks/useActions";
+import { useLockBodyScroll } from "@/src/hooks/useLockBodyScroll";
+import { ImCross } from "react-icons/im";
 
 interface iCard {
   title: any;
@@ -10,6 +12,7 @@ interface iCard {
 export default function Card({ title, body, icon, id }: iCard) {
   const card = useActions((state) => state.card);
   const setCard = useActions((state) => state.setCard);
+
   return (
     <>
       <button
@@ -57,15 +60,22 @@ export default function Card({ title, body, icon, id }: iCard) {
               y: 50,
               opacity: 0,
             }}
-            className="fixed w-full h-full top-0 left-0 bg-slate-800/40 z-50 backdrop-blur-2xl"
+            className="fixed w-full h-full top-0 left-0 z-50 p-6 bg-black/80"
           >
-            <button
-              onClick={() => {
-                setCard("");
-              }}
-            >
-              close
-            </button>
+            <div className="bg-slate-800/40 backdrop-blur-2xl border-2 border-slate-600 rounded-4xl w-full h-full p-6">
+              <button
+                onClick={() => {
+                  setCard("");
+                }}
+                className="absolute flex justify-center items-center rounded-full border-2 border-red hover:bg-red-800 transition-all duration-500 cursor-pointer right-0 top-0 m-4 w-12 h-12 bg-red"
+              >
+                <ImCross></ImCross>
+              </button>
+
+              <div className="text-white">
+                <h2 className="text-4xl font-semibold">{title}:</h2>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
