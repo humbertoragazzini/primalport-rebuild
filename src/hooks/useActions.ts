@@ -1,8 +1,15 @@
 import { create } from "zustand";
 
-export const useActions = create((set) => ({
+type ActionsStore = {
+  menu: boolean;
+  setMenuToggle: (open: boolean) => void;
+  card: string;
+  setCard: (value: string) => void;
+};
+
+export const useActions = create<ActionsStore>((set) => ({
   menu: false,
-  setMenuToggle: (open: boolean) => set({ menu: !open }),
+  setMenuToggle: (open) => set({ menu: !open }),
   card: "",
-  setCardToggle: (value: string) => set({ card: value }),
+  setCard: (value) => set({ card: value }),
 }));
