@@ -5,6 +5,7 @@ import Card from "./Card";
 import MultiLangSpan from "../../atoms/MultiLangSpan";
 import { LuClipboardList } from "react-icons/lu";
 import { GoGraph } from "react-icons/go";
+import { LiaHandsHelpingSolid, LiaToolsSolid } from "react-icons/lia";
 
 // same shape as in MultiLangSpan.tsx
 type MultiLangHTML = {
@@ -76,8 +77,8 @@ const icons: Record<string, React.ComponentType<{ className?: string }>> = {
   importsIcon: BsCalculator,
   tariffIcon: LuClipboardList,
   costsIcon: GoGraph,
-  // toolsIcon: ToolsIconComponent,
-  // adviceIcon: AdviceIconComponent,
+  toolsIcon: LiaToolsSolid,
+  adviceIcon: LiaHandsHelpingSolid,
 };
 
 // ---------- Cards config JSON-ish ------------------------
