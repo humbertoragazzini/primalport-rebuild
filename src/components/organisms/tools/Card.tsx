@@ -23,7 +23,7 @@ export default function Card({ title, body, icon, id }: iCard) {
       >
         <div className="relative h-full z-10 flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-slate-900 p-8 transition-colors duration-500 group-hover:bg-slate-800">
           <div className="main-container">
-            <div className="icon-container w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
+            <div className="icon-container mx-auto w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
               {icon}
             </div>
             <h4 className="title relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">

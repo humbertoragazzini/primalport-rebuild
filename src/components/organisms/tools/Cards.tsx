@@ -1,5 +1,5 @@
 "use client";
-
+import { BsCalculator } from "react-icons/bs";
 import { useActions } from "@/src/hooks/useActions";
 import Card from "./Card";
 import MultiLangSpan from "../../atoms/MultiLangSpan";
@@ -54,7 +54,7 @@ const AdviceBody: React.FC = () => (
   <MultiLangSpan
     content={{
       es: "Hablá con un especialista en comercio exterior.",
-      en: "Talk with a foreign trade specialist.",
+      en: "Talk withBsCalculator a foreign trade specialist.",
     }}
   />
 );
@@ -71,7 +71,7 @@ const bodyComponents: Record<string, React.ComponentType> = {
 // ---------- Icons map (you’ll fill these in) -------------
 
 const icons: Record<string, React.ComponentType<{ className?: string }>> = {
-  // importsIcon: ImportsIconComponent,
+  importsIcon: BsCalculator,
   // tariffIcon: TariffIconComponent,
   // costsIcon: CostsIconComponent,
   // toolsIcon: ToolsIconComponent,
@@ -160,7 +160,9 @@ export default function Cards() {
               title={<MultiLangSpan content={item.title} />}
               body={BodyComponent ? <BodyComponent /> : null}
               icon={
-                IconComponent ? <IconComponent className="w-14 h-14" /> : null
+                IconComponent ? (
+                  <IconComponent className="w-14 h-14 mx-auto fill-white" />
+                ) : null
               }
             />
           </div>
