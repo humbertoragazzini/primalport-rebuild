@@ -1,11 +1,21 @@
+"use client";
 import { FaArrowRight } from "react-icons/fa";
 import PpButton from "../atoms/Button";
 import Heading from "../atoms/Heading";
 import MultiLangSpan from "../atoms/MultiLangSpan";
+import { ScrollReveal } from "../atoms/ScrollReveal";
+import { motion } from "framer-motion";
 
 export default function HeadingSection({ tag, title, subtitle, button }: any) {
   return (
-    <div className="mx-auto px-2 xl:px-6 h-screen lg:h-[calc(100vh-160px)] w-full flex justify-center items-center">
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: "linear",
+      }}
+      className="mx-auto px-2 xl:px-6 h-screen w-full flex justify-center items-center"
+    >
       <div className="max-w-[1480px]">
         {tag && (
           <div className="rounded-full border-yellow-bright border-2 text-white py-4 px-6 w-fit mx-auto font-semibold mb-4 text-2xl backdrop-blur-xl">
@@ -39,6 +49,6 @@ export default function HeadingSection({ tag, title, subtitle, button }: any) {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
