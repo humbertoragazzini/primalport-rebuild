@@ -6,6 +6,7 @@ import MultiLangSpan from "../../atoms/MultiLangSpan";
 import { LuClipboardList } from "react-icons/lu";
 import { GoGraph } from "react-icons/go";
 import { LiaHandsHelpingSolid, LiaToolsSolid } from "react-icons/lia";
+import { ScrollReveal } from "../../atoms/ScrollReveal";
 
 // same shape as in MultiLangSpan.tsx
 type MultiLangHTML = {
@@ -157,7 +158,12 @@ export default function Cards() {
         const BodyComponent = bodyComponents[item.body];
 
         return (
-          <div key={item.id} className={item.wrapperClass}>
+          <ScrollReveal
+            key={item.id}
+            direction="bottom"
+            delay={0.3}
+            className={item.wrapperClass}
+          >
             <Card
               id={item.id}
               title={<MultiLangSpan content={item.title} />}
@@ -168,7 +174,7 @@ export default function Cards() {
                 ) : null
               }
             />
-          </div>
+          </ScrollReveal>
         );
       })}
     </div>
