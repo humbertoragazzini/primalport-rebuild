@@ -185,20 +185,24 @@ export default function AboutUs() {
       {/* our mission */}
       <GradientSection>
         <div className="w-full mx-auto text-white">
-          <Heading level={2} className="text-left font-semibold! mb-8">
-            <MultiLangSpan
-              content={aboutUsContent.mission.title}
-            ></MultiLangSpan>
-          </Heading>
-          <div className="mb-16 mx-auto">
-            <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+          <ScrollReveal direction="bottom" delay={0.4}>
+            <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
-                content={aboutUsContent.mission.body}
+                content={aboutUsContent.mission.title}
               ></MultiLangSpan>
-            </p>
-          </div>
+            </Heading>
+          </ScrollReveal>
+          <ScrollReveal direction="bottom" delay={0.4}>
+            <div className="mb-16 mx-auto">
+              <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={aboutUsContent.mission.body}
+                ></MultiLangSpan>
+              </p>
+            </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-            <div className="col-span-1">
+            <ScrollReveal className="col-span-1" direction="left" delay={0.4}>
               <div className="border-1 p-6 rounded-2xl bg-slate-700 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <p className="font-semibold text-xl mb-4">
                   <MultiLangSpan
@@ -211,8 +215,8 @@ export default function AboutUs() {
                   ></MultiLangSpan>
                 </p>
               </div>
-            </div>
-            <div className="col-span-1">
+            </ScrollReveal>
+            <ScrollReveal className="col-span-1" direction="right" delay={0.4}>
               <div className="border-1 p-6 rounded-2xl bg-slate-700 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <p className="font-semibold text-xl mb-4">
                   <MultiLangSpan
@@ -225,7 +229,7 @@ export default function AboutUs() {
                   ></MultiLangSpan>
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </GradientSection>
