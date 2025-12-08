@@ -57,7 +57,7 @@ export default function Home() {
 
       {/* cards */}
       <TransparentSection id={"cards-highlights"}>
-        <div className="mx-auto text-white lg:pb-[145px]">
+        <div className="mx-auto text-white">
           <div className="grid grid-cols-12">
             <ScrollReveal
               direction="left"
