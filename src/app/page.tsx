@@ -71,7 +71,7 @@ export default function Home() {
               </Heading>
             </ScrollReveal>
 
-            <div className="col-span-12 lg:col-span-8 px-6 pt-16 lg:px-0 lg:pt-0">
+            <div className="col-span-12 lg:col-span-8 pt-16 lg:px-0 lg:pt-0">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-7">
                 <ScrollReveal
                   direction="scale"
