@@ -76,11 +76,11 @@ export default function Home() {
                 <ScrollReveal
                   direction="scale"
                   delay={Math.random() * 0.5}
-                  className="col-span-1"
+                  className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
                     href={"#"}
-                    className="hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] transition-all duration-500 group lg:translate-y-32 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
+                    className="transition-all duration-500 group lg:translate-y-32"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">
                       <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
@@ -102,11 +102,11 @@ export default function Home() {
                 <ScrollReveal
                   direction="scale"
                   delay={Math.random() * 0.5}
-                  className="col-span-1"
+                  className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
                     href={"#"}
-                    className="hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] transition-all duration-500 group lg:translate-y-0 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
+                    className="transition-all duration-500 group lg:translate-y-0"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">
                       <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
@@ -128,11 +128,11 @@ export default function Home() {
                 <ScrollReveal
                   direction="scale"
                   delay={Math.random() * 0.5}
-                  className="col-span-1"
+                  className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
                     href={"#"}
-                    className="hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] transition-all duration-500 group lg:translate-y-32 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
+                    className="transition-all duration-500 group lg:translate-y-32"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">
                       <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
@@ -154,11 +154,11 @@ export default function Home() {
                 <ScrollReveal
                   direction="scale"
                   delay={Math.random() * 0.5}
-                  className="col-span-1"
+                  className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
                     href={"#"}
-                    className="hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] transition-all duration-500 group lg:translate-y-0 rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
+                    className="transition-all duration-500 group lg:translate-y-0"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">
                       <div className="w-28 h-28 z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 flex justify-center items-center text-7xl">
