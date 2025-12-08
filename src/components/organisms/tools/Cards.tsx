@@ -101,7 +101,7 @@ const cardsConfig: CardConfig[] = [
     },
     body: "importsBody",
     icon: "importsIcon",
-    wrapperClass: "col-span-2",
+    wrapperClass: "col-span-1 md:col-span-2",
   },
   {
     id: "tariff-code",
@@ -111,7 +111,7 @@ const cardsConfig: CardConfig[] = [
     },
     body: "tariffBody",
     icon: "tariffIcon",
-    wrapperClass: "col-span-2",
+    wrapperClass: "col-span-1 md:col-span-2",
   },
   {
     id: "costs-benefits",
@@ -121,7 +121,7 @@ const cardsConfig: CardConfig[] = [
     },
     body: "costsBody",
     icon: "costsIcon",
-    wrapperClass: "col-span-2",
+    wrapperClass: "col-span-1 md:col-span-2",
   },
   {
     id: "tools",
