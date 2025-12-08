@@ -4,6 +4,7 @@ import { useActions } from "@/src/hooks/useActions";
 import Card from "./Card";
 import MultiLangSpan from "../../atoms/MultiLangSpan";
 import { LuClipboardList } from "react-icons/lu";
+import { GoGraph } from "react-icons/go";
 
 // same shape as in MultiLangSpan.tsx
 type MultiLangHTML = {
@@ -74,7 +75,7 @@ const bodyComponents: Record<string, React.ComponentType> = {
 const icons: Record<string, React.ComponentType<{ className?: string }>> = {
   importsIcon: BsCalculator,
   tariffIcon: LuClipboardList,
-  // costsIcon: CostsIconComponent,
+  costsIcon: GoGraph,
   // toolsIcon: ToolsIconComponent,
   // adviceIcon: AdviceIconComponent,
 };
