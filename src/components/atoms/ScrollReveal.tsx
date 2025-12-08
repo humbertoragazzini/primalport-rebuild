@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { motion, Variants } from "framer-motion";
 
-type Direction = "left" | "right" | "bottom" | "scale";
+type Direction = "left" | "right" | "bottom" | "up" | "scale";
 
 type ScrollRevealProps = {
   children: ReactNode;
@@ -15,19 +15,23 @@ type ScrollRevealProps = {
 
 const directionVariants: Record<Direction, Variants> = {
   left: {
-    hidden: { opacity: 0, x: -50 }, // come from left
+    hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
   },
   right: {
-    hidden: { opacity: 0, x: 50 }, // come from right
+    hidden: { opacity: 0, x: 50 },
     visible: { opacity: 1, x: 0 },
   },
   bottom: {
-    hidden: { opacity: 0, y: 50 }, // come from bottom
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  },
+  up: {
+    hidden: { opacity: 0, y: -50 }, // come from top
     visible: { opacity: 1, y: 0 },
   },
   scale: {
-    hidden: { opacity: 0, scale: 0.8 }, // scale grow
+    hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 },
   },
 };

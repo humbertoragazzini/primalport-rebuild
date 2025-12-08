@@ -92,20 +92,25 @@ export default function AboutUs() {
       {/* our values */}
       <TransparentSection>
         <div className="w-ful text-white">
-          <Heading level={2} className="text-center font-semibold! mb-8">
-            <MultiLangSpan
-              content={aboutUsContent.values.title}
-            ></MultiLangSpan>
-          </Heading>
-          <div className="mb-16 mx-auto">
-            <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+          <ScrollReveal direction="bottom" delay={0.35}>
+            <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
-                content={aboutUsContent.values.subtitle}
+                content={aboutUsContent.values.title}
               ></MultiLangSpan>
-            </p>
-          </div>
+            </Heading>
+          </ScrollReveal>
+          <ScrollReveal direction="bottom" delay={0.35}>
+            <div className="mb-16 mx-auto">
+              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={aboutUsContent.values.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+          </ScrollReveal>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-            <div className="col-span-1">
+            <ScrollReveal direction="left" delay={0.6}>
               <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                   <FaLeaf className="w-6 h-6"></FaLeaf>
@@ -121,8 +126,8 @@ export default function AboutUs() {
                   ></MultiLangSpan>
                 </p>
               </div>
-            </div>
-            <div className="col-span-1">
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.45}>
               <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                   <FaHandHoldingHeart className="w-6 h-6"></FaHandHoldingHeart>
@@ -138,8 +143,8 @@ export default function AboutUs() {
                   ></MultiLangSpan>
                 </p>
               </div>
-            </div>
-            <div className="col-span-1">
+            </ScrollReveal>
+            <ScrollReveal direction="bottom" delay={0.55}>
               <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                   <FaPeopleGroup className="w-6 h-6"></FaPeopleGroup>
@@ -155,8 +160,8 @@ export default function AboutUs() {
                   ></MultiLangSpan>
                 </p>
               </div>
-            </div>
-            <div className="col-span-1">
+            </ScrollReveal>
+            <ScrollReveal direction="bottom" delay={0.45}>
               <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                 <div className="w-16 h-16 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                   <GiBrain className="w-6 h-6"></GiBrain>
@@ -172,7 +177,7 @@ export default function AboutUs() {
                   ></MultiLangSpan>
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </TransparentSection>
