@@ -153,7 +153,7 @@ export default function Cards() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mx-auto text-white">
-      {cardsConfig.map((item) => {
+      {cardsConfig.map((item, i) => {
         const IconComponent = icons[item.icon];
         const BodyComponent = bodyComponents[item.body];
 
@@ -161,7 +161,7 @@ export default function Cards() {
           <ScrollReveal
             key={item.id}
             direction="bottom"
-            delay={0.3}
+            delay={0.3 * (Math.random() * 1)}
             className={item.wrapperClass}
           >
             <Card
