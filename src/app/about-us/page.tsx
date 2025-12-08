@@ -16,6 +16,7 @@ import { ImLeaf } from "react-icons/im";
 import { GiBrain } from "react-icons/gi";
 import GradientSection from "@/src/components/atoms/GradientSection";
 import TransparentSection from "@/src/components/atoms/TransparentSection";
+import { ScrollReveal } from "@/src/components/atoms/ScrollReveal";
 
 export default function AboutUs() {
   return (
@@ -30,17 +31,22 @@ export default function AboutUs() {
       {/* our mission */}
       <GradientSection>
         <div className="w-full text-white">
-          <Heading level={2} className="text-left font-semibold! mb-8">
-            <MultiLangSpan
-              content={aboutUsContent.mission.title}
-            ></MultiLangSpan>
-          </Heading>
-          <div className="mb-16 ">
-            <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+          <ScrollReveal direction="left" delay={0.3}>
+            <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
-                content={aboutUsContent.mission.body}
+                content={aboutUsContent.mission.title}
               ></MultiLangSpan>
-            </p>
+            </Heading>
+          </ScrollReveal>
+
+          <div className="mb-16 ">
+            <ScrollReveal direction="right" delay={0.4}>
+              <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={aboutUsContent.mission.body}
+                ></MultiLangSpan>
+              </p>
+            </ScrollReveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
             <div className="col-span-1">
@@ -272,17 +278,21 @@ export default function AboutUs() {
       {/* our mission */}
       <GradientSection>
         <div className="w-full mx-auto text-white">
-          <Heading level={2} className="text-left font-semibold! mb-8">
-            <MultiLangSpan
-              content={aboutUsContent.whyDifferent.title}
-            ></MultiLangSpan>
-          </Heading>
-          <div className="mb-16 w-full">
-            <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+          <ScrollReveal direction="left" delay={0.3}>
+            <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
-                content={aboutUsContent.whyDifferent.subtitle}
+                content={aboutUsContent.whyDifferent.title}
               ></MultiLangSpan>
-            </p>
+            </Heading>
+          </ScrollReveal>
+          <div className="mb-16 w-full">
+            <ScrollReveal direction="left" delay={0.3}>
+              <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={aboutUsContent.whyDifferent.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </ScrollReveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {aboutUsContent.whyDifferent.points.map((t, i) => {
@@ -307,11 +317,13 @@ export default function AboutUs() {
       <TransparentSection>
         <div className=" inset-0 h-full">
           <div className="w-full mx-auto text-white">
-            <Heading level={2} className="text-center font-semibold! mb-8">
-              <MultiLangSpan
-                content={aboutUsContent.team.title}
-              ></MultiLangSpan>
-            </Heading>
+            <ScrollReveal direction="left" delay={0.3}>
+              <Heading level={2} className="text-center font-semibold! mb-8">
+                <MultiLangSpan
+                  content={aboutUsContent.team.title}
+                ></MultiLangSpan>
+              </Heading>
+            </ScrollReveal>
             <div className="mb-16 ">
               <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
