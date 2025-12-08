@@ -9,25 +9,25 @@ type ScrollRevealProps = {
   children: ReactNode;
   className?: string;
   direction?: Direction;
-  delay?: number;
+  delay?: number; // optional
   duration?: number;
 };
 
 const directionVariants: Record<Direction, Variants> = {
   left: {
-    hidden: { opacity: 0, x: -40 },
+    hidden: { opacity: 0, x: -50 }, // come from left
     visible: { opacity: 1, x: 0 },
   },
   right: {
-    hidden: { opacity: 0, x: 40 },
+    hidden: { opacity: 0, x: 50 }, // come from right
     visible: { opacity: 1, x: 0 },
   },
   bottom: {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 50 }, // come from bottom
     visible: { opacity: 1, y: 0 },
   },
   scale: {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, scale: 0.8 }, // scale grow
     visible: { opacity: 1, scale: 1 },
   },
 };
@@ -36,7 +36,7 @@ export function ScrollReveal({
   children,
   className = "",
   direction = "bottom",
-  delay = 0, // default delay = 0
+  delay = 0,
   duration = 0.6,
 }: ScrollRevealProps) {
   const variants = directionVariants[direction];
@@ -50,7 +50,7 @@ export function ScrollReveal({
       viewport={{ once: true, amount: 0.2 }}
       transition={{
         duration,
-        delay, // optional, no problem if undefined
+        delay,
         ease: "easeOut",
       }}
     >
