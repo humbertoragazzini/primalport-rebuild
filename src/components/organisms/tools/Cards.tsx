@@ -3,6 +3,7 @@ import { BsCalculator } from "react-icons/bs";
 import { useActions } from "@/src/hooks/useActions";
 import Card from "./Card";
 import MultiLangSpan from "../../atoms/MultiLangSpan";
+import { LuClipboardList } from "react-icons/lu";
 
 // same shape as in MultiLangSpan.tsx
 type MultiLangHTML = {
@@ -72,7 +73,7 @@ const bodyComponents: Record<string, React.ComponentType> = {
 
 const icons: Record<string, React.ComponentType<{ className?: string }>> = {
   importsIcon: BsCalculator,
-  // tariffIcon: TariffIconComponent,
+  tariffIcon: LuClipboardList,
   // costsIcon: CostsIconComponent,
   // toolsIcon: ToolsIconComponent,
   // adviceIcon: AdviceIconComponent,
@@ -161,7 +162,7 @@ export default function Cards() {
               body={BodyComponent ? <BodyComponent /> : null}
               icon={
                 IconComponent ? (
-                  <IconComponent className="w-14 h-14 mx-auto fill-white" />
+                  <IconComponent className="w-14 h-14 mx-auto" />
                 ) : null
               }
             />
