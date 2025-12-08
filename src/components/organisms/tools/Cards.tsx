@@ -1,5 +1,5 @@
 "use client";
-import { BsCalculator } from "react-icons/bs";
+import { BsCalculator, BsListTask } from "react-icons/bs";
 import { useActions } from "@/src/hooks/useActions";
 import Card from "./Card";
 import MultiLangSpan from "../../atoms/MultiLangSpan";
@@ -75,7 +75,7 @@ const bodyComponents: Record<string, React.ComponentType> = {
 
 const icons: Record<string, React.ComponentType<{ className?: string }>> = {
   importsIcon: BsCalculator,
-  tariffIcon: LuClipboardList,
+  tariffIcon: BsListTask,
   costsIcon: GoGraph,
   toolsIcon: LiaToolsSolid,
   adviceIcon: LiaHandsHelpingSolid,
@@ -164,7 +164,7 @@ export default function Cards() {
               body={BodyComponent ? <BodyComponent /> : null}
               icon={
                 IconComponent ? (
-                  <IconComponent className="w-14 h-14 mx-auto" />
+                  <IconComponent className="w-14 h-14 mx-auto fill-indigo-500 " />
                 ) : null
               }
             />
