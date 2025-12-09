@@ -263,10 +263,17 @@ export default function AboutUs() {
                     return (
                       <div className="col-span-1 relative">
                         <div className="absolute h-full top-0 -translate-x-9 md:-translate-x-12 lg:-translate-x-16 xl:-translate-x-22">
-                          <div className="relative z-10 flex justify-center items-center">
-                            <div className="w-4 h-4 bg-slate-700 border-2 border-slate-800 rounded-full -mb-1"></div>
-                          </div>
-                          <div className="relative z-0 w-full h-full flex justify-center">
+                          <ScrollReveal direction="scale" delay={0.2}>
+                            <div className="relative z-10 flex justify-center items-center">
+                              <div className="w-4 h-4 bg-slate-700 border-2 border-slate-800 rounded-full -mb-1"></div>
+                            </div>
+                          </ScrollReveal>
+
+                          <ScrollReveal
+                            className="relative z-0 w-full h-full flex justify-center"
+                            direction="bottom"
+                            delay={0.2}
+                          >
                             <div
                               className={`${
                                 i + 1 == aboutUsContent.story.timeline.length
@@ -274,9 +281,14 @@ export default function AboutUs() {
                                   : "h-[calc(100%+2rem)]"
                               } w-[2px] bg-slate-500 shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]`}
                             ></div>
-                          </div>
+                          </ScrollReveal>
                         </div>
-                        <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
+
+                        <ScrollReveal
+                          className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
+                          direction="bottom"
+                          delay={0.2}
+                        >
                           <p className="font-semibold text-md mb-4">{t.year}</p>
                           <p className="font-semibold text-xl mb-4">
                             <MultiLangSpan content={t.title}></MultiLangSpan>
@@ -284,7 +296,7 @@ export default function AboutUs() {
                           <p>
                             <MultiLangSpan content={t.body}></MultiLangSpan>
                           </p>
-                        </div>
+                        </ScrollReveal>
                       </div>
                     );
                   })}
