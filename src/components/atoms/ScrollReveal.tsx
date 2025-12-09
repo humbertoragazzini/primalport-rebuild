@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { motion, Variants } from "framer-motion";
 
-type Direction = "left" | "right" | "bottom" | "up" | "scale";
+export type Direction = "left" | "right" | "bottom" | "up" | "scale";
 
 type ScrollRevealProps = {
   children: ReactNode;

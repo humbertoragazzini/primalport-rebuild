@@ -16,7 +16,7 @@ import { ImLeaf } from "react-icons/im";
 import { GiBrain } from "react-icons/gi";
 import GradientSection from "@/src/components/atoms/GradientSection";
 import TransparentSection from "@/src/components/atoms/TransparentSection";
-import { ScrollReveal } from "@/src/components/atoms/ScrollReveal";
+import { Direction, ScrollReveal } from "@/src/components/atoms/ScrollReveal";
 
 export default function AboutUs() {
   return (
@@ -372,9 +372,14 @@ export default function AboutUs() {
               </ScrollReveal>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
-              {aboutUsContent.team.members.map((m) => {
+              {aboutUsContent.team.members.map((m, i) => {
+                const from = ["left", "bottom", "right"];
                 return (
-                  <div className="col-span-1">
+                  <ScrollReveal
+                    className="col-span-1"
+                    direction={from[i] as Direction}
+                    delay={Math.random()}
+                  >
                     <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                       <div className="aspect-square w-fit overflow-hidden mx-auto p-3 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                         <img
@@ -392,7 +397,7 @@ export default function AboutUs() {
                         <MultiLangSpan content={m.role}></MultiLangSpan>
                       </p>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 );
               })}
             </div>
