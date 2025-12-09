@@ -252,9 +252,14 @@ export default function OurServices() {
             </div>
           </ScrollReveal>
           <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-            {servicesPageContent.paperSection.bullets.map((b) => {
+            {servicesPageContent.paperSection.bullets.map((b, i) => {
+              const from = ["up", "right", "left", "bottom", "bottom"];
               return (
-                <div className="col-span-1 relative">
+                <ScrollReveal
+                  className="col-span-1 relative"
+                  direction={from[i] as Direction}
+                  delay={Math.random()}
+                >
                   <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="w-[28px] h-[28px] p-[2px] bg bg-slate-950 rounded-full border-yellow-bright border-2">
                       <FaCircleCheck className="w-[20px] h-[20px] text-yellow-bright"></FaCircleCheck>
@@ -263,7 +268,7 @@ export default function OurServices() {
                       <MultiLangSpan content={b}></MultiLangSpan>
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -272,22 +277,40 @@ export default function OurServices() {
       <TransparentSection>
         <div className=" inset-0 h-full">
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
-            <Heading level={2} className="text-center font-semibold! mb-8">
-              <MultiLangSpan
-                content={servicesPageContent.whyUs.title}
-              ></MultiLangSpan>
-            </Heading>
-            <div className="mb-16 ">
-              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+            <ScrollReveal direction={"bottom"} delay={Math.random()}>
+              <Heading level={2} className="text-center font-semibold! mb-8">
                 <MultiLangSpan
-                  content={servicesPageContent.whyUs.subtitle}
+                  content={servicesPageContent.whyUs.title}
                 ></MultiLangSpan>
-              </p>
-            </div>
+              </Heading>
+            </ScrollReveal>
+
+            <ScrollReveal direction={"bottom"} delay={Math.random()}>
+              <div className="mb-16 ">
+                <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+                  <MultiLangSpan
+                    content={servicesPageContent.whyUs.subtitle}
+                  ></MultiLangSpan>
+                </p>
+              </div>
+            </ScrollReveal>
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
-              {servicesPageContent.whyUs.points.map((m) => {
+              {servicesPageContent.whyUs.points.map((m, i) => {
+                const from = [
+                  "left",
+                  "up",
+                  "left",
+                  "right",
+                  "bottom",
+                  "bottom",
+                ];
                 return (
-                  <div className="col-span-1">
+                  <ScrollReveal
+                    className="col-span-1 relative"
+                    direction={from[i] as Direction}
+                    delay={Math.random()}
+                  >
                     <div className="border-1 p-6 rounded-2xl bg-slate-700/40 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                       {/* <div className="aspect-square w-fit overflow-hidden mx-auto p-3 flex justify-center items-center bg bg-slate-950 rounded-full border-slate-600 border-2 mb-6">
                         <img
@@ -299,7 +322,7 @@ export default function OurServices() {
                         <MultiLangSpan content={m}></MultiLangSpan>
                       </p>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 );
               })}
             </div>
@@ -309,18 +332,25 @@ export default function OurServices() {
 
       <GradientSection>
         <div className="w-full  text-white">
-          <div className="mb-4 ">
-            <Heading level={2} className="text-center font-semibold! mb-8">
-              <MultiLangSpan
-                content={servicesPageContent.process.title}
-              ></MultiLangSpan>
-            </Heading>
-          </div>
+          <ScrollReveal direction={"up"} delay={Math.random()}>
+            <div className="mb-4 ">
+              <Heading level={2} className="text-center font-semibold! mb-8">
+                <MultiLangSpan
+                  content={servicesPageContent.process.title}
+                ></MultiLangSpan>
+              </Heading>
+            </div>
+          </ScrollReveal>
 
           <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
             {servicesPageContent.process.steps.map((b) => {
+              const from = ["left", "up", "left", "right", "bottom", "bottom"];
               return (
-                <div className="col-span-1 relative">
+                <ScrollReveal
+                  className="col-span-1 relative"
+                  direction={from[i] as Direction}
+                  delay={Math.random()}
+                >
                   <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="flex justify-center items-center min-w-[48px] text-yellow-bright min-h-[48px] bg bg-slate-950 rounded-full border-yellow-bright border-2 font-bold">
                       {b.number}
@@ -334,7 +364,7 @@ export default function OurServices() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
