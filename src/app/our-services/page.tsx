@@ -9,7 +9,7 @@ import servicesPageContent from "@/src/data/servicesPageContent";
 import HeadingSection from "@/src/components/organisms/HeadingSection";
 import GradientSection from "@/src/components/atoms/GradientSection";
 import TransparentSection from "@/src/components/atoms/TransparentSection";
-import { ScrollReveal } from "@/src/components/atoms/ScrollReveal";
+import { Direction, ScrollReveal } from "@/src/components/atoms/ScrollReveal";
 
 export default function OurServices() {
   return (
@@ -196,11 +196,12 @@ export default function OurServices() {
               </div>
             </ScrollReveal>
             <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-              {servicesPageContent.consultingSection.bullets.map((b) => {
+              {servicesPageContent.consultingSection.bullets.map((b, i) => {
+                const from = ["up", "right", "left", "bottom"];
                 return (
                   <ScrollReveal
                     className="col-span-1 relative"
-                    direction={"left"}
+                    direction={from[i] as Direction}
                     delay={Math.random()}
                   >
                     <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
@@ -221,29 +222,35 @@ export default function OurServices() {
 
       <GradientSection>
         <div className="w-full  text-white">
-          <div className="mb-4 ">
-            <Heading level={2} className="text-center font-semibold! mb-8">
-              <MultiLangSpan
-                content={servicesPageContent.paperSection.title}
-              ></MultiLangSpan>
-            </Heading>
-          </div>
+          <ScrollReveal direction={"left"} delay={Math.random()}>
+            <div className="mb-4 ">
+              <Heading level={2} className="text-center font-semibold! mb-8">
+                <MultiLangSpan
+                  content={servicesPageContent.paperSection.title}
+                ></MultiLangSpan>
+              </Heading>
+            </div>
+          </ScrollReveal>
 
-          <div className="mb-4 ">
-            <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
-              <MultiLangSpan
-                content={servicesPageContent.paperSection.subtitle}
-              ></MultiLangSpan>
-            </p>
-          </div>
-          <div className="mb-16 ">
-            <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
-              <MultiLangSpan
-                content={servicesPageContent.paperSection.body}
-              ></MultiLangSpan>
-            </p>
-          </div>
+          <ScrollReveal direction={"right"} delay={Math.random()}>
+            <div className="mb-4 ">
+              <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
+                <MultiLangSpan
+                  content={servicesPageContent.paperSection.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+          </ScrollReveal>
 
+          <ScrollReveal direction={"bottom"} delay={Math.random()}>
+            <div className="mb-16 ">
+              <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={servicesPageContent.paperSection.body}
+                ></MultiLangSpan>
+              </p>
+            </div>
+          </ScrollReveal>
           <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
             {servicesPageContent.paperSection.bullets.map((b) => {
               return (
