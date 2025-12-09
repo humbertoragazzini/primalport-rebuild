@@ -238,18 +238,23 @@ export default function AboutUs() {
       <TransparentSection>
         <div className=" inset-0 h-full">
           <div className="w-full mx-auto text-white">
-            <Heading level={2} className="text-center font-semibold! mb-8">
-              <MultiLangSpan
-                content={aboutUsContent.story.title}
-              ></MultiLangSpan>
-            </Heading>
-            <div className="mb-16 ">
-              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+            <ScrollReveal direction="bottom" delay={0.4}>
+              <Heading level={2} className="text-center font-semibold! mb-8">
                 <MultiLangSpan
-                  content={aboutUsContent.story.subtitle}
+                  content={aboutUsContent.story.title}
                 ></MultiLangSpan>
-              </p>
-            </div>
+              </Heading>
+            </ScrollReveal>
+            <ScrollReveal direction="bottom" delay={0.4}>
+              <div className="mb-16 ">
+                <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+                  <MultiLangSpan
+                    content={aboutUsContent.story.subtitle}
+                  ></MultiLangSpan>
+                </p>
+              </div>
+            </ScrollReveal>
+
             <div className="w-full flex flex-row">
               <div className="w-[15%]"></div>
               <div className="w-[80%]">
