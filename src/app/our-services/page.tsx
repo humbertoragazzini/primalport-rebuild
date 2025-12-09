@@ -9,6 +9,7 @@ import servicesPageContent from "@/src/data/servicesPageContent";
 import HeadingSection from "@/src/components/organisms/HeadingSection";
 import GradientSection from "@/src/components/atoms/GradientSection";
 import TransparentSection from "@/src/components/atoms/TransparentSection";
+import { ScrollReveal } from "@/src/components/atoms/ScrollReveal";
 
 export default function OurServices() {
   return (
@@ -22,22 +23,30 @@ export default function OurServices() {
 
       <GradientSection>
         <div className="w-full  text-white">
-          <Heading level={2} className="text-left font-semibold! mb-8">
-            <MultiLangSpan
-              content={servicesPageContent.overview.title}
-            ></MultiLangSpan>
-          </Heading>
-          <div className="mb-16 ">
-            <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+          <ScrollReveal direction={"right"} delay={Math.random() / 2}>
+            <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.overview.subtitle}
+                content={servicesPageContent.overview.title}
               ></MultiLangSpan>
-            </p>
-          </div>
+            </Heading>
+          </ScrollReveal>
+          <ScrollReveal direction={"left"} delay={Math.random() / 2}>
+            <div className="mb-16 ">
+              <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={servicesPageContent.overview.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
             {servicesPageContent.overview.cards.map((c) => {
               return (
-                <div className="col-span-1">
+                <ScrollReveal
+                  className="col-span-1"
+                  direction={"bottom"}
+                  delay={Math.random()}
+                >
                   <div className="border-1 p-6 rounded-2xl bg-slate-800 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <p className="font-semibold text-xl mb-4">
                       <MultiLangSpan content={c.title}></MultiLangSpan>
@@ -46,7 +55,7 @@ export default function OurServices() {
                       <MultiLangSpan content={c.body}></MultiLangSpan>
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -55,29 +64,52 @@ export default function OurServices() {
 
       <TransparentSection>
         <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
-          <Heading level={2} className="text-center font-semibold! mb-8">
-            <MultiLangSpan
-              content={servicesPageContent.importSection.title}
-            ></MultiLangSpan>
-          </Heading>
-          <div className="mb-4 ">
-            <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
+          <ScrollReveal
+            className="col-span-1"
+            direction={"left"}
+            delay={Math.random()}
+          >
+            <Heading level={2} className="text-center font-semibold! mb-8">
               <MultiLangSpan
-                content={servicesPageContent.importSection.subtitle}
+                content={servicesPageContent.importSection.title}
               ></MultiLangSpan>
-            </p>
-          </div>
-          <div className="mb-16 ">
-            <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
-              <MultiLangSpan
-                content={servicesPageContent.importSection.body}
-              ></MultiLangSpan>
-            </p>
-          </div>
+            </Heading>
+          </ScrollReveal>
+          <ScrollReveal
+            className="col-span-1"
+            direction={"right"}
+            delay={Math.random()}
+          >
+            <div className="mb-4 ">
+              <p className="text-center font-semibold text-xl! lg:text-2xl! text-yellow-bright">
+                <MultiLangSpan
+                  content={servicesPageContent.importSection.subtitle}
+                ></MultiLangSpan>
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal
+            className="col-span-1"
+            direction={"bottom"}
+            delay={Math.random()}
+          >
+            <div className="mb-16 ">
+              <p className="text-center text-lg! lg:text-2xl! text-muted-steel-blue">
+                <MultiLangSpan
+                  content={servicesPageContent.importSection.body}
+                ></MultiLangSpan>
+              </p>
+            </div>
+          </ScrollReveal>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
             {servicesPageContent.importSection.bullets.map((b) => {
               return (
-                <div className="col-span-1 relative">
+                <ScrollReveal
+                  className="col-span-1 relative"
+                  direction={"bottom"}
+                  delay={Math.random()}
+                >
                   <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="w-[28px] h-[28px] p-[2px] bg bg-slate-950 rounded-full border-yellow-bright border-2">
                       <FaCircleCheck className="w-[20px] h-[20px] text-yellow-bright"></FaCircleCheck>
@@ -86,7 +118,7 @@ export default function OurServices() {
                       <MultiLangSpan content={b}></MultiLangSpan>
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
