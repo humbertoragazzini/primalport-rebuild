@@ -127,22 +127,32 @@ export default function OurServices() {
 
       <GradientSection>
         <div className="w-full  text-white">
-          <Heading level={2} className="text-left font-semibold! mb-8">
-            <MultiLangSpan
-              content={servicesPageContent.exportSection.title}
-            ></MultiLangSpan>
-          </Heading>
-          <div className="mb-16 lg:max-w-[1200px] mx-auto">
+          <ScrollReveal direction={"up"} delay={Math.random()}>
+            <Heading level={2} className="text-left font-semibold! mb-8">
+              <MultiLangSpan
+                content={servicesPageContent.exportSection.title}
+              ></MultiLangSpan>
+            </Heading>
+          </ScrollReveal>
+          <ScrollReveal
+            className="mb-16 lg:max-w-[1200px] mx-auto"
+            direction={"right"}
+            delay={Math.random()}
+          >
             <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
               <MultiLangSpan
                 content={servicesPageContent.exportSection.body}
               ></MultiLangSpan>
             </p>
-          </div>
+          </ScrollReveal>
           <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
             {servicesPageContent.exportSection.bullets.map((b) => {
               return (
-                <div className="col-span-1 relative">
+                <ScrollReveal
+                  className="col-span-1 relative"
+                  direction={"bottom"}
+                  delay={Math.random()}
+                >
                   <div className="border-1 p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="w-[28px] h-[28px] p-[2px] bg bg-slate-950 rounded-full border-yellow-bright border-2">
                       <FaCircleCheck className="w-[20px] h-[20px] text-yellow-bright"></FaCircleCheck>
@@ -151,7 +161,7 @@ export default function OurServices() {
                       <MultiLangSpan content={b}></MultiLangSpan>
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
