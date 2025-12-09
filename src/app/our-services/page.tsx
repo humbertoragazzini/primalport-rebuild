@@ -343,7 +343,7 @@ export default function OurServices() {
           </ScrollReveal>
 
           <div className="grid lg:max-w-[1200px] grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-            {servicesPageContent.process.steps.map((b) => {
+            {servicesPageContent.process.steps.map((b, i) => {
               const from = ["left", "up", "left", "right", "bottom", "bottom"];
               return (
                 <ScrollReveal
@@ -373,31 +373,37 @@ export default function OurServices() {
       <TransparentSection>
         <div className=" inset-0 h-full">
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
-            <Heading level={2} className="text-center font-semibold! mb-8">
-              <MultiLangSpan
-                content={servicesPageContent.cta.title}
-              ></MultiLangSpan>
-            </Heading>
-            <div className="mb-16 ">
-              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+            <ScrollReveal direction={"up"} delay={Math.random()}>
+              <Heading level={2} className="text-center font-semibold! mb-8">
                 <MultiLangSpan
-                  content={servicesPageContent.cta.subtitle}
+                  content={servicesPageContent.cta.title}
                 ></MultiLangSpan>
-              </p>
-            </div>
-            <div className="flex justify-center items-center">
-              <div className="ml-3">
-                <PpButton
-                  theme={"yellow"}
-                  icon={<FaArrowRight size={18} />}
-                  href={"/"}
-                >
+              </Heading>
+            </ScrollReveal>
+            <ScrollReveal direction={"left"} delay={Math.random()}>
+              <div className="mb-16 ">
+                <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
                   <MultiLangSpan
-                    content={servicesPageContent.cta.button}
+                    content={servicesPageContent.cta.subtitle}
                   ></MultiLangSpan>
-                </PpButton>
+                </p>
               </div>
-            </div>
+            </ScrollReveal>
+            <ScrollReveal direction={"right"} delay={Math.random()}>
+              <div className="flex justify-center items-center">
+                <div className="ml-3">
+                  <PpButton
+                    theme={"yellow"}
+                    icon={<FaArrowRight size={18} />}
+                    href={"/"}
+                  >
+                    <MultiLangSpan
+                      content={servicesPageContent.cta.button}
+                    ></MultiLangSpan>
+                  </PpButton>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </TransparentSection>
