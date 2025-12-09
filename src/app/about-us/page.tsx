@@ -320,7 +320,7 @@ export default function AboutUs() {
             </Heading>
           </ScrollReveal>
           <div className="mb-16 w-full">
-            <ScrollReveal direction="left" delay={0.3}>
+            <ScrollReveal direction="bottom" delay={0.3}>
               <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
                 <MultiLangSpan
                   content={aboutUsContent.whyDifferent.subtitle}
@@ -331,7 +331,11 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {aboutUsContent.whyDifferent.points.map((t, i) => {
               return (
-                <div className="col-span-1 relative">
+                <ScrollReveal
+                  direction="bottom"
+                  className="col-span-1 relative"
+                  delay={((0.3 * i) / 8) * Math.random()}
+                >
                   <div className="border-1 h-full p-6 flex items-center bg-slate-700 rounded-2xl border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
                     <div className="w-[28px] h-[28px] p-[2px] bg bg-slate-950 rounded-full border-yellow-bright border-2">
                       <FaCircleCheck className="w-[20px] h-[20px] text-yellow-bright"></FaCircleCheck>
@@ -340,7 +344,7 @@ export default function AboutUs() {
                       <MultiLangSpan content={t}></MultiLangSpan>
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -359,11 +363,13 @@ export default function AboutUs() {
               </Heading>
             </ScrollReveal>
             <div className="mb-16 ">
-              <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
-                <MultiLangSpan
-                  content={aboutUsContent.team.subtitle}
-                ></MultiLangSpan>
-              </p>
+              <ScrollReveal direction="right" delay={0.3}>
+                <p className="text-center text-xl! lg:text-2xl! text-muted-steel-blue">
+                  <MultiLangSpan
+                    content={aboutUsContent.team.subtitle}
+                  ></MultiLangSpan>
+                </p>
+              </ScrollReveal>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
               {aboutUsContent.team.members.map((m) => {
