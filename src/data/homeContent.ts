@@ -34,10 +34,13 @@ const homeContent = {
             </span>`,
     },
     button: {
-      en: "Check our services",
-      es: "Visita nuestros servicios",
-      it: "Controlla i nostri servizi",
-      ch: "查看我们的服务", // Chinese (Simplified)
+      label: {
+        en: "Check our services",
+        es: "Visita nuestros servicios",
+        it: "Controlla i nostri servizi",
+        ch: "查看我们的服务", // Chinese (Simplified)
+      },
+      link: "/our-services",
     },
     subtitle: {
       en: "Import, export, and logistics solutions designed to help businesses grow beyond borders.",

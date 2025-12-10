@@ -79,7 +79,7 @@ export default function Home() {
                   className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
-                    href={"#"}
+                    href={"/our-services#import-services"}
                     className="transition-all duration-500 group lg:translate-y-32"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">
@@ -105,7 +105,7 @@ export default function Home() {
                   className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
-                    href={"#"}
+                    href={"/our-services#export-services"}
                     className="transition-all duration-500 group lg:translate-y-0"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">
@@ -131,7 +131,7 @@ export default function Home() {
                   className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
-                    href={"#"}
+                    href={"/our-services#logistics-services"}
                     className="transition-all duration-500 group lg:translate-y-32"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">
@@ -157,7 +157,7 @@ export default function Home() {
                   className="col-span-1 hover:shadow-[0_0_25px_6px_rgba(150,150,150,0.3)] rounded-3xl backdrop-blur-2xl shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]"
                 >
                   <a
-                    href={"#"}
+                    href={"/our-services#paper-services"}
                     className="transition-all duration-500 group lg:translate-y-0"
                   >
                     <div className="transition-all duration-500 group-hover:bg-slate-950/50 h-full border-1 p-6 rounded-2xl flex justify-center items-center flex-col bg-slate-700/40 border-[rgba(255,255,255,0.1)]">

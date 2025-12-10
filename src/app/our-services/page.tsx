@@ -63,7 +63,10 @@ export default function OurServices() {
       </GradientSection>
 
       <TransparentSection>
-        <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
+        <div
+          id="import-services"
+          className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white"
+        >
           <ScrollReveal
             className="col-span-1"
             direction={"left"}

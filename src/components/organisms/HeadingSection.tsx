@@ -41,9 +41,10 @@ export default function HeadingSection({ tag, title, subtitle, button }: any) {
               <PpButton
                 theme={"yellow"}
                 icon={<FaArrowRight size={18} />}
-                href={"/"}
+                href={button.link ? button.link : ""}
+                as={"a"}
               >
-                <MultiLangSpan content={button}></MultiLangSpan>
+                <MultiLangSpan content={button.label}></MultiLangSpan>
               </PpButton>
             </div>
           </div>
