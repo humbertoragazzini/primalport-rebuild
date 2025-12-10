@@ -156,8 +156,8 @@ export default function Footer() {
           <FooterColumn
             title="Contact us"
             links={[
-              { label: "Contact form", href: "#contact-form" },
-              { label: "Location", href: "#contact-location" },
+              { label: "What We Offer", href: "/contact-us#what-we-offer" },
+              { label: "Contact form", href: "/contact-us#contact-form" },
             ]}
           />
         </div>

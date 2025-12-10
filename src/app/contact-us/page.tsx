@@ -29,7 +29,7 @@ export default function Contact() {
       ></HeadingSection>
 
       {/* carousel */}
-      <GradientSection>
+      <GradientSection id={"what-we-offer"}>
         <>
           <div className="w-full mx-auto max-w-[1480px]">
             <ScrollReveal direction={"left"} delay={Math.random()}>
@@ -113,7 +113,7 @@ export default function Contact() {
         </>
       </GradientSection>
 
-      <TransparentSection>
+      <TransparentSection id={"contact-form"}>
         <>
           <div className="mx-auto text-white">
             <div className="w-full mx-auto max-w-[1480px] mb-16 text-white">

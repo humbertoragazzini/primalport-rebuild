@@ -62,7 +62,7 @@ export default function OurServices() {
         </div>
       </GradientSection>
 
-      <TransparentSection>
+      <TransparentSection id={"import-services"}>
         <div
           id="import-services"
           className="scroll-mt-32 w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white"
@@ -128,7 +128,7 @@ export default function OurServices() {
         </div>
       </TransparentSection>
 
-      <GradientSection>
+      <GradientSection id={"export-services"}>
         <div id="export-services" className="scroll-mt-32 w-full  text-white">
           <ScrollReveal direction={"up"} delay={Math.random()}>
             <Heading level={2} className="text-left font-semibold! mb-8">
@@ -171,7 +171,7 @@ export default function OurServices() {
         </div>
       </GradientSection>
 
-      <TransparentSection>
+      <TransparentSection id={"logistics-supply-chain"}>
         <div id="consulting-services" className="scroll-mt-32 inset-0 h-full">
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <ScrollReveal direction={"up"} delay={Math.random()}>
@@ -224,7 +224,7 @@ export default function OurServices() {
         </div>
       </TransparentSection>
 
-      <GradientSection>
+      <GradientSection id={"toilet-paper-distribution"}>
         <div id="paper-services" className="scroll-mt-32 w-full  text-white">
           <ScrollReveal direction={"left"} delay={Math.random()}>
             <div className="mb-4 ">
@@ -278,7 +278,8 @@ export default function OurServices() {
           </div>
         </div>
       </GradientSection>
-      <TransparentSection>
+
+      <TransparentSection id={"why-us"}>
         <div className=" inset-0 h-full">
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <ScrollReveal direction={"bottom"} delay={Math.random()}>
