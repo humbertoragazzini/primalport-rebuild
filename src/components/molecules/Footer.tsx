@@ -100,14 +100,11 @@ export default function Footer() {
             title="Home"
             links={[
               { label: "Hero", href: "/#hero" },
-              { label: "About Primalport", href: "/#about-primalport" },
-              { label: "Smart Importing", href: "/#import-services" },
-              { label: "Smooth Exporting", href: "/#export-services" },
+              { label: "Our tools", href: "/#our-tools" },
               {
-                label: "Logistics & Coordination",
-                href: "/#consultin-services",
+                label: "Solutions foryour Business",
+                href: "/#solutions-for-your-business",
               },
-              { label: "Toilet Paper Line", href: "/#paper-services" },
             ]}
           />
 

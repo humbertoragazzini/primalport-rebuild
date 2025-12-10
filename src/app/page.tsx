@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* carousel */}
       <GradientSection
-        id={"home-highlights"}
+        id={"our-tools"}
         className={"[&_.inner-container]:px-0 [&_.inner-container]:py-16"}
       >
         <div className="w-full mb-16">
@@ -56,7 +56,7 @@ export default function Home() {
       </GradientSection>
 
       {/* cards */}
-      <TransparentSection id={"cards-highlights"}>
+      <TransparentSection id={"solutions-for-your-business"}>
         <div className="mx-auto text-white">
           <div className="grid grid-cols-12">
             <ScrollReveal
