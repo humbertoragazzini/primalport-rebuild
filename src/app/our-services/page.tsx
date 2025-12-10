@@ -65,7 +65,7 @@ export default function OurServices() {
       <TransparentSection>
         <div
           id="import-services"
-          className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white"
+          className="scroll-mt-32 w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white"
         >
           <ScrollReveal
             className="col-span-1"
@@ -129,7 +129,7 @@ export default function OurServices() {
       </TransparentSection>
 
       <GradientSection>
-        <div id="export-services" className="w-full  text-white">
+        <div id="export-services" className="scroll-mt-32 w-full  text-white">
           <ScrollReveal direction={"up"} delay={Math.random()}>
             <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
@@ -172,7 +172,7 @@ export default function OurServices() {
       </GradientSection>
 
       <TransparentSection>
-        <div id="consulting-services" className=" inset-0 h-full">
+        <div id="consulting-services" className="scroll-mt-32 inset-0 h-full">
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <ScrollReveal direction={"up"} delay={Math.random()}>
               <Heading level={2} className="text-center font-semibold! mb-8">
@@ -225,7 +225,7 @@ export default function OurServices() {
       </TransparentSection>
 
       <GradientSection>
-        <div id="paper-services" className="w-full  text-white">
+        <div id="paper-services" className="scroll-mt-32 w-full  text-white">
           <ScrollReveal direction={"left"} delay={Math.random()}>
             <div className="mb-4 ">
               <Heading level={2} className="text-center font-semibold! mb-8">
