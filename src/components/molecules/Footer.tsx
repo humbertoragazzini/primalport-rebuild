@@ -99,46 +99,73 @@ export default function Footer() {
           <FooterColumn
             title="Home"
             links={[
-              { label: "Hero", href: "/#home-hero" },
-              { label: "About Primalport", href: "/#home-highlights" },
-              { label: "Smart Importing", href: "/#cards-highlights" },
-              { label: "Smooth Exporting", href: "/#cards-highlights" },
-              { label: "Logistics & Coordination", href: "/#cards-highlights" },
-              { label: "Toilet Paper Line", href: "/#cards-highlights" },
+              { label: "Hero", href: "/#hero" },
+              { label: "About Primalport", href: "/#about-primalport" },
+              { label: "Smart Importing", href: "/#smart-importing" },
+              { label: "Smooth Exporting", href: "/#smooth-exporting" },
+              {
+                label: "Logistics & Coordination",
+                href: "/#logistics-coordination",
+              },
+              { label: "Toilet Paper Line", href: "/#toilet-paper-line" },
             ]}
           />
 
           <FooterColumn
             title="About us"
             links={[
-              { label: "Who we are", href: "#about-who" },
-              { label: "Our mission", href: "#about-mission" },
-              { label: "Our values", href: "#about-values" },
-              { label: "Our story", href: "#about-story" },
-              { label: "Why we’re different", href: "#about-different" },
-              { label: "Our team", href: "#about-team" },
-              { label: "Toilet paper brand", href: "#about-paper" },
-              { label: "Looking ahead", href: "#about-future" },
+              { label: "Who we are", href: "/about-us#who-we-are" },
+              { label: "Our mission", href: "/about-us#our-mission" },
+              { label: "Our values", href: "/about-us#our-values" },
+              { label: "Our story", href: "/about-us#our-story" },
+              {
+                label: "Why we’re different",
+                href: "/about-us#why-were-different",
+              },
+              { label: "Our team", href: "/about-us#our-team" },
+              {
+                label: "Toilet paper brand",
+                href: "/about-us#toilet-paper-brand",
+              },
+              { label: "Looking ahead", href: "/about-us#looking-ahead" },
             ]}
           />
 
           <FooterColumn
             title="Our services"
             links={[
-              { label: "Import services", href: "#services-import" },
-              { label: "Export services", href: "#services-export" },
+              {
+                label: "Import services",
+                href: "/our-services#import-services",
+              },
+              {
+                label: "Export services",
+                href: "/our-services#export-services",
+              },
               {
                 label: "Market research & sourcing",
-                href: "#services-research",
+                href: "/our-services#market-research-sourcing",
               },
               {
                 label: "Logistics & supply chain",
-                href: "#services-logistics",
+                href: "/our-services#logistics-supply-chain",
               },
-              { label: "Customs & compliance", href: "#services-customs" },
-              { label: "Quality assurance", href: "#services-quality" },
-              { label: "Toilet paper distribution", href: "#services-paper" },
-              { label: "Additional services", href: "#services-extra" },
+              {
+                label: "Customs & compliance",
+                href: "/our-services#customs-compliance",
+              },
+              {
+                label: "Quality assurance",
+                href: "/our-services#quality-assurance",
+              },
+              {
+                label: "Toilet paper distribution",
+                href: "/our-services#toilet-paper-distribution",
+              },
+              {
+                label: "Additional services",
+                href: "/our-services#additional-services",
+              },
             ]}
           />
 
