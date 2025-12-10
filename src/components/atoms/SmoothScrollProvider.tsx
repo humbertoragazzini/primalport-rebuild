@@ -1,18 +1,17 @@
 "use client";
 
-import { PropsWithChildren, useEffect, useRef } from "react";
+import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
-import { useActions } from "@/src/hooks/useActions"; // <- your zustand store
+import { useActions } from "@/src/hooks/useActions";
+import { LenisContext } from "@/src/context/LenisContext";
 
 export default function SmoothScrollProvider({ children }: PropsWithChildren) {
-  // Grab whatever tells you "modal is open"
-  // Here I'm assuming: card != "" means a modal is open
   const card = useActions((state) => state.card);
   const isModalOpen = Boolean(card !== "");
 
   const lenisRef = useRef<Lenis | null>(null);
+  const [lenisState, setLenisState] = useState<Lenis | null>(null);
 
-  // Initialize Lenis once
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.1,
@@ -21,6 +20,7 @@ export default function SmoothScrollProvider({ children }: PropsWithChildren) {
     });
 
     lenisRef.current = lenis;
+    setLenisState(lenis);
 
     const raf = (time: number) => {
       lenis.raf(time);
@@ -32,20 +32,22 @@ export default function SmoothScrollProvider({ children }: PropsWithChildren) {
     return () => {
       lenis.destroy();
       lenisRef.current = null;
+      setLenisState(null);
     };
   }, []);
 
-  // React to modal open/close
   useEffect(() => {
     const lenis = lenisRef.current;
     if (!lenis) return;
 
     if (isModalOpen) {
-      lenis.stop(); // 🚫 lock scroll
+      lenis.stop();
     } else {
-      lenis.start(); // ✅ enable scroll again
+      lenis.start();
     }
   }, [isModalOpen]);
 
-  return <>{children}</>;
+  return (
+    <LenisContext.Provider value={lenisState}>{children}</LenisContext.Provider>
+  );
 }

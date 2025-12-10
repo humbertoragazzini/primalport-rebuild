@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { JumpLink } from "../atoms/JumpLink";
 
 export default function Footer() {
   return (
@@ -174,9 +175,7 @@ export default function Footer() {
             <a href="#" className="hover:text-slate-300">
               Terms
             </a>
-            <a href="#" className="hover:text-slate-300">
-              Cookie Preferences
-            </a>
+            <a href="#" className="hover:text-slate-300"></a>
           </div>
         </div>
       </div>
@@ -198,12 +197,12 @@ function FooterColumn({ title, links }: FooterColumnProps) {
       <ul className="space-y-1 text-sm text-slate-400">
         {links.map((link) => (
           <li key={link.href}>
-            <Link
+            <JumpLink
               href={link.href}
               className="hover:text-slate-200 transition-colors"
             >
               {link.label}
-            </Link>
+            </JumpLink>
           </li>
         ))}
       </ul>
