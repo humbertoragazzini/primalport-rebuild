@@ -101,13 +101,13 @@ export default function Footer() {
             links={[
               { label: "Hero", href: "/#hero" },
               { label: "About Primalport", href: "/#about-primalport" },
-              { label: "Smart Importing", href: "/#smart-importing" },
-              { label: "Smooth Exporting", href: "/#smooth-exporting" },
+              { label: "Smart Importing", href: "/#import-services" },
+              { label: "Smooth Exporting", href: "/#export-services" },
               {
                 label: "Logistics & Coordination",
-                href: "/#logistics-coordination",
+                href: "/#consultin-services",
               },
-              { label: "Toilet Paper Line", href: "/#toilet-paper-line" },
+              { label: "Toilet Paper Line", href: "/#paper-services" },
             ]}
           />
 
@@ -123,11 +123,6 @@ export default function Footer() {
                 href: "/about-us#why-were-different",
               },
               { label: "Our team", href: "/about-us#our-team" },
-              {
-                label: "Toilet paper brand",
-                href: "/about-us#toilet-paper-brand",
-              },
-              { label: "Looking ahead", href: "/about-us#looking-ahead" },
             ]}
           />
 
