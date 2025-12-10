@@ -1,8 +1,8 @@
 "use client";
 
+import { useLenisInstance } from "@/src/context/LenisContext";
 import { useRouter } from "next/navigation";
 import type { ReactNode, MouseEvent } from "react";
-import { useLenisInstance } from "@/src/context/LenisContext";
 
 type JumpLinkProps = {
   href: string;
@@ -38,14 +38,8 @@ export function JumpLink({ href, children, className }: JumpLinkProps) {
         if (!el) return;
 
         if (lenis) {
-          // ✅ Use Lenis for smooth scroll
-          lenis.scrollTo(el, {
-            // You can add offset if you have a sticky header
-            // offset: -80,
-            // duration: 1.2, // depends on Lenis version/options
-          });
+          lenis.scrollTo(el, {});
         } else {
-          // Fallback if Lenis isn't ready for some reason
           el.scrollIntoView({
             behavior: "smooth",
             block: "start",
@@ -55,7 +49,7 @@ export function JumpLink({ href, children, className }: JumpLinkProps) {
         window.history.replaceState(null, "", `${targetPath}#${targetHash}`);
       },
       samePage ? 0 : 2000
-    ); // small delay only when changing page
+    );
   };
 
   return (
