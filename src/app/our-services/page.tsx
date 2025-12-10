@@ -129,7 +129,7 @@ export default function OurServices() {
       </TransparentSection>
 
       <GradientSection>
-        <div className="w-full  text-white">
+        <div id="export-services" className="w-full  text-white">
           <ScrollReveal direction={"up"} delay={Math.random()}>
             <Heading level={2} className="text-left font-semibold! mb-8">
               <MultiLangSpan
@@ -170,8 +170,9 @@ export default function OurServices() {
           </div>
         </div>
       </GradientSection>
+
       <TransparentSection>
-        <div className=" inset-0 h-full">
+        <div id="consulting-services" className=" inset-0 h-full">
           <div className="w-full mx-auto max-w-[1280px] px-2 xl:px-6 text-white">
             <ScrollReveal direction={"up"} delay={Math.random()}>
               <Heading level={2} className="text-center font-semibold! mb-8">
@@ -224,7 +225,7 @@ export default function OurServices() {
       </TransparentSection>
 
       <GradientSection>
-        <div className="w-full  text-white">
+        <div id="paper-services" className="w-full  text-white">
           <ScrollReveal direction={"left"} delay={Math.random()}>
             <div className="mb-4 ">
               <Heading level={2} className="text-center font-semibold! mb-8">
