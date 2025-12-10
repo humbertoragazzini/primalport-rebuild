@@ -143,20 +143,12 @@ export default function Footer() {
                 href: "/our-services#logistics-supply-chain",
               },
               {
-                label: "Customs & compliance",
-                href: "/our-services#customs-compliance",
-              },
-              {
-                label: "Quality assurance",
-                href: "/our-services#quality-assurance",
-              },
-              {
                 label: "Toilet paper distribution",
                 href: "/our-services#toilet-paper-distribution",
               },
               {
-                label: "Additional services",
-                href: "/our-services#additional-services",
+                label: "Why us",
+                href: "/our-services#why-us",
               },
             ]}
           />
