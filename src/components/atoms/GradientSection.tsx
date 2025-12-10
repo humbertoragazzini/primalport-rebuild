@@ -2,7 +2,7 @@ export default function GradientSection({ children, id, className }: any) {
   return (
     <div
       id={id}
-      className={`w-full py-[1px] mb-32 bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_95%,rgba(2,6,24,1)_100%)] md:bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)] ${
+      className={`w-full scroll-mt-24 py-[1px] mb-32 bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_95%,rgba(2,6,24,1)_100%)] md:bg-[radial-gradient(circle,rgba(2,6,24,1)_0%,rgba(87,199,133,1)_0%,rgba(2,6,24,1)_100%)] ${
         className ? className : ""
       }`}
     >

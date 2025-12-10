@@ -29,7 +29,7 @@ export default function AboutUs() {
       ></HeadingSection>
 
       {/* our mission */}
-      <GradientSection>
+      <GradientSection id={"our-mission"}>
         <div className="w-full text-white">
           <ScrollReveal direction="left" delay={0.3}>
             <Heading level={2} className="text-left font-semibold! mb-8">
@@ -90,7 +90,7 @@ export default function AboutUs() {
       </GradientSection>
 
       {/* our values */}
-      <TransparentSection>
+      <TransparentSection id={"our-values"}>
         <div className="w-ful text-white">
           <ScrollReveal direction="bottom" delay={0.35}>
             <Heading level={2} className="text-center font-semibold! mb-8">
@@ -183,59 +183,7 @@ export default function AboutUs() {
       </TransparentSection>
 
       {/* our mission */}
-      <GradientSection>
-        <div className="w-full mx-auto text-white">
-          <ScrollReveal direction="bottom" delay={0.4}>
-            <Heading level={2} className="text-left font-semibold! mb-8">
-              <MultiLangSpan
-                content={aboutUsContent.mission.title}
-              ></MultiLangSpan>
-            </Heading>
-          </ScrollReveal>
-          <ScrollReveal direction="bottom" delay={0.4}>
-            <div className="mb-16 mx-auto">
-              <p className="text-xl! lg:text-2xl! text-muted-steel-blue">
-                <MultiLangSpan
-                  content={aboutUsContent.mission.body}
-                ></MultiLangSpan>
-              </p>
-            </div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-            <ScrollReveal className="col-span-1" direction="left" delay={0.4}>
-              <div className="border-1 p-6 rounded-2xl bg-slate-700 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                <p className="font-semibold text-xl mb-4">
-                  <MultiLangSpan
-                    content={aboutUsContent.mission.cards[0].title}
-                  ></MultiLangSpan>
-                </p>
-                <p>
-                  <MultiLangSpan
-                    content={aboutUsContent.mission.cards[0].body}
-                  ></MultiLangSpan>
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal className="col-span-1" direction="right" delay={0.4}>
-              <div className="border-1 p-6 rounded-2xl bg-slate-700 border-[rgba(255,255,255,0.1)] backdrop-blur-2xl overflow-hidden shadow-[0_0_25px_6px_rgba(150,150,150,0.2)]">
-                <p className="font-semibold text-xl mb-4">
-                  <MultiLangSpan
-                    content={aboutUsContent.mission.cards[1].title}
-                  ></MultiLangSpan>
-                </p>
-                <p>
-                  <MultiLangSpan
-                    content={aboutUsContent.mission.cards[1].body}
-                  ></MultiLangSpan>
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </GradientSection>
-
-      {/* our values */}
-      <TransparentSection>
+      <TransparentSection id={"our-story"}>
         <div className=" inset-0 h-full">
           <div className="w-full mx-auto text-white">
             <ScrollReveal direction="bottom" delay={0.4}>
@@ -310,7 +258,7 @@ export default function AboutUs() {
       </TransparentSection>
 
       {/* our mission */}
-      <GradientSection>
+      <GradientSection id={"why-were-different"}>
         <div className="w-full mx-auto text-white">
           <ScrollReveal direction="left" delay={0.3}>
             <Heading level={2} className="text-left font-semibold! mb-8">
@@ -352,7 +300,7 @@ export default function AboutUs() {
       </GradientSection>
 
       {/* our values */}
-      <TransparentSection>
+      <TransparentSection id={"our-team"}>
         <div className=" inset-0 h-full">
           <div className="w-full mx-auto text-white">
             <ScrollReveal direction="left" delay={0.3}>
