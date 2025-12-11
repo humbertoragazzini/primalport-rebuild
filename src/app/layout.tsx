@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`
-          bg-slate-950
+          bg-[#020311]
           relative
           ${plexSans.variable}
           antialiased

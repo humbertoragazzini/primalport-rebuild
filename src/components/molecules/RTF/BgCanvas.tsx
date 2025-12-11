@@ -163,6 +163,10 @@ export default function BgCanvas() {
       <Canvas camera={{ position: [5, 2, 5], fov: 45 }}>
         {/* Rotating scene group */}
         <ScrollAndMouseGroup />
+        {/* <mesh>
+          <sphereGeometry args={[2, 70, 70]} />
+          <meshStandardMaterial color="#010001" side={THREE.DoubleSide} />
+        </mesh> */}
         {/* <OrbitControls></OrbitControls> */}
         {/* Basic lighting */}
         {/* <ambientLight intensity={0.5} /> */}
@@ -172,12 +176,12 @@ export default function BgCanvas() {
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
           {/* Depth of field aimed at the origin (where your torus is) */}
-          {/* <DepthOfField
-            focusDistance={0.02} // tweak for where focus starts
-            focalLength={0.04} // how strong the DOF is
-            bokehScale={3} // size of the blur circles
+          <DepthOfField
+            focusDistance={0.2} // tweak for where focus starts
+            focalLength={0.4} // how strong the DOF is
+            bokehScale={6} // size of the blur circles
             height={480}
-          /> */}
+          />
 
           {/* Bloom for glow */}
           <Bloom
@@ -249,7 +253,7 @@ function AbstractNetwork() {
   const curves = useMemo(() => {
     const items: THREE.CatmullRomCurve3[] = [];
 
-    const lineCount = 10;
+    const lineCount = 20;
     const spanX = 50; // how far left/right the lines go
     const maxAmp = 20; // how “tall” the waves are
 
