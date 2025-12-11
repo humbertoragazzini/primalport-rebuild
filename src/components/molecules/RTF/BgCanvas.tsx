@@ -159,7 +159,7 @@ function ScrollAndMouseGroup() {
   }, []);
 
   // Animate group
-  useFrame(() => {
+  useFrame(({ camera }) => {
     if (!groupRef.current) return;
 
     const scrollY = scrollRef.current;
@@ -178,7 +178,7 @@ function ScrollAndMouseGroup() {
 
     // groupRef.current.position.x = t * mouseStrength;
 
-    groupRef.current.position.y = t * scrollStrength;
+    camera.position.y = t * scrollStrength;
 
     // 🔥 modify fov on every frame
     // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
@@ -207,6 +207,7 @@ export default function BgCanvas() {
         {/* Basic lighting */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[4, 6, 3]} intensity={1.2} />
+        <perspectiveCamera default></perspectiveCamera>
 
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
