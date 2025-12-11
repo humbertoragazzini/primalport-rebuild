@@ -165,24 +165,24 @@ export default function BgCanvas() {
         <ScrollAndMouseGroup />
         {/* <OrbitControls></OrbitControls> */}
         {/* Basic lighting */}
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[4, 6, 3]} intensity={1.2} />
+        {/* <ambientLight intensity={0.5} /> */}
+        {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}
         <perspectiveCamera default></perspectiveCamera>
         <AbstractNetwork></AbstractNetwork>
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
           {/* Depth of field aimed at the origin (where your torus is) */}
-          <DepthOfField
+          {/* <DepthOfField
             focusDistance={0.02} // tweak for where focus starts
             focalLength={0.04} // how strong the DOF is
             bokehScale={3} // size of the blur circles
             height={480}
-          />
+          /> */}
 
           {/* Bloom for glow */}
           <Bloom
-            intensity={1.2} // how strong
-            luminanceThreshold={0.2} // what is considered "bright"
+            intensity={4} // how strong
+            luminanceThreshold={0.1} // what is considered "bright"
             luminanceSmoothing={0.15}
           />
         </EffectComposer>
@@ -198,7 +198,7 @@ type NetworkLineProps = {
   color?: string;
 };
 
-function NetworkLine({ curve, color = "#4fc3f7" }: NetworkLineProps) {
+function NetworkLine({ curve, color = "#100505" }: NetworkLineProps) {
   const points = useMemo(() => curve.getPoints(80), [curve]);
 
   return (
@@ -237,7 +237,7 @@ function MovingNode({ curve }: MovingNodeProps) {
       <meshStandardMaterial
         color="#ffd85a"
         emissive="#ffd85a"
-        emissiveIntensity={2}
+        emissiveIntensity={10}
       />
     </mesh>
   );
@@ -250,8 +250,8 @@ function AbstractNetwork() {
     const items: THREE.CatmullRomCurve3[] = [];
 
     const lineCount = 10;
-    const spanX = 18; // how far left/right the lines go
-    const maxAmp = 4; // how “tall” the waves are
+    const spanX = 50; // how far left/right the lines go
+    const maxAmp = 20; // how “tall” the waves are
 
     for (let i = 0; i < lineCount; i++) {
       const t = i / (lineCount - 1);
@@ -267,10 +267,18 @@ function AbstractNetwork() {
       const z = 10;
 
       // 4 control points across X
-      const p1 = new THREE.Vector3(-spanX, 0, 0);
-      const p2 = new THREE.Vector3(0, 0, 0);
-      const p3 = new THREE.Vector3(0, 0, 0);
-      const p4 = new THREE.Vector3(spanX, 0, 0);
+      const p1 = new THREE.Vector3(-spanX, yBase, z);
+      const p2 = new THREE.Vector3(
+        -spanX / 3,
+        yBase + amp * Math.sin(phase),
+        z - 2
+      );
+      const p3 = new THREE.Vector3(
+        spanX / 3,
+        yBase + amp * Math.sin(phase + Math.PI / 2),
+        z - 3
+      );
+      const p4 = new THREE.Vector3(spanX, yBase, z);
 
       const curve = new THREE.CatmullRomCurve3([p1, p2, p3, p4]);
       items.push(curve);
