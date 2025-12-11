@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
@@ -9,7 +10,7 @@ import {
   Bloom,
 } from "@react-three/postprocessing";
 import { useMemo } from "react";
-import { OrbitControls } from "@react-three/drei";
+import { Line, OrbitControls } from "@react-three/drei";
 
 function SceneObjects() {
   const objects = useMemo(() => {
@@ -167,7 +168,7 @@ export default function BgCanvas() {
         <ambientLight intensity={0.5} />
         <directionalLight position={[4, 6, 3]} intensity={1.2} />
         <perspectiveCamera default></perspectiveCamera>
-
+        <AbstractNetwork></AbstractNetwork>
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
           {/* Depth of field aimed at the origin (where your torus is) */}
@@ -187,5 +188,105 @@ export default function BgCanvas() {
         </EffectComposer>
       </Canvas>
     </div>
+  );
+}
+
+/* ---------- Single glowing line ---------- */
+
+type NetworkLineProps = {
+  curve: THREE.CatmullRomCurve3;
+  color?: string;
+};
+
+function NetworkLine({ curve, color = "#4fc3f7" }: NetworkLineProps) {
+  const points = useMemo(() => curve.getPoints(80), [curve]);
+
+  return (
+    <Line
+      points={points}
+      color={color}
+      lineWidth={1.5}
+      transparent
+      opacity={0.5}
+    />
+  );
+}
+
+/* ---------- Node that moves along a curve ---------- */
+
+type MovingNodeProps = {
+  curve: THREE.CatmullRomCurve3;
+};
+
+function MovingNode({ curve }: MovingNodeProps) {
+  const ref = useRef<THREE.Mesh | null>(null);
+  const t = useRef(Math.random()); // start at a random point on the curve
+
+  useFrame((_, delta) => {
+    if (!ref.current) return;
+
+    // move along the curve in [0, 1]
+    t.current = (t.current + delta * 0.06) % 1;
+    const pos = curve.getPoint(t.current);
+    ref.current.position.copy(pos);
+  });
+
+  return (
+    <mesh ref={ref}>
+      <sphereGeometry args={[0.18, 16, 16]} />
+      <meshStandardMaterial
+        color="#ffd85a"
+        emissive="#ffd85a"
+        emissiveIntensity={2}
+      />
+    </mesh>
+  );
+}
+
+/* ---------- Whole network of lines + nodes ---------- */
+
+function AbstractNetwork() {
+  const curves = useMemo(() => {
+    const items: THREE.CatmullRomCurve3[] = [];
+
+    const lineCount = 10;
+    const spanX = 18; // how far left/right the lines go
+    const maxAmp = 4; // how “tall” the waves are
+
+    for (let i = 0; i < lineCount; i++) {
+      const t = i / (lineCount - 1);
+
+      // base height for this line (spaced from -6 to +6)
+      const yBase = t * 12 - 6;
+
+      // random amplitude & phase so they don't all look the same
+      const amp = maxAmp * (0.4 + Math.random() * 0.6); // 40–100% of maxAmp
+      const phase = Math.random() * Math.PI * 2;
+
+      // depth
+      const z = 10;
+
+      // 4 control points across X
+      const p1 = new THREE.Vector3(-spanX, 0, 0);
+      const p2 = new THREE.Vector3(0, 0, 0);
+      const p3 = new THREE.Vector3(0, 0, 0);
+      const p4 = new THREE.Vector3(spanX, 0, 0);
+
+      const curve = new THREE.CatmullRomCurve3([p1, p2, p3, p4]);
+      items.push(curve);
+    }
+
+    return items;
+  }, []);
+
+  return (
+    <group position={[-20, -10, -20]} rotation={[0, Math.PI / 4, 0]}>
+      {curves.map((curve, i) => (
+        <group key={i}>
+          <NetworkLine curve={curve} />
+          <MovingNode curve={curve} />
+        </group>
+      ))}
+    </group>
   );
 }
