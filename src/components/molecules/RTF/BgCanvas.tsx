@@ -26,60 +26,37 @@ function SceneObjects() {
       "#e5e7ec",
     ];
 
-    const geometryTypes = [
-      "box",
-      "sphere",
-      "dodeca",
-      "torus",
-      "torusKnot",
-      "octa",
-      "cone",
-      "cylinder",
-    ] as const;
+    // how many cubes across / down
+    const gridX = 30;
+    const gridY = 30;
 
-    const count = 50;
+    // spacing between cubes on x and y
+    const spacing = 30;
+
     const result: {
       position: [number, number, number];
       scale: number;
-      geometry: (typeof geometryTypes)[number];
       color: string;
-      bubble: boolean;
     }[] = [];
 
-    const minRadius = 10;
-    const maxRadius = 35;
+    for (let y = 0; y < gridY; y++) {
+      for (let x = 0; x < gridX; x++) {
+        // grid layout centered roughly around 0
+        const posX = (x - gridX / 2) * (spacing - spacing * Math.random());
+        const posY = (y - gridY / 2) * (spacing - spacing * Math.random());
 
-    for (let i = 0; i < count; i++) {
-      // random direction on a sphere
-      const u = Math.random();
-      const v = Math.random();
-      const theta = 2 * Math.PI * u;
-      const phi = Math.acos(2 * v - 1);
+        // random depth
+        const posZ = -5 - Math.random() * 45; // → -5 to -50
 
-      const r = minRadius + Math.random() * (maxRadius - minRadius);
+        const scale = 1;
+        const color = GREYS[Math.floor(Math.random() * GREYS.length)];
 
-      const x = r * Math.sin(phi) * Math.cos(theta);
-      const y = r * Math.sin(phi) * Math.sin(theta);
-      const z = r * Math.cos(phi);
-
-      // More variety in size
-      const scale = 0.4 + Math.random() * 3.0;
-
-      const geometry =
-        geometryTypes[Math.floor(Math.random() * geometryTypes.length)];
-
-      const color = GREYS[Math.floor(Math.random() * GREYS.length)];
-
-      // ~30% bubbles
-      const bubble = Math.random() < 0.3;
-
-      result.push({
-        position: [x, y, z - 10], // push them a bit deeper overall
-        scale,
-        geometry,
-        color,
-        bubble,
-      });
+        result.push({
+          position: [posX, posY, posZ],
+          scale,
+          color,
+        });
+      }
     }
 
     return result;
@@ -89,40 +66,8 @@ function SceneObjects() {
     <>
       {objects.map((obj, i) => (
         <mesh key={i} position={obj.position} scale={obj.scale}>
-          {obj.geometry === "box" && <boxGeometry args={[1, 1, 1]} />}
-          {obj.geometry === "sphere" && <sphereGeometry args={[0.7, 32, 32]} />}
-          {obj.geometry === "dodeca" && (
-            <dodecahedronGeometry args={[0.8, 0]} />
-          )}
-          {obj.geometry === "torus" && (
-            <torusGeometry args={[0.7, 0.25, 16, 64]} />
-          )}
-          {obj.geometry === "torusKnot" && (
-            <torusKnotGeometry args={[0.6, 0.2, 100, 16]} />
-          )}
-          {obj.geometry === "octa" && <octahedronGeometry args={[0.8, 0]} />}
-          {obj.geometry === "cone" && <coneGeometry args={[0.7, 1.4, 32]} />}
-          {obj.geometry === "cylinder" && (
-            <cylinderGeometry args={[0.5, 0.5, 1.4, 32]} />
-          )}
-
-          {obj.bubble ? (
-            <meshPhysicalMaterial
-              color={obj.color}
-              roughness={0.05}
-              metalness={0.0}
-              transmission={0.9} // glassy / bubble
-              thickness={0.8}
-              clearcoat={1}
-              clearcoatRoughness={0.05}
-            />
-          ) : (
-            <meshStandardMaterial
-              color={obj.color}
-              roughness={0.4}
-              metalness={0.3}
-            />
-          )}
+          <boxGeometry args={[1, 1, 1]} />
+          <meshStandardMaterial color={obj.color} />
         </mesh>
       ))}
     </>
@@ -178,7 +123,7 @@ function ScrollAndMouseGroup() {
 
     // groupRef.current.position.x = t * mouseStrength;
 
-    camera.position.y = t * scrollStrength;
+    camera.position.y = t * -scrollStrength;
 
     // 🔥 modify fov on every frame
     // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
@@ -203,7 +148,7 @@ export default function BgCanvas() {
       <Canvas camera={{ position: [5, 2, 5], fov: 45 }}>
         {/* Rotating scene group */}
         <ScrollAndMouseGroup />
-        <OrbitControls></OrbitControls>
+        {/* <OrbitControls></OrbitControls> */}
         {/* Basic lighting */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[4, 6, 3]} intensity={1.2} />
