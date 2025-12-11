@@ -26,12 +26,15 @@ function SceneObjects() {
       "#e5e7ec",
     ];
 
-    // how many cubes across / down
-    const gridX = 30;
-    const gridY = 30;
+    const count = 150;
 
-    // spacing between cubes on x and y
-    const spacing = 30;
+    // We’ll build a grid big enough to hold `count` cubes
+    const spacing = 10; // distance between cubes in X/Y
+    const jitter = 3; // little random offset so it doesn’t look too perfect
+
+    // Try to make grid roughly square
+    const gridX = Math.ceil(Math.sqrt(count)); // columns
+    const gridY = Math.ceil(count / gridX); // rows
 
     const result: {
       position: [number, number, number];
@@ -39,24 +42,31 @@ function SceneObjects() {
       color: string;
     }[] = [];
 
-    for (let y = 0; y < gridY; y++) {
-      for (let x = 0; x < gridX; x++) {
-        // grid layout centered roughly around 0
-        const posX = (x - gridX / 2) * (spacing - spacing * Math.random());
-        const posY = (y - gridY / 2) * (spacing - spacing * Math.random());
+    for (let i = 0; i < count; i++) {
+      const col = i % gridX;
+      const row = Math.floor(i / gridX);
 
-        // random depth
-        const posZ = -5 - Math.random() * 45; // → -5 to -50
+      // center grid around 0 using (gridN - 1) / 2
+      const centerX = (gridX - 1) / 2;
+      const centerY = (gridY - 1) / 2;
 
-        const scale = 1;
-        const color = GREYS[Math.floor(Math.random() * GREYS.length)];
+      let x = (col - centerX) * spacing;
+      let y = (row - centerY) * spacing;
 
-        result.push({
-          position: [posX, posY, posZ],
-          scale,
-          color,
-        });
-      }
+      // add small randomness so it looks less rigid
+      x += (Math.random() - 0.5) * jitter;
+      y += (Math.random() - 0.5) * jitter;
+
+      // random depth from -5 to -50
+      const z = -5 - Math.random() * 45;
+
+      const color = GREYS[Math.floor(Math.random() * GREYS.length)];
+
+      result.push({
+        position: [x, y, z],
+        scale: 1,
+        color,
+      });
     }
 
     return result;
@@ -67,7 +77,11 @@ function SceneObjects() {
       {objects.map((obj, i) => (
         <mesh key={i} position={obj.position} scale={obj.scale}>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color={obj.color} />
+          <meshStandardMaterial
+            color={obj.color}
+            roughness={0.4}
+            metalness={0.3}
+          />
         </mesh>
       ))}
     </>
