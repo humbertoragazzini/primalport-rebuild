@@ -165,20 +165,20 @@ function ScrollAndMouseGroup() {
     const scrollY = scrollRef.current;
     const { x: mx, y: my } = mouseRef.current;
 
-    const t = scrollY * 0.001;
+    const t = scrollY * 0.01;
 
     const scrollStrength = 1.5;
-    const mouseStrength = 0.02;
+    const mouseStrength = 0.1;
 
-    groupRef.current.rotation.x = Math.sin(t * 0.6) * mouseStrength;
+    // groupRef.current.rotation.x = Math.sin(t * 0.6) * mouseStrength;
 
-    groupRef.current.rotation.y = Math.cos(t * 0.6) * mouseStrength;
+    // groupRef.current.rotation.y = Math.cos(t * 0.6) * mouseStrength;
 
     // groupRef.current.rotation.z = Math.sin(t * 0.3) * scrollStrength + mx * 0.1;
 
-    groupRef.current.position.x = mx * mouseStrength;
+    // groupRef.current.position.x = t * mouseStrength;
 
-    groupRef.current.position.y = t * scrollStrength + my * mouseStrength;
+    groupRef.current.position.y = t * scrollStrength;
 
     // 🔥 modify fov on every frame
     // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
