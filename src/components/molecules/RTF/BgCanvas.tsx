@@ -170,11 +170,9 @@ function ScrollAndMouseGroup() {
     const scrollStrength = 1.5;
     const mouseStrength = 0.02;
 
-    groupRef.current.rotation.x =
-      Math.sin(t * 0.6) * scrollStrength + my * mouseStrength;
+    groupRef.current.rotation.x = Math.sin(t * 0.6) * mouseStrength;
 
-    groupRef.current.rotation.y =
-      Math.cos(t * 0.6) * scrollStrength + mx * mouseStrength;
+    groupRef.current.rotation.y = Math.cos(t * 0.6) * mouseStrength;
 
     // groupRef.current.rotation.z = Math.sin(t * 0.3) * scrollStrength + mx * 0.1;
 
@@ -183,7 +181,7 @@ function ScrollAndMouseGroup() {
     groupRef.current.position.y = t * scrollStrength + my * mouseStrength;
 
     // 🔥 modify fov on every frame
-    camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
+    // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
 
     // You MUST update projection matrix after modifying the fov
     camera.updateProjectionMatrix();
