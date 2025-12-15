@@ -164,30 +164,43 @@ function WobblePlane() {
   });
 
   return (
-    <mesh>
-      <icosahedronGeometry args={[2, 15, 64, 64]} />
+    <mesh iframe rotation={[0, Math.PI / 4, 0]} position={[0, 0, 5]}>
+      <planeGeometry args={[10, 10, 100, 100]} />
       <shaderMaterial
         ref={mat}
+        // wireframe
         vertexShader={`
           varying vec2 vUv;
+          varying vec3 uPosition;
           uniform float uTime;
 
           void main() {
             vUv = uv;
 
             vec3 p = position;
+            uPosition = position;
             p.z += sin(uTime + p.x * 4.0) * 0.1; // wobble
-
+            p.x += sin(uTime + p.y * 4.0) * 0.1; // wobble
+            p.y += sin(uTime + p.x * p.y * 4.0) * 0.1; // wobble
+            uPosition = p;
             gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
           }
         `}
         fragmentShader={`
           varying vec2 vUv;
+          varying vec3 uPosition;
           uniform float uTime;
 
           void main() {
-            float pulse = cos(vUv.y) * vUv.x * sin(uTime);
-            gl_FragColor = vec4(0.5,0.1,pulse, 1.0);
+          float pulse = cos(vUv.y) * vUv.x * sin(uTime);
+
+          float a = 0.1;
+          float b = 0.3;
+          float w = 0.05;
+
+          float band = smoothstep(a - w, a + w, pulse) - smoothstep(b - w, b + w, pulse);
+
+          gl_FragColor = vec4(uPosition.z*uPosition.x, uPosition.z*uPosition.y*uPosition.x, uPosition.z*uPosition.y, 1.0);
           }
         `}
         uniforms={{
@@ -218,19 +231,19 @@ export default function BgCanvas() {
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
           {/* Depth of field aimed at the origin (where your torus is) */}
-          {/* <DepthOfField
+          <DepthOfField
             focusDistance={0.5} // tweak for where focus starts
             focalLength={0.5} // how strong the DOF is
             bokehScale={1.5} // size of the blur circles
             height={480}
-          /> */}
+          />
 
           {/* Bloom for glow */}
-          {/* <Bloom
+          <Bloom
             intensity={2} // how strong
             luminanceThreshold={1.1} // what is considered "bright"
             luminanceSmoothing={0.15}
-          /> */}
+          />
         </EffectComposer>
       </Canvas>
     </div>
