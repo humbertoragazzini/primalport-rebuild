@@ -169,6 +169,12 @@ export default function Footer() {
             © {new Date().getFullYear()} Primalport. All rights reserved.
           </span>
           <div className="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/humbertoragazzini"
+              className="hover:text-slate-300"
+            >
+              Design and Developed my Tobe21
+            </a>
             <a href="#" className="hover:text-slate-300">
               Privacy
             </a>
