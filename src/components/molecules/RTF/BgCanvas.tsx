@@ -168,7 +168,7 @@ function WobblePlane() {
       <planeGeometry args={[10, 10, 100, 100]} />
       <shaderMaterial
         ref={mat}
-        // wireframe
+        wireframe
         vertexShader={`
           varying vec2 vUv;
           varying vec3 uPosition;
@@ -200,7 +200,7 @@ function WobblePlane() {
 
           float band = smoothstep(a - w, a + w, pulse) - smoothstep(b - w, b + w, pulse);
 
-          gl_FragColor = vec4(uPosition.z*uPosition.x, uPosition.z*uPosition.y*uPosition.x, uPosition.z*uPosition.y, 1.0);
+          gl_FragColor = vec4(uPosition.z*uPosition.x, 0.0, uPosition.z*uPosition.y, 1.0);
           }
         `}
         uniforms={{
