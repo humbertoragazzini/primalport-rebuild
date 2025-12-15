@@ -166,7 +166,7 @@ export default function Footer() {
         {/* Bottom strip */}
         <div className="mt-10 border-t border-slate-800 pt-4 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
           <span>
-            © {new Date().getFullYear()} Your Company. All rights reserved.
+            © {new Date().getFullYear()} Primalport. All rights reserved.
           </span>
           <div className="flex flex-wrap gap-4">
             <a href="#" className="hover:text-slate-300">
