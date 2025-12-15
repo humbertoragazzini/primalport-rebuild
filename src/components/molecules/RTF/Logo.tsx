@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 export function Logo3D(props) {
   const { nodes, materials } = useGLTF("/blender/glbs/band1v3Main.glb");
@@ -16,7 +17,11 @@ export function Logo3D(props) {
         castShadow
         receiveShadow
         geometry={nodes.Cone.geometry}
-        material={materials["Material.001"]}
+        material={
+          new THREE.MeshStandardMaterial({
+            color: new THREE.Color().setRGB(1, 0, 1),
+          })
+        }
         position={[0, -0.009, 0]}
         rotation={[0, Math.PI / 2, 0]}
         scale={[1, 1, 0.165]}
