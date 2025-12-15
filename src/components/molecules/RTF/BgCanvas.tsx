@@ -136,7 +136,7 @@ function ScrollAndMouseGroup() {
 
     // groupRef.current.position.x = t * mouseStrength;
 
-    // camera.position.y = t * -scrollStrength;
+    camera.position.y = t * -scrollStrength;
 
     // 🔥 modify fov on every frame
     // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
@@ -164,8 +164,12 @@ function WobblePlane() {
   });
 
   return (
-    <mesh iframe rotation={[0, Math.PI / 4, 0]} position={[0, 0, 5]}>
-      <planeGeometry args={[10, 10, 100, 100]} />
+    <mesh
+      iframe
+      rotation={[0, Math.PI / 4, Math.PI / 7]}
+      position={[0, 0, -25]}
+    >
+      <planeGeometry args={[200, 200, 50, 50]} />
       <shaderMaterial
         ref={mat}
         wireframe
@@ -216,13 +220,13 @@ export default function BgCanvas() {
     <div className="w-screen h-screen fixed top-0 left-0 -z-50 bg-slate-950">
       <Canvas camera={{ position: [5, 2, 5], fov: 45 }}>
         {/* Rotating scene group */}
-        <ScrollAndMouseGroup />
         <WobblePlane></WobblePlane>
+        <ScrollAndMouseGroup />
         {/* <mesh>
           <sphereGeometry args={[2, 70, 70]} />
           <meshStandardMaterial color="#010001" side={THREE.DoubleSide} />
         </mesh> */}
-        <OrbitControls></OrbitControls>
+        {/* <OrbitControls></OrbitControls> */}
         {/* Basic lighting */}
         {/* <ambientLight intensity={0.5} /> */}
         {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}
