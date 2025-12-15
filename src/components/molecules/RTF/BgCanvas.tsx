@@ -168,23 +168,23 @@ export default function BgCanvas() {
         {/* <OrbitControls></OrbitControls> */}
         {/* Basic lighting */}
         {/* <ambientLight intensity={0.5} /> */}
-        <directionalLight position={[4, 6, 3]} intensity={1.2} />
+        {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}
         <perspectiveCamera default></perspectiveCamera>
         <AbstractNetwork></AbstractNetwork>
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
           {/* Depth of field aimed at the origin (where your torus is) */}
-          {/* <DepthOfField
-            focusDistance={0.2} // tweak for where focus starts
-            focalLength={0.4} // how strong the DOF is
-            bokehScale={6} // size of the blur circles
+          <DepthOfField
+            focusDistance={0.5} // tweak for where focus starts
+            focalLength={0.5} // how strong the DOF is
+            bokehScale={1.5} // size of the blur circles
             height={480}
-          /> */}
+          />
 
           {/* Bloom for glow */}
           <Bloom
-            intensity={4} // how strong
-            luminanceThreshold={0.1} // what is considered "bright"
+            intensity={2} // how strong
+            luminanceThreshold={1.1} // what is considered "bright"
             luminanceSmoothing={0.15}
           />
         </EffectComposer>
