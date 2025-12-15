@@ -173,7 +173,7 @@ export default function Footer() {
               href="https://github.com/humbertoragazzini"
               className="hover:text-slate-300"
             >
-              Design and Developed my Tobe21
+              Design and Developed by Tobe21
             </a>
             <a href="#" className="hover:text-slate-300">
               Privacy
