@@ -136,7 +136,7 @@ function ScrollAndMouseGroup() {
 
     // groupRef.current.position.x = t * mouseStrength;
 
-    camera.position.y = t * -scrollStrength;
+    // camera.position.y = t * -scrollStrength;
 
     // 🔥 modify fov on every frame
     // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
@@ -155,37 +155,61 @@ function ScrollAndMouseGroup() {
   );
 }
 
+function WobblePlane() {
+  const mat = useRef<THREE.ShaderMaterial>(null!);
+
+  useFrame((state) => {
+    // elapsedTime is a nice stable clock (seconds)
+    mat.current.uniforms.uTime.value = state.clock.elapsedTime;
+  });
+
+  return (
+    <mesh>
+      <icosahedronGeometry args={[2, 15, 64, 64]} />
+      <shaderMaterial
+        ref={mat}
+        vertexShader={`
+          varying vec2 vUv;
+          uniform float uTime;
+
+          void main() {
+            vUv = uv;
+
+            vec3 p = position;
+            p.z += sin(uTime + p.x * 4.0) * 0.1; // wobble
+
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
+          }
+        `}
+        fragmentShader={`
+          varying vec2 vUv;
+          uniform float uTime;
+
+          void main() {
+            float pulse = cos(vUv.y) * vUv.x * sin(uTime);
+            gl_FragColor = vec4(0.5,0.1,pulse, 1.0);
+          }
+        `}
+        uniforms={{
+          uTime: { value: 0 }, // you *must* wrap in { value: ... }
+        }}
+      />
+    </mesh>
+  );
+}
+
 export default function BgCanvas() {
-  const vertex = `
-    void main() {
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    }
-  `;
-  const fragment = `
-    precision mediump float;
-
-    void main() {
-        gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
-    }
-  `;
-
   return (
     <div className="w-screen h-screen fixed top-0 left-0 -z-50 bg-slate-950">
       <Canvas camera={{ position: [5, 2, 5], fov: 45 }}>
         {/* Rotating scene group */}
         <ScrollAndMouseGroup />
-        <mesh position={[0, -2, 0]}>
-          <icosahedronGeometry args={[2, 15, 15]}></icosahedronGeometry>
-          <shaderMaterial
-            vertexShader={vertex}
-            fragmentShader={fragment}
-          ></shaderMaterial>
-        </mesh>
+        <WobblePlane></WobblePlane>
         {/* <mesh>
           <sphereGeometry args={[2, 70, 70]} />
           <meshStandardMaterial color="#010001" side={THREE.DoubleSide} />
         </mesh> */}
-        {/* <OrbitControls></OrbitControls> */}
+        <OrbitControls></OrbitControls>
         {/* Basic lighting */}
         {/* <ambientLight intensity={0.5} /> */}
         {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}
