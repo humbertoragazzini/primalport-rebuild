@@ -10,7 +10,7 @@ import {
   Bloom,
 } from "@react-three/postprocessing";
 import { useMemo } from "react";
-import { Line, OrbitControls } from "@react-three/drei";
+import { Float, Line, OrbitControls } from "@react-three/drei";
 import { Logo3D } from "./Logo";
 
 function SceneObjects() {
@@ -78,7 +78,9 @@ function SceneObjects() {
     <>
       {objects.map((obj, i) => (
         <mesh key={i} position={obj.position} scale={obj.scale}>
-          <Logo3D></Logo3D>
+          <Float>
+            <Logo3D></Logo3D>
+          </Float>
         </mesh>
       ))}
     </>
@@ -166,18 +168,18 @@ export default function BgCanvas() {
         {/* <OrbitControls></OrbitControls> */}
         {/* Basic lighting */}
         {/* <ambientLight intensity={0.5} /> */}
-        {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}
+        <directionalLight position={[4, 6, 3]} intensity={1.2} />
         <perspectiveCamera default></perspectiveCamera>
         <AbstractNetwork></AbstractNetwork>
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
           {/* Depth of field aimed at the origin (where your torus is) */}
-          <DepthOfField
+          {/* <DepthOfField
             focusDistance={0.2} // tweak for where focus starts
             focalLength={0.4} // how strong the DOF is
             bokehScale={6} // size of the blur circles
             height={480}
-          />
+          /> */}
 
           {/* Bloom for glow */}
           <Bloom
