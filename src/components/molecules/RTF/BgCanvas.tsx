@@ -156,11 +156,31 @@ function ScrollAndMouseGroup() {
 }
 
 export default function BgCanvas() {
+  const vertex = `
+    void main() {
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  `;
+  const fragment = `
+    precision mediump float;
+
+    void main() {
+        gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+    }
+  `;
+
   return (
     <div className="w-screen h-screen fixed top-0 left-0 -z-50 bg-slate-950">
       <Canvas camera={{ position: [5, 2, 5], fov: 45 }}>
         {/* Rotating scene group */}
         <ScrollAndMouseGroup />
+        <mesh position={[0, -2, 0]}>
+          <icosahedronGeometry args={[2, 15, 15]}></icosahedronGeometry>
+          <shaderMaterial
+            vertexShader={vertex}
+            fragmentShader={fragment}
+          ></shaderMaterial>
+        </mesh>
         {/* <mesh>
           <sphereGeometry args={[2, 70, 70]} />
           <meshStandardMaterial color="#010001" side={THREE.DoubleSide} />
@@ -174,19 +194,19 @@ export default function BgCanvas() {
         {/* Post-processing */}
         <EffectComposer multisampling={0}>
           {/* Depth of field aimed at the origin (where your torus is) */}
-          <DepthOfField
+          {/* <DepthOfField
             focusDistance={0.5} // tweak for where focus starts
             focalLength={0.5} // how strong the DOF is
             bokehScale={1.5} // size of the blur circles
             height={480}
-          />
+          /> */}
 
           {/* Bloom for glow */}
-          <Bloom
+          {/* <Bloom
             intensity={2} // how strong
             luminanceThreshold={1.1} // what is considered "bright"
             luminanceSmoothing={0.15}
-          />
+          /> */}
         </EffectComposer>
       </Canvas>
     </div>
