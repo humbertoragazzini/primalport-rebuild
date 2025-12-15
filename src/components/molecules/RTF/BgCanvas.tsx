@@ -11,6 +11,7 @@ import {
 } from "@react-three/postprocessing";
 import { useMemo } from "react";
 import { Line, OrbitControls } from "@react-three/drei";
+import { Logo3D } from "./Logo";
 
 function SceneObjects() {
   const objects = useMemo(() => {
@@ -77,12 +78,7 @@ function SceneObjects() {
     <>
       {objects.map((obj, i) => (
         <mesh key={i} position={obj.position} scale={obj.scale}>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial
-            color={obj.color}
-            roughness={0.4}
-            metalness={0.3}
-          />
+          <Logo3D></Logo3D>
         </mesh>
       ))}
     </>
