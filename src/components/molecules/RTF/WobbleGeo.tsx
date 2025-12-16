@@ -12,11 +12,11 @@ export default function WobblePlane() {
 
   return (
     <mesh rotation={[0, Math.PI / 4, 0]} position={[0, 0, -80]}>
-      <sphereGeometry args={[50, 50, 50, 50]} />
-      {/* <icosahedronGeometry args={[50, 50, 50, 50]} /> */}
+      {/* <sphereGeometry args={[20, 50, 50, 50]} /> */}
+      <icosahedronGeometry args={[50, 10]} />
       <shaderMaterial
         ref={mat}
-        // wireframe
+        wireframe
         vertexShader={`
           varying vec2 vUv;
           varying vec3 uPosition;
@@ -39,9 +39,11 @@ export default function WobblePlane() {
           uniform float uTime;
 
           void main() {
-            float d = distance(uPosition, vec3(0,0,0))/60.0;
+            float x = (distance(uPosition, vec3(0,0,0)));
+            float y = cos(distance(uPosition, vec3(0,0,0)));
+            float z = sin(distance(uPosition, vec3(0,0,0))) * cos(distance(uPosition, vec3(0,0,0)));
 
-            gl_FragColor = vec4(d,d,d, 1.0);
+            gl_FragColor = vec4(x,x/2.0,x, 1.0);
           }
         `}
         uniforms={{
