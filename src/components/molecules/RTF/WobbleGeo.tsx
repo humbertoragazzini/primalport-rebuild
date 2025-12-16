@@ -14,12 +14,13 @@ export default function WobblePlane() {
   return (
     <mesh
       rotation={[0, Math.PI / 4, 0]}
-      position={[0, 0, -25]}
+      position={[0, 0, -80]}
     >
-      <planeGeometry args={[50, 50, 50, 50]} />
+      {/* <sphereGeometry args={[50, 50, 50, 50]} /> */}
+      {/* <icosahedronGeometry args={[50, 50, 50, 50]} /> */}
       <shaderMaterial
         ref={mat}
-        wireframe
+        // wireframe
         vertexShader={`
           varying vec2 vUv;
           varying vec3 uPosition;
@@ -29,10 +30,9 @@ export default function WobblePlane() {
             vUv = uv;
 
             vec3 p = position;
-            uPosition = position;
-            p.z += sin(uTime + p.x * 4.0) * 0.1; // wobble
-            p.x += sin(uTime + p.y * 4.0) * 0.1; // wobble
-            p.y += sin(uTime + p.x * p.y * 4.0) * 0.1; // wobble
+            p.z += sin(uTime + p.x * 0.1) * 10.0; // wobble
+            p.x += sin(uTime + p.y * 0.1) * 10.0; // wobble
+            p.y += sin(uTime + p.z * 0.1) * 10.0; // wobble
             uPosition = p;
             gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
           }
@@ -43,15 +43,8 @@ export default function WobblePlane() {
           uniform float uTime;
 
           void main() {
-          float pulse = cos(vUv.y) * vUv.x * sin(uTime);
 
-          float a = 0.1;
-          float b = 0.3;
-          float w = 0.05;
-
-          float band = smoothstep(a - w, a + w, pulse) - smoothstep(b - w, b + w, pulse);
-
-          gl_FragColor = vec4(uPosition.z*uPosition.x, 0.0, uPosition.z*uPosition.y, 1.0);
+            gl_FragColor = vec4(smoothstep(0.25,0.75,abs(sin(uTime)*0.1*uPosition.y)),  smoothstep(0.25,0.75,abs(sin(uTime)*0.1*uPosition.x)), smoothstep(0.25,0.75,abs(sin(uTime)*0.1*uPosition.z)), 1.0);
           }
         `}
         uniforms={{
