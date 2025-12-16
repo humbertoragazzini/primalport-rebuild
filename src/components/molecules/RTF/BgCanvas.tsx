@@ -12,148 +12,11 @@ import {
 import { useMemo } from "react";
 import { Float, Line, OrbitControls } from "@react-three/drei";
 import { Logo3D } from "./Logo";
+import SceneObjects from "./MultiObject";
 
-function SceneObjects() {
-  const objects = useMemo(() => {
-    const GREYS = [
-      "#0b0c10",
-      "#14151b",
-      "#1f2128",
-      "#2b2e37",
-      "#3a3e4a",
-      "#515669",
-      "#707791",
-      "#9aa1b5",
-      "#c3c7d3",
-      "#e5e7ec",
-    ];
 
-    const count = 150;
 
-    // We’ll build a grid big enough to hold `count` cubes
-    const spacing = 10; // distance between cubes in X/Y
-    const jitter = 3; // little random offset so it doesn’t look too perfect
 
-    // Try to make grid roughly square
-    const gridX = Math.ceil(Math.sqrt(count)); // columns
-    const gridY = Math.ceil(count / gridX); // rows
-
-    const result: {
-      position: [number, number, number];
-      scale: number;
-      color: string;
-    }[] = [];
-
-    for (let i = 0; i < count; i++) {
-      const col = i % gridX;
-      const row = Math.floor(i / gridX);
-
-      // center grid around 0 using (gridN - 1) / 2
-      const centerX = (gridX - 1) / 2;
-      const centerY = (gridY - 1) / 2;
-
-      let x = (col - centerX) * spacing;
-      let y = (row - centerY) * spacing;
-
-      // add small randomness so it looks less rigid
-      x += (Math.random() - 0.5) * jitter;
-      y += (Math.random() - 0.5) * jitter;
-
-      // random depth from -5 to -50
-      const z = -5 - Math.random() * 45;
-
-      const color = GREYS[Math.floor(Math.random() * GREYS.length)];
-
-      result.push({
-        position: [x, y, z],
-        scale: 1,
-        color,
-      });
-    }
-
-    return result;
-  }, []);
-
-  return (
-    <>
-      {objects.map((obj, i) => (
-        <mesh key={i} position={obj.position} scale={obj.scale}>
-          <Float>
-            <Logo3D></Logo3D>
-          </Float>
-        </mesh>
-      ))}
-    </>
-  );
-}
-
-function ScrollAndMouseGroup() {
-  const groupRef = useRef<THREE.Group>(null);
-  const { camera } = useThree();
-  const scrollRef = useRef(0);
-  const mouseRef = useRef({ x: 0, y: 0 });
-
-  // Track scroll + mouse
-  useEffect(() => {
-    const handleScroll = () => {
-      scrollRef.current = window.scrollY || 0;
-    };
-
-    const handleMouseMove = (event: MouseEvent) => {
-      const x = (event.clientX / window.innerWidth) * 2 - 1;
-      const y = (event.clientY / window.innerHeight) * 2 - 1;
-      mouseRef.current = { x, y: -y };
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousemove", handleMouseMove);
-
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  // Animate group
-  useFrame(({ camera }) => {
-    if (!groupRef.current) return;
-
-    const scrollY = scrollRef.current;
-    const { x: mx, y: my } = mouseRef.current;
-
-    const t = scrollY * 0.01;
-
-    const scrollStrength = 1.5;
-    const mouseStrength = 0.1;
-
-    // groupRef.current.rotation.x = Math.sin(t * 0.6) * mouseStrength;
-
-    // groupRef.current.rotation.y = Math.cos(t * 0.6) * mouseStrength;
-
-    // groupRef.current.rotation.z = Math.sin(t * 0.3) * scrollStrength + mx * 0.1;
-
-    // groupRef.current.position.x = t * mouseStrength;
-
-    camera.position.y = t * -scrollStrength;
-
-    // 🔥 modify fov on every frame
-    // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
-
-    // You MUST update projection matrix after modifying the fov
-    camera.updateProjectionMatrix();
-
-    // groupRef.current.position.z = Math.cos(t * 0.8) * scrollStrength;
-  });
-
-  return (
-    <group ref={groupRef}>
-      {/* You can replace this with your real scene later */}
-      <SceneObjects></SceneObjects>
-    </group>
-  );
-}
 
 function WobblePlane() {
   const mat = useRef<THREE.ShaderMaterial>(null!);
@@ -166,10 +29,10 @@ function WobblePlane() {
   return (
     <mesh
       iframe
-      rotation={[0, Math.PI / 4, Math.PI / 7]}
+      rotation={[0, Math.PI / 4, 0]}
       position={[0, 0, -25]}
     >
-      <planeGeometry args={[200, 200, 50, 50]} />
+      <planeGeometry args={[50, 50, 50, 50]} />
       <shaderMaterial
         ref={mat}
         wireframe
@@ -226,7 +89,7 @@ export default function BgCanvas() {
           <sphereGeometry args={[2, 70, 70]} />
           <meshStandardMaterial color="#010001" side={THREE.DoubleSide} />
         </mesh> */}
-        {/* <OrbitControls></OrbitControls> */}
+        <OrbitControls></OrbitControls>
         {/* Basic lighting */}
         {/* <ambientLight intensity={0.5} /> */}
         {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}
