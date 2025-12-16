@@ -1,4 +1,3 @@
-
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
@@ -12,11 +11,8 @@ export default function WobblePlane() {
   });
 
   return (
-    <mesh
-      rotation={[0, Math.PI / 4, 0]}
-      position={[0, 0, -80]}
-    >
-      {/* <sphereGeometry args={[50, 50, 50, 50]} /> */}
+    <mesh rotation={[0, Math.PI / 4, 0]} position={[0, 0, -80]}>
+      <sphereGeometry args={[50, 50, 50, 50]} />
       {/* <icosahedronGeometry args={[50, 50, 50, 50]} /> */}
       <shaderMaterial
         ref={mat}
@@ -43,8 +39,9 @@ export default function WobblePlane() {
           uniform float uTime;
 
           void main() {
+            float d = distance(uPosition, vec3(0,0,0))/60.0;
 
-            gl_FragColor = vec4(smoothstep(0.25,0.75,abs(sin(uTime)*0.1*uPosition.y)),  smoothstep(0.25,0.75,abs(sin(uTime)*0.1*uPosition.x)), smoothstep(0.25,0.75,abs(sin(uTime)*0.1*uPosition.z)), 1.0);
+            gl_FragColor = vec4(d,d,d, 1.0);
           }
         `}
         uniforms={{
