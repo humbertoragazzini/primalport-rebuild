@@ -12,7 +12,7 @@ export function Logo3D(props) {
         geometry={nodes.Torus001.geometry}
         material={
           new THREE.MeshStandardMaterial({
-            color: new THREE.Color().setRGB(1, 1, 1),
+            color: new THREE.Color().setHex(0x020311),
           })
         }
         rotation={[0, 0, -Math.PI / 2]}
@@ -23,7 +23,7 @@ export function Logo3D(props) {
         geometry={nodes.Cone.geometry}
         material={
           new THREE.MeshStandardMaterial({
-            color: new THREE.Color().setRGB(1, 1, 1),
+            color: new THREE.Color().setHex(0x020311),
           })
         }
         position={[0, -0.009, 0]}

@@ -47,7 +47,7 @@ export default function WobblePlane() {
             float y = sin(distance(uPosition, vec3(0,0,0)));
             float z = sin(distance(uPosition, vec3(0,0,0))) * cos(distance(uPosition, vec3(0,0,0)));
 
-            gl_FragColor = vec4(x-16.0,x-16.0,x-16.0,x-98.0);
+            gl_FragColor = vec4(x-16.0,x-105.0,x-16.0,x-104.5);
           }
         `}
         uniforms={{

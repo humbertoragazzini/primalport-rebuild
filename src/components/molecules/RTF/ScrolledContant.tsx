@@ -1,7 +1,7 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import SceneObjects from "./MultiObject";
-import * as THREE from "three"
+import * as THREE from "three";
 
 export default function ScrollAndMouseGroup() {
   const groupRef = useRef<THREE.Group>(null);
@@ -52,7 +52,7 @@ export default function ScrollAndMouseGroup() {
 
     // groupRef.current.position.x = t * mouseStrength;
 
-    // camera.position.y = t * -scrollStrength;
+    camera.position.y = t * -scrollStrength;
 
     // 🔥 modify fov on every frame
     // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
