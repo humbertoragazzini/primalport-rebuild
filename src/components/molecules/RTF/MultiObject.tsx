@@ -66,7 +66,7 @@ export default function SceneObjects() {
   return (
     <>
       {objects.map((obj, i) => (
-        <mesh key={i} position={obj.position} scale={obj.scale}>
+        <mesh key={i} position={obj.position} scale={obj.scale} rotation={[0,-Math.PI/4,0]}>
           <Float>
             <Logo3D></Logo3D>
           </Float>

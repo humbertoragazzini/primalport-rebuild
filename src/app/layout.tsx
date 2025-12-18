@@ -34,9 +34,9 @@ export default function RootLayout({
         `}
       >
         <BgCanvas />
-        <Header />
+        {/*<Header />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
-        <Footer />
+        <Footer />*/}
       </body>
     </html>
   );
