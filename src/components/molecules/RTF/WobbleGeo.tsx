@@ -36,15 +36,15 @@ export default function WobblePlane() {
     mat.current.uniforms.uTime.value = state.clock.elapsedTime;
     // sphere.current.rotation.x = mouseRef.current.y/10
     // sphere.current.rotation.y = mouseRef.current.x/10
-    sphere.current.rotation.x = scrollRef.current/2000;
+    // sphere.current.rotation.x = scrollRef.current/2000;
     // sphere.current.rotation.y = scrollRef.current/500;
     // sphere.current.position.x = state.camera.position.x
-    sphere.current.position.y = state.camera.position.y
+    // sphere.current.position.y = state.camera.position.y
 
   });
 
   return (
-    <mesh ref={sphere}  position={[0, 0, 0]} scale={1.5}>
+    <mesh ref={sphere}  position={[0, 0, 0]} scale={0.005}>
       {/* <sphereGeometry args={[20, 50, 50, 50]} /> */}
       <icosahedronGeometry args={[100, 100]} />
       {/* <planeGeometry args={[10, 10, 50, 50]}></planeGeometry> */}
@@ -74,13 +74,62 @@ export default function WobblePlane() {
           varying vec2 vUv;
           varying vec3 uPosition;
           uniform float uTime;
+          /*
+contributors: Jamie Owen
+description: Photoshop Reflect blend mode mplementations sourced from this article on https://mouaif.wordpress.com/2009/01/05/photoshop-math-with-glsl-shaders/
+use: blendReflect(<float|vec3> base, <float|vec3> blend [, <float> opacity])
+license: MIT License (MIT) Copyright (c) 2015 Jamie Owen
+*/
 
+#ifndef FNC_BLENDREFLECT
+#define FNC_BLENDREFLECT
+float blendReflect(in float base, in float blend) {
+    return (blend == 1.)? blend : min(base * base / (1. - blend), 1.);
+}
+
+vec3 blendReflect(in vec3 base, in vec3 blend) {
+    return vec3(blendReflect(base.r, blend.r),
+                blendReflect(base.g, blend.g),
+                blendReflect(base.b, blend.b));
+}
+
+vec3 blendReflect(in vec3 base, in vec3 blend, in float opacity) {
+    return (blendReflect(base, blend) * opacity + base * (1. - opacity));
+}
+#endif
+/*
+contributors: Jamie Owen
+description: Photoshop Glow blend mode mplementations sourced from this article on https://mouaif.wordpress.com/2009/01/05/photoshop-math-with-glsl-shaders/
+use: blendGlow(<float|vec3> base, <float|vec3> blend [, <float> opacity])
+license: MIT License (MIT) Copyright (c) 2015 Jamie Owen
+*/
+
+#ifndef FNC_BLENDGLOW
+#define FNC_BLENDGLOW
+float blendGlow(in float base, in float blend) {
+    return blendReflect(blend, base);
+}
+
+vec3 blendGlow(in vec3 base, in vec3 blend) {
+    return blendReflect(blend, base);
+}
+
+vec3 blendGlow(in vec3 base, in vec3 blend, in float opacity) {
+    return (blendGlow(base, blend) * opacity + base * (1. - opacity));
+}
+#endif
           void main() {
             float x = (distance(uPosition, vec3(0,0,0)));
             float y = sin(distance(uPosition, vec3(0,0,0)));
             float z = sin(distance(uPosition, vec3(0,0,0))) * cos(distance(uPosition, vec3(0,0,0)));
+  float d = distance(uPosition, vec3(0.0));
+  float intensity = smoothstep(0.0, 1.0, d/116.0); // tweak range
 
-            gl_FragColor = vec4(smoothstep(0.0,1.0,x-16.0),smoothstep(0.0,1.0,x-105.0),smoothstep(0.0,1.0,x-16.0),smoothstep(0.0,1.0,x-104.5));
+  vec3 base = vec3(0.0, 0.0, 0.0);
+  vec3 blend = vec3(1.0, 0.6, 1.0) * intensity+intensity;
+
+  vec3 col = blendGlow(base, blend, 2.0);
+  gl_FragColor = vec4(col, 1.0);
           }
         `}
             //         float x = (distance(uPosition, vec3(0,0,0)));

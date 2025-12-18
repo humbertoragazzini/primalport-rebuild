@@ -28,7 +28,7 @@ export default function BgCanvas() {
           <sphereGeometry args={[2, 70, 70]} />
           <meshStandardMaterial color="#010001" side={THREE.DoubleSide} />
         </mesh> */}
-        {/* <OrbitControls></OrbitControls> */}
+        <OrbitControls></OrbitControls>
         {/* Basic lighting */}
         <ambientLight intensity={5} />
         {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}
@@ -45,11 +45,11 @@ export default function BgCanvas() {
           /> */}
 
           {/* Bloom for glow */}
-          {/* <Bloom
-            intensity={0.5} // how strong
-            luminanceThreshold={0.5} // what is considered "bright"
+          <Bloom
+            intensity={10} // how strong
+            luminanceThreshold={1.0} // what is considered "bright"
             luminanceSmoothing={0.15}
-          /> */}
+          />
         </EffectComposer>
       </Canvas>
     </div>

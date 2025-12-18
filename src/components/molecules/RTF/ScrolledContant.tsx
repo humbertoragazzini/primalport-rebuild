@@ -52,7 +52,7 @@ export default function ScrollAndMouseGroup() {
 
     // groupRef.current.position.x = t * mouseStrength;
 
-    camera.position.y = t * -scrollStrength;
+    // camera.position.y = t * -scrollStrength;
 
     // 🔥 modify fov on every frame
     // camera.fov = 60 - ((10 * t) / 2) * scrollStrength;
