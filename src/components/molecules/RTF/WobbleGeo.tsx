@@ -40,11 +40,10 @@ export default function WobblePlane() {
     // sphere.current.rotation.y = scrollRef.current/500;
     // sphere.current.position.x = state.camera.position.x
     // sphere.current.position.y = state.camera.position.y
-
   });
 
   return (
-    <mesh ref={sphere}  position={[0, 0, 0]} scale={0.005}>
+    <mesh ref={sphere} position={[0, 0, 0]} scale={2}>
       {/* <sphereGeometry args={[20, 50, 50, 50]} /> */}
       <icosahedronGeometry args={[100, 100]} />
       {/* <planeGeometry args={[10, 10, 50, 50]}></planeGeometry> */}
@@ -122,24 +121,25 @@ vec3 blendGlow(in vec3 base, in vec3 blend, in float opacity) {
             float x = (distance(uPosition, vec3(0,0,0)));
             float y = sin(distance(uPosition, vec3(0,0,0)));
             float z = sin(distance(uPosition, vec3(0,0,0))) * cos(distance(uPosition, vec3(0,0,0)));
-  float d = distance(uPosition, vec3(0.0));
-  float intensity = smoothstep(0.0, 1.0, d/116.0); // tweak range
+            float d = distance(uPosition, vec3(0.0));
+            float intensity = smoothstep(0.0, 1.0, d/116.0); // tweak range
 
-  vec3 base = vec3(0.0, 0.0, 0.0);
-  vec3 blend = vec3(1.0, 0.6, 1.0) * intensity+intensity;
+            vec3 base = vec3(0.0, 0.0, 0.0);
+            vec3 blend = vec3(1.0, 0.6, 1.0) * intensity+intensity;
 
-  vec3 col = blendGlow(base, blend, 2.0);
-  gl_FragColor = vec4(col, 1.0);
+            vec3 col = blendGlow(base, blend, 2.0);
+
+            gl_FragColor = vec4(smoothstep(0.0,1.0,x-16.0),smoothstep(0.0,1.0,x-105.0),smoothstep(0.0,1.0,x-16.0),smoothstep(0.0,1.0,x-104.5));
           }
         `}
-            //         float x = (distance(uPosition, vec3(0,0,0)));
-            // float y = sin(distance(uPosition, vec3(0,0,0)));
-            // float z = sin(distance(uPosition, vec3(0,0,0))) * cos(distance(uPosition, vec3(0,0,0)));
-            // float test = pow(sin(x),cos(x))*pow(sin(x),cos(x));
-            // float test2 = pow(sin(y),cos(y))*pow(sin(y),cos(y));
-            // float test3 = pow(sin(x),cos(x))*pow(sin(x),cos(x));
+        //         float x = (distance(uPosition, vec3(0,0,0)));
+        // float y = sin(distance(uPosition, vec3(0,0,0)));
+        // float z = sin(distance(uPosition, vec3(0,0,0))) * cos(distance(uPosition, vec3(0,0,0)));
+        // float test = pow(sin(x),cos(x))*pow(sin(x),cos(x));
+        // float test2 = pow(sin(y),cos(y))*pow(sin(y),cos(y));
+        // float test3 = pow(sin(x),cos(x))*pow(sin(x),cos(x));
 
-            // gl_FragColor = vec4(smoothstep(0.0,1.0,x),smoothstep(0.0,1.0,y/2.0),smoothstep(0.0,1.0,x),smoothstep(0.0,1.0,z));
+        // gl_FragColor = vec4(smoothstep(0.0,1.0,x),smoothstep(0.0,1.0,y/2.0),smoothstep(0.0,1.0,x),smoothstep(0.0,1.0,z));
         uniforms={{
           uTime: { value: 0 }, // you *must* wrap in { value: ... }
         }}
