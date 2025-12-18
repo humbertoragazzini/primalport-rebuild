@@ -34,16 +34,16 @@ export default function RootLayout({
         `}
       >
         <BgCanvas />
-       {/* <SmoothScrollProvider><div className="h-[200vh]">
+        {/* <SmoothScrollProvider><div className="h-[200vh]">
         
         <div className="w-[800px] h-[500px] my-[150px] bg-[rgba(155,155,155,0.1)] mx-auto border-2 border-[rgba(255,255,255,0.1)] rounded-xl backdrop-blur-xl"></div>
         <div className="w-[800px] h-[500px] my-[150px]"></div>
         <div className="w-[800px] h-[500px] my-[150px] bg-[rgba(155,155,155,0.1)] mx-auto border-2 border-[rgba(255,255,255,0.1)] rounded-xl backdrop-blur-xl"></div>
         <div className="w-[800px] h-[500px] my-[150px]"></div>
         </div></SmoothScrollProvider>  */}
-        {/*<Header />
+        <Header />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
-        <Footer />*/}
+        <Footer />
       </body>
     </html>
   );

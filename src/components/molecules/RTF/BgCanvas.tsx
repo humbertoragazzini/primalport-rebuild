@@ -28,7 +28,7 @@ export default function BgCanvas() {
           <sphereGeometry args={[2, 70, 70]} />
           <meshStandardMaterial color="#010001" side={THREE.DoubleSide} />
         </mesh> */}
-        <OrbitControls></OrbitControls>
+        {/* <OrbitControls></OrbitControls> */}
         {/* Basic lighting */}
         <ambientLight intensity={5} />
         {/* <directionalLight position={[4, 6, 3]} intensity={1.2} /> */}

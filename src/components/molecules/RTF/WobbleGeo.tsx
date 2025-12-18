@@ -36,10 +36,10 @@ export default function WobblePlane() {
     mat.current.uniforms.uTime.value = state.clock.elapsedTime;
     // sphere.current.rotation.x = mouseRef.current.y/10
     // sphere.current.rotation.y = mouseRef.current.x/10
-    // sphere.current.rotation.x = scrollRef.current/2000;
+    sphere.current.rotation.x = scrollRef.current / 2000;
     // sphere.current.rotation.y = scrollRef.current/500;
     // sphere.current.position.x = state.camera.position.x
-    // sphere.current.position.y = state.camera.position.y
+    sphere.current.position.y = state.camera.position.y;
   });
 
   return (
