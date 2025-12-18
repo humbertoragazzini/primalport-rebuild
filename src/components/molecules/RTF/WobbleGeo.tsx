@@ -36,12 +36,15 @@ export default function WobblePlane() {
     mat.current.uniforms.uTime.value = state.clock.elapsedTime;
     // sphere.current.rotation.x = mouseRef.current.y/10
     // sphere.current.rotation.y = mouseRef.current.x/10
-    sphere.current.rotation.y = scrollRef.current;
+    sphere.current.rotation.x = scrollRef.current/500;
+    // sphere.current.rotation.y = scrollRef.current/500;
+    // sphere.current.position.x = state.camera.position.x
+    sphere.current.position.y = state.camera.position.y
 
   });
 
   return (
-    <mesh ref={sphere} rotation={[0, Math.PI / 4, 0]} position={[0, 0, 0]} scale={1}>
+    <mesh ref={sphere}  position={[0, 0, 0]} scale={1.5}>
       {/* <sphereGeometry args={[20, 50, 50, 50]} /> */}
       <icosahedronGeometry args={[100, 100]} />
       {/* <planeGeometry args={[10, 10, 50, 50]}></planeGeometry> */}
